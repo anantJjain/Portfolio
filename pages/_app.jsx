@@ -36,7 +36,6 @@ const MyApp = ({ Component, pageProps }) => {
           initial={{backgroundColor:'#60a5fa',opacity:0.8}}
           whileInView={{backgroundColor:'#000',opacity:1}}
           transition={{type:'tween'}}
-          // className='border-2 border-red-500'
         >
           <Header menuState={isOpen} menuMethod={setOpen} className={isOpen?'bg-black':'bg-blue-400'}/>
         </motion.div>

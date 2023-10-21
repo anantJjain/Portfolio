@@ -33,7 +33,7 @@ const Projects = () => {
             initial="textInitial"
             whileInView="textAnimate"
             viewport={{once:true}}
-            className="w-4/5 pt-4 m-auto text-sm font-normal tracking-widest l-20 text-stone-400"
+            className="w-full m-auto text-sm font-normal tracking-widest sm3:w-4/5 sm1:w-full sm1:text-center sm3:text-left text-stone-400 sm1:mt-8"
           > FEATURED PROJECTS -
           </motion.div>
           <motion.div 
@@ -41,10 +41,10 @@ const Projects = () => {
             initial="textInitial"
             whileInView="textAnimate"
             viewport={{once:true}}
-            className="w-4/5 pt-4 m-auto text-4xl font-bold text-white"
+            className="w-full pt-4 m-auto text-4xl font-bold text-white sm1:text-center sm1:w-full sm3:w-4/5 sm3:text-left sm3:flex sm1:text-2xl sm3:text-2xl md:text-3xl lg:text-4xl"
           > Stuff I&apos;ve Worked on 💻
           </motion.div>
-          <div className="grid gap-4 m-auto mt-10 md:grid-cols-2 lg:grid-cols-3 md:w-4/5 lg:w-4/5">
+          <div className="grid gap-4 m-auto mt-10 md:grid-cols-2 lg:grid-cols-3 sm1:w-4/5">
             {
                 Project.map((project)=>{
                   return(
@@ -57,7 +57,8 @@ const Projects = () => {
                       whileHover={{scale:0.95}}
                       className={
                         `${project.bgKey}
-                        text-3xl
+                        sm1:text-2xl
+                        md:text-3xl
                         projectTiles
                         border-2
                         transition
@@ -68,7 +69,10 @@ const Projects = () => {
                         hover:bg-[linear-gradient(to_top,#000,#000)]
                       hover:text-white
                       hover:border-white
-                        m-auto min-w-full min-h-20`} 
+                        m-auto 
+                        min-w-full 
+                        sm3:min-h-20`
+                      } 
                         key={project.id}
                     >
                       <a 
@@ -78,12 +82,12 @@ const Projects = () => {
                       >
                         <BsGithub />
                       </a>     
-                      <div className="pt-20 pb-10 pl-4 text-3xl font-bold text-left">{project.name}</div>
-                      <div className="flex p-4 space-x-4 text-sm font-medium text-left">
+                      <div className="p-2 pt-20 font-bold text-left lg:pb-10 lg:text-3xl sm1:text-2xl">{project.name}</div>
+                      <div className="flex flex-wrap p-4 text-sm font-medium text-left">
                         {
                           project.skills.map((skill)=>{
                             return(
-                              <div className="text-xs uppercase" key={project.id}>{skill}</div>
+                              <div className="pr-4 text-xs uppercase" key={project.id}>{skill}</div>
                             )
                           })
                         }

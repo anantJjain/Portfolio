@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 const Header = (props) => { 
   return (
-    <div className={props.menuState ? 'bg-blue-400 pr-20 pl-20' : 'bg-black pr-20 pl-20'}>
+    <div className={props.menuState ? 'bg-blue-400 sm1:pr-4 sm1:pl-6 md:pr-20 md:pl-20' : 'bg-black sm1:pr-4 sm1:pl-6 md:pr-20 md:pl-20'}>
           <div className="flex justify-between w-full text-white">
               <div className="text-left">
                 <motion.svg 
@@ -15,8 +15,8 @@ const Header = (props) => {
                   <path fill={props.menuState ? '#000':'#42a5f5'} d=""/>
                 </motion.svg>
               </div>
-              <div className="fixed z-10 p-2 mt-6 text-right bg-black right-12 w-fit rounded-4xl">
-                <Hamburger color={props.menuState ? '#fff' : '#60a5fa'} toggled={props.menuState} toggle={props.menuMethod} rounded size={28} />
+              <div className="fixed z-10 mt-6 text-right bg-black sm1:p-0 lg:p-2 sm1:right-2 md:right-6 w-fit rounded-4xl">
+                <Hamburger color={props.menuState ? '#fff' : '#60a5fa'} toggled={props.menuState} toggle={props.menuMethod} rounded size={24} />
               </div>
           </div>
       

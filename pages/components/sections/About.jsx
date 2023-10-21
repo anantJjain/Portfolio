@@ -17,8 +17,8 @@ const About = () => {
             variants={textVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{once:true}}
-            className="w-4/5 pt-4 m-auto text-sm font-normal tracking-widest text-stone-400"
+            viewport={{once:true}} 
+            className="w-full m-auto text-sm font-normal tracking-widest sm3:w-4/5 sm1:w-full sm1:text-center sm3:text-left text-stone-400 sm1:mt-8"
           > BEHIND THE PORTFOLIO - 
           </motion.div>
           <motion.div 
@@ -26,7 +26,7 @@ const About = () => {
             initial="initial"
             whileInView="animate"
             viewport={{once:true}}
-            className="flex w-4/5 pt-4 m-auto text-4xl font-bold text-white">About Me😁
+            className="w-full pt-4 m-auto text-4xl font-bold text-white sm1:text-center sm1:w-full sm3:w-4/5 sm3:text-left sm3:flex sm1:text-4xl">About Me😁
           </motion.div>  
           <div className="w-4/5 m-auto">
             <motion.div 
@@ -34,7 +34,7 @@ const About = () => {
               initial="initial"
               whileInView="animate"
               viewport={{once:true}}
-              className='flex w-3/5 p-0 pr-10 mt-10 text-2xl font-extralight text-stone-400'
+              className='flex w-3/5 p-0 mt-10 text-2xl font-extralight text-stone-400 sm1:w-full sm1:text-xl md:w-4/5 lg:w-3/5 xl:pr-20 md:text-2xl'
             >
               Hello! I&apos;m an engineering student🤓 at BITS Pilani, Pilani.I&apos;m passionate about web development and have experience with MERN Stack.🚀
               I enjoy creating interactive web apps that not only convey information but also engage users. Outside of web development, I love playing cricket🏏. I&apos;m also a sci-fi movie🎦 enthusiast.Feel free to explore my portfolio and reach out if you&apos;d like to collaborate or chat!🤝

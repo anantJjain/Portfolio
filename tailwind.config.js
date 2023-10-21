@@ -5,6 +5,16 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens:{
+      'sm1': '320px',
+      'sm2':'375px',
+      'sm3':'425px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1440px',
+      '3xl': '1536px',
+    },
     extend: {
       colors:{
         'blueGreen': 'linear-gradient(90deg, #3498db, #2ecc71)',
@@ -56,7 +66,7 @@ module.exports = {
       },
       borderRadius:{
         '4xl':'4rem',
-      }
+      },
     },
   },
   plugins: [],

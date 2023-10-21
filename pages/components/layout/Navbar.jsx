@@ -86,8 +86,8 @@ const Navbar = (props) => {
                 mouseControls: true,
                 touchControls: true,
                 gyroControls: false,
-                minHeight: 200.00,
-                minWidth: 200.00,
+                // minHeight: 200.00,
+                // minWidth: 200.00,
                 backgroundColor:0x60A5FA,
                 color:0x000000,
                 size:1.5
@@ -107,7 +107,7 @@ const Navbar = (props) => {
     return (        
         <motion.div 
             ref={vantaRef}
-            className="grid h-screen grid-cols-2 m-auto text-white bg-blue-400" 
+            className="grid h-screen grid-cols-2 m-auto text-white bg-blue-400 sm1:grid-cols-1 lg:grid-cols-2" 
             variants={sliderVariants} 
             initial="initial"
             animate="animate"
@@ -117,9 +117,9 @@ const Navbar = (props) => {
                 initial="initial"
                 whileInView="animate" 
             >
-                <div className="w-1/2 m-auto mt-10 font-semibold tracking-widest text-black">NAVIGATION</div>
-                <div className="flex flex-col w-1/2 m-auto space-y-10">
-                    <Link className="mt-8 text-5xl font-bold text-black" href="#home">
+                <div className="w-1/2 m-auto mt-10 font-semibold tracking-widest text-black sm1:w-full sm1:pl-6 md:w-3/4">NAVIGATION</div>
+                <div className="flex flex-col w-1/2 m-auto font-bold text-black sm1:space-y-4 sm3:space-y-6 md:space-y-10 sm1:w-full sm1:pl-6 sm1:text-3xl sm3:text-4xl md:text-5xl md:w-3/4">
+                    <Link className="mt-8 transition delay-200" href="#home">
                         <motion.button
                             variants={linkVariants}
                             initial="initial"
@@ -127,11 +127,11 @@ const Navbar = (props) => {
                             onClick={toggleMenu}
                         >
                             <span>HOME</span> &nbsp;
-                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="text-xl text-black"/>
+                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="sm1:text-lg md:text-xl"/>
                         </motion.button>
                     </Link>
                     
-                    <Link className="mt-8 text-5xl font-bold text-black transition delay-200" href="#about">
+                    <Link className="mt-8 transition delay-200" href="#about">
                         <motion.button
                             variants={linkVariants}
                             initial="initial"
@@ -139,11 +139,11 @@ const Navbar = (props) => {
                             onClick={toggleMenu}
                         >
                             <span>ABOUT</span> &nbsp;
-                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="text-xl text-black"/>
+                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="sm1:text-lg md:text-xl"/>
                         </motion.button>
                     </Link>
                     
-                    <Link className="mt-8 text-5xl font-bold text-black transition delay-200" href="#projects">
+                    <Link className="mt-8 transition delay-200" href="#projects">
                         <motion.button
                             variants={linkVariants}
                             initial="initial"
@@ -151,11 +151,11 @@ const Navbar = (props) => {
                             onClick={toggleMenu}
                         >
                             <span>PROJECTS</span> &nbsp;
-                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="text-xl text-black"/>
+                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="sm1:text-lg md:text-xl"/>
                         </motion.button>
                     </Link>
                     
-                    <Link className="mt-8 text-5xl font-bold text-black transition delay-200" href="#contact">
+                    <Link className="mt-8 transition delay-200" href="#contact">
                         <motion.button
                             variants={linkVariants}
                             initial="initial"
@@ -163,20 +163,22 @@ const Navbar = (props) => {
                             onClick={toggleMenu}
                         >
                             <span>CONTACT</span> &nbsp;
-                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="text-xl text-black"/>
+                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="sm1:text-lg md:text-xl"/>
                         </motion.button>
                     </Link>
                 
                 </div>
             </motion.div>
             <motion.div 
-                className=""
+                className="sm1:-mt-56 md:-mt-36 lg:mt-0"
                 variants={menuVariants}
                 initial="initial"
                 whileInView="animate" 
             >
-                <div className="mt-10 ml-20 font-semibold tracking-widest text-black">ON THE WEB</div>
-                <div className="flex justify-between w-2/5 m-auto mt-10 ml-20 text-4xl text-black">
+                <div className="w-1/2 mt-10 font-semibold tracking-widest text-black sm1:w-full sm1:pl-6 md:w-1/2 md:text-center">
+                    ON THE WEB
+                </div>
+                <div className="flex justify-between m-auto text-black sm1:mt-4 sm1:w-4/5 sm1:text-3xl md:w-3/5 md:text-4xl lg:w-3/5 xl:w-2/5 xl:ml-32">
                     <motion.a 
                         variants={iconVariants}
                         initial="initial"
@@ -198,9 +200,9 @@ const Navbar = (props) => {
                         whileHover="animate"
                         href="mailto:anantjain.8k@gmail.com" target="_blank" className="hover:text-white"><MdEmail /></motion.a>
                 </div>
-                <div className="mt-20">
+                <div className="md:mt-12 sm1:mt-8 lg:mt-20">
                     <Link 
-                        className="ml-20 text-5xl font-bold text-black transition delay-200" 
+                        className="text-5xl font-bold text-black transition delay-200" 
                         href='https://drive.google.com/file/d/1M_DXhtAgd0_StuxAzvUpi4INsVqN6I2s/view?usp=share_link'
                         passHref={true} //to pass external links
                         target="_blank"
@@ -210,7 +212,7 @@ const Navbar = (props) => {
                             variants={linkVariants2}
                             initial="initial"
                             whileHover="animate"
-                            className="" onClick={toggleMenu}
+                            className="sm1:w-full sm1:text-3xl sm3:text-4xl md:text-5xl md:w-full lg:w-3/4" onClick={toggleMenu}
                         >
                             RESUME &nbsp;<FontAwesomeIcon icon={faArrowDown} className="text-2xl font-extrabold text-black" />    
                         </motion.button>
