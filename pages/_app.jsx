@@ -27,11 +27,11 @@ const MyApp = ({ Component, pageProps }) => {
   })
   
   return(
-    <Head>
-      <title>Anant Jain | Portfolio </title>
-    </Head>,
     !loading ?
         <>
+        <Head>
+          <title>Anant Jain | Portfolio </title>
+        </Head>
         <motion.div 
           initial={{backgroundColor:'#60a5fa',opacity:0.8}}
           whileInView={{backgroundColor:'#000',opacity:1}}
@@ -95,6 +95,9 @@ const MyApp = ({ Component, pageProps }) => {
         </>
         :
         <>
+          <Head>
+            <title>Anant Jain | Portfolio </title>
+          </Head>
           <Loader />
         </>
   )}
