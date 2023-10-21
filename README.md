@@ -17,10 +17,8 @@ This is my personal portfolio website, built using Next.js for the front-end, st
 - **Three.js:** Create stunning 3D objects and animations for a unique touch.
 - **Vanta.js:** Enhance the visuals with dynamic backgrounds and special effects.
 
-Feel free to explore, and don't hesitate to reach out if you have any questions or collaboration opportunities. I'm excited to share my journey and work with you!
+Feel free to explore, and don't hesitate to reach out if you have any questions or collaboration opportunities.
 
-🔗 [Visit My Portfolio](#your-portfolio-website-url)
-
-🌐 [Check out My Blog](#your-blog-url) | 📧 [Contact Me](#your-contact-url)
+🔗 [Visit My Portfolio](https://anantjain-portfolio.vercel.app/)
 
 📬 Let's Connect and Collaborate! 🚀
