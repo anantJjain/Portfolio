@@ -53,7 +53,7 @@ const Home = () => {
         <div className="pb-4 mt-2 mb-2 text-5xl font-extrabold text-white">Anant</div>
         <div className="pt-0 mb-2 text-lg tracking-widest text-blue-400 sm1:text-sm sm1:font-bold sm3:font-normal">FULL STACK DEVELOPER 👨‍💻</div>
         <div className="pr-24 text-sm font-normal sm1:w-full sm1:pr-0 white text-stone-400 sm3:w-3/4 md:w-2/4 lg:w-3/4 xl:w-2/4 xl:text-sm">
-          I’m a Software Developer specializing in building (and occassionally   designing) exceptional applications,web sites, and everything in between.
+          I’m a Software Developer specialized in building (occassionally designing) applications,web sites, and everything in between.
         </div>
         <div className="">
           <button className="p-2 mt-8 tracking-wider text-white transition duration-200 ease-linear border-2 border-white shadow-inner md:text-lg md:pr-8 md:pl-8 sm1:text-sm sm1:pr-4 sm1:pl-4 hover:shadow-inner-2xl rounded-3xl hover:bg-blue-400 hover:text-black hover:border-blue-400 hover:scale-110">

@@ -36,7 +36,7 @@ const About = () => {
               viewport={{once:true}}
               className='flex w-3/5 p-0 mt-10 text-2xl font-extralight text-stone-400 sm1:w-full sm1:text-xl md:w-4/5 lg:w-3/5 xl:pr-20 md:text-2xl'
             >
-              Hello! I&apos;m an engineering student🤓 at BITS Pilani, Pilani.I&apos;m passionate about web development and have experience with MERN Stack.🚀
+              Hello! I&apos;m an engineering undergrad🤓at BITS Pilani, Pilani.I&apos;m passionate about web development and have experience with MERN Stack.🚀
               I enjoy creating interactive web apps that not only convey information but also engage users. Outside of web development, I love playing cricket🏏. I&apos;m also a sci-fi movie🎦 enthusiast.Feel free to explore my portfolio and reach out if you&apos;d like to collaborate or chat!🤝
             </motion.div>
           </div>
