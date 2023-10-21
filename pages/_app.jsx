@@ -23,7 +23,7 @@ const MyApp = ({ Component, pageProps }) => {
   const [ isOpen,setOpen ] = useState(false)
 
   useEffect(() => {
-    setTimeout(() => setLoading(false),8000)
+    setTimeout(() => setLoading(false),4000)
   })
   
   return(

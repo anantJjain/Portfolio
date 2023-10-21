@@ -26,7 +26,7 @@ const textVariants={
 
 const Loader = () => {
   return (
-    <div className="grid h-screen grid-cols-5 text-5xl text-white">
+    <div className="grid h-screen grid-cols-5 overflow-hidden text-5xl text-white">
         <motion.div 
             variants={loaderVariants}
             initial="initial"

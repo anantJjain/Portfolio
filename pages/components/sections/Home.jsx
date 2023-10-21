@@ -40,7 +40,7 @@ const Home = () => {
     };
   }, [vantaEffect]);
   return (
-    <div className="h-screen"
+    <div className="h-screen overflow-hidden"
       ref={vantaRef}  
     > 
       <motion.div

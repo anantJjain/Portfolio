@@ -17,7 +17,7 @@ const fadeInAnimationVariants={
 
 const textVariants = {
   textInitial:{
-    y:100
+    y:20
   },
   textAnimate:{
     y:0,
@@ -64,9 +64,8 @@ const Projects = () => {
                         transition
                         ease-linear
                         duration-200
-                        bg-[linear-gradient(to_top,#ffecd2,#fcb69f)]
+                        text-black
                         border-black
-                        hover:bg-[linear-gradient(to_top,#000,#000)]
                       hover:text-white
                       hover:border-white
                         m-auto 

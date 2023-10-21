@@ -107,7 +107,7 @@ const Navbar = (props) => {
     return (        
         <motion.div 
             ref={vantaRef}
-            className="grid h-screen grid-cols-2 m-auto text-white bg-blue-400 sm1:grid-cols-1 lg:grid-cols-2" 
+            className="grid h-screen grid-cols-2 m-auto overflow-hidden text-white bg-blue-400 sm1:grid-cols-1 lg:grid-cols-2" 
             variants={sliderVariants} 
             initial="initial"
             animate="animate"
@@ -119,7 +119,7 @@ const Navbar = (props) => {
             >
                 <div className="w-1/2 m-auto mt-10 font-semibold tracking-widest text-black sm1:w-full sm1:pl-6 md:w-3/4">NAVIGATION</div>
                 <div className="flex flex-col w-1/2 m-auto font-bold text-black sm1:space-y-4 sm3:space-y-6 md:space-y-10 sm1:w-full sm1:pl-6 sm1:text-3xl sm3:text-4xl md:text-5xl md:w-3/4">
-                    <Link className="mt-8 transition delay-200" href="#home">
+                    <Link className="mt-8 transition delay-200" href="#home" scroll={false}>
                         <motion.button
                             variants={linkVariants}
                             initial="initial"
@@ -131,7 +131,7 @@ const Navbar = (props) => {
                         </motion.button>
                     </Link>
                     
-                    <Link className="mt-8 transition delay-200" href="#about">
+                    <Link className="mt-8 transition delay-200" href="#about" scroll={false}>
                         <motion.button
                             variants={linkVariants}
                             initial="initial"
@@ -143,7 +143,7 @@ const Navbar = (props) => {
                         </motion.button>
                     </Link>
                     
-                    <Link className="mt-8 transition delay-200" href="#projects">
+                    <Link className="mt-8 transition delay-200" href="#projects" scroll={false}>
                         <motion.button
                             variants={linkVariants}
                             initial="initial"
@@ -155,7 +155,7 @@ const Navbar = (props) => {
                         </motion.button>
                     </Link>
                     
-                    <Link className="mt-8 transition delay-200" href="#contact">
+                    <Link className="mt-8 transition delay-200" href="#contact" scroll={false}>
                         <motion.button
                             variants={linkVariants}
                             initial="initial"

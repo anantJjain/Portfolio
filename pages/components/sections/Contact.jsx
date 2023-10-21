@@ -41,7 +41,7 @@ const textVariants = {
 const Contact = () => {
     return (
       <> 
-        <div id='contact' className="pt-10 pb-20 mb-20 text-xl mt-26">
+        <div id='contact' className="pt-10 pb-20 mb-20 text-xlmt-26">
           <motion.div 
             variants={textVariants}
             initial="textInitial"
@@ -55,8 +55,9 @@ const Contact = () => {
             initial="textInitial"
             whileInView="textAnimate"
             viewport={{once:true}}
-            className="w-full pt-4 m-auto text-4xl font-bold text-white sm1:text-center sm1:w-full sm3:w-4/5 sm3:text-left sm3:flex"
-          > On The Web  
+            className="w-full pt-4 m-auto text-4xl font-bold text-white sm1:flex sm1:w-full sm1:justify-center sm3:w-4/5 sm3:justify-start"
+          > 
+            <span>On The Web</span>
             <motion.div 
               whileHover={{
                 rotate:360,
@@ -115,8 +116,8 @@ const Contact = () => {
           </div>
           
          
-          <div className="w-full m-auto text-sm font-normal tracking-widest sm3:w-4/5 sm1:w-full sm1:text-center sm3:text-left text-stone-400 sm1:mt-8">CONTACT -</div>
-          <div className="w-full pt-4 m-auto text-4xl font-bold text-white sm1:text-xl sm3:text-2xl md:text-4xl sm1:text-center sm1:w-full sm3:w-4/5 sm3:text-left sm3:flex">Let&apos;s Brainstorm Together 
+          <div className="w-full m-auto text-sm font-normal tracking-widest sm3:w-4/5 sm1:w-full sm1:text-center sm3:text-left text-stone-400 sm1:mt-8 lg:mt-16">CONTACT -</div>
+          <div className="flex w-full pt-4 font-bold text-white sm1:text-xl sm1:justify-center sm3:w-4/5 sm3:text-2xl sm3:m-auto md:justify-start md:text-4xl">Let&apos;s Brainstorm Together 
             <motion.div 
               initial={{
                 y:-200,
@@ -133,14 +134,14 @@ const Contact = () => {
             >🤯</motion.div>
           </div>
           
-          <div className="w-full m-auto text-sm font-normal tracking-widest sm3:w-4/5 sm1:w-full sm1:text-center sm3:text-left text-stone-400 sm1:mt-8">EMAIL -</div>
-          <div className="w-4/5 pt-4 m-auto text-3xl font-semibold text-white lg:w-full lg:pl-24 xl:w-4/5 xl:pl-0">
+          <div className="w-full m-auto text-sm font-normal tracking-widest sm3:w-4/5 sm1:w-full sm1:text-center sm3:text-left text-stone-400 sm1:mt-8 md:mt-12">EMAIL -</div>
+          <div className="w-4/5 pt-4 m-auto text-3xl font-semibold text-white lg:w-full lg:pl-24 xl:w-4/5 xl:pl-0 sm1:text-center sm3:text-left">
             <a className="transition duration-500 ease-in-out hover:text-blue-400" href="mailto:anantjain.8k@gmail.com">
-              <span className='sm2:text-4xl'>📧</span> <span className="sm1:text-xl sm1:font-light sm3:text-2xl">anantjain.8k@gmail.com</span>
+              <span className='sm2:text-4xl sm1:hidden sm3:inline'>📧</span> <span className="sm1:text-xl sm1:font-light sm3:text-2xl">anantjain.8k@gmail.com</span>
             </a>
             <span className='border-r-8 border-blue-400 lg:pr-10 lg:pl-10 md:pl-4 md:pr-4 sm1:hidden md:inline'></span>
             <a className="transition duration-500 ease-in-out lg:pl-10 hover:text-blue-400 md:inline-block" href="mailto:f20200641@pilani.bits-pilani.ac.in">
-              <span className='sm2:text-3xl sm3:text-4xl '>🏫</span> <span className="sm1:text-lg sm1:font-light sm3:text-2xl">f20200641@pilani.bits-pilani.ac.in</span>
+              <span className='sm2:text-3xl sm3:text-4xl sm1:hidden sm3:inline'>🏫</span> <span className="sm1:text-lg sm1:font-light sm3:text-xl md:text-2xl">f20200641@pilani.bits-pilani.ac.in</span>
             </a>
           </div>
           

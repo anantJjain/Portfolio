@@ -57,3 +57,7 @@ a {
 .projectTiles:nth-child(6){
   background-image: linear-gradient(to top,#FDBA74,#FFEBCD);
 }
+
+.projectTiles:hover{
+  background-image : linear-gradient(to top,#000,#000)
+}
