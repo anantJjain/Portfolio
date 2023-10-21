@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { AiFillLinkedin,AiFillGithub, AiFillInstagram } from 'react-icons/ai';
-
+import { PiArrowUpRightBold } from 'react-icons/pi';
+import Link from 'next/link'
 
 const fadeInAnimationVariants={
   initial:{
@@ -132,7 +133,23 @@ const Contact = () => {
                 transition:{type:"spring",stiffness:100}
               }}
             >🤯</motion.div>
+            <Link 
+              href='https://drive.google.com/file/d/1M_DXhtAgd0_StuxAzvUpi4INsVqN6I2s/view?usp=share_link'
+              passHref={true} //to pass external links
+              target="_blank" 
+              whileHover="hover"
+              className="p-2 pl-10 pr-10 ml-10 text-2xl font-normal transition duration-200 ease-linear border-2 border-l-8 lg:flex sm1:hidden border-stone-500 border-l-blue-500 hover:text-white text-stone-400 hover:scale-110"
+            > <span>Resume</span><span className="mt-2 ml-2"><PiArrowUpRightBold/></span> 
+            </Link>
           </div>
+            <Link 
+              href='https://drive.google.com/file/d/1M_DXhtAgd0_StuxAzvUpi4INsVqN6I2s/view?usp=share_link'
+              passHref={true} //to pass external links
+              target="_blank" 
+              whileHover="hover"
+              className="flex p-2 text-2xl font-normal transition duration-200 ease-linear border-2 border-l-8 sm1:justify-center border-stone-500 border-l-blue-500 hover:text-white text-stone-400 hover:scale-110 lg:hidden sm1:w-3/5 sm1:m-auto sm1:mt-4 sm1:text-xl md:w-2/5"
+            > <span>Resume</span><span className="mt-2 ml-2"><PiArrowUpRightBold/></span> 
+            </Link>
           
           <div className="w-full m-auto text-sm font-normal tracking-widest sm3:w-4/5 sm1:w-full sm1:text-center sm3:text-left text-stone-400 sm1:mt-8 md:mt-12">EMAIL -</div>
           <div className="w-4/5 pt-4 m-auto text-3xl font-semibold text-white lg:w-full lg:pl-24 xl:w-4/5 xl:pl-0 sm1:text-center sm3:text-left">

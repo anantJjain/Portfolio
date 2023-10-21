@@ -48,7 +48,7 @@ const Projects = () => {
             {
                 Project.map((project)=>{
                   return(
-                    <motion.div 
+                    <motion.a 
                       variants={fadeInAnimationVariants}
                       initial="initial"
                       whileInView="animate"
@@ -73,6 +73,8 @@ const Projects = () => {
                         sm3:min-h-20`
                       } 
                         key={project.id}
+                        href={project.url}
+                        target="_blank"
                     >
                       <a 
                         href={project.url}
@@ -91,7 +93,7 @@ const Projects = () => {
                           })
                         }
                       </div>
-                    </motion.div>  
+                    </motion.a>  
                   )
                 })
               }
