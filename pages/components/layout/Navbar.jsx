@@ -107,7 +107,7 @@ const Navbar = (props) => {
     return (        
         <motion.div 
             ref={vantaRef}
-            className="grid h-screen grid-cols-2 m-auto overflow-hidden text-white bg-blue-400 sm1:grid-cols-1 lg:grid-cols-2" 
+            className="grid h-screen grid-cols-2 pt-20 m-auto overflow-hidden text-white bg-blue-400 lg:pt-32 sm1:grid-cols-1 lg:grid-cols-2" 
             variants={sliderVariants} 
             initial="initial"
             animate="animate"
