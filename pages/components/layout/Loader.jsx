@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import logo  from '../../../public/media/Anant.gif'
+import logo  from '../../../public/media/Loader.gif'
 
 const loaderVariants ={
     initial:{

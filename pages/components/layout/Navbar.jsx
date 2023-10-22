@@ -86,8 +86,8 @@ const Navbar = (props) => {
                 mouseControls: true,
                 touchControls: true,
                 gyroControls: false,
-                // minHeight: 200.00,
-                // minWidth: 200.00,
+                minHeight: 200.00,
+                minWidth: 200.00,
                 backgroundColor:0x60A5FA,
                 color:0x000000,
                 size:1.5
