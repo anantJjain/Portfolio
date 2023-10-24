@@ -203,7 +203,7 @@ const Navbar = (props) => {
                 <div className="md:mt-12 sm1:mt-8 lg:mt-20">
                     <Link 
                         className="text-5xl font-bold text-black transition delay-200" 
-                        href='https://drive.google.com/file/d/1M_DXhtAgd0_StuxAzvUpi4INsVqN6I2s/view?usp=share_link'
+                        href='https://drive.google.com/file/d/1KgTNsw2jPpuE-QCrm2txd_l8RejSsj-M/view?usp=sharing'
                         passHref={true} //to pass external links
                         target="_blank"
                         onClick={toggleMenu}
