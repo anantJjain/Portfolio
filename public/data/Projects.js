@@ -26,7 +26,7 @@ export const Project = [
     {
         "id":5,
         "name":"Redux Dashboard",
-        "url":"",
+        "url":"https://github.com/anantJjain/redux-dashboard/",
         "skills":["React","Redux","CSS"],
     },
     {
