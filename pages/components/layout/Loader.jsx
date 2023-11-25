@@ -22,8 +22,6 @@ const textVariants={
     }
 }
 
-
-
 const Loader = () => {
   return (
     <div className="grid h-screen grid-cols-5 overflow-hidden text-5xl text-white">
@@ -71,7 +69,6 @@ const Loader = () => {
             custom={5}
         >
         </motion.div>
-
         <motion.div 
             variants={textVariants}
             initial="initial"

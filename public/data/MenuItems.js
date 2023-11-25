@@ -1,0 +1,22 @@
+export const MenuItems = [
+    {
+        id:1,
+        linkedSection:'home',
+        name:'Home',
+    },
+    {
+        id:2,
+        linkedSection:'about',
+        name:'About',
+    },
+    {
+        id:3,
+        linkedSection:'projects',
+        name:'Projects',
+    },
+    {
+        id:3,
+        linkedSection:'contact',
+        name:'Contact',
+    },
+]

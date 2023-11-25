@@ -16,6 +16,8 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/icons-material": "^5.14.14",
     "@mui/material": "^5.14.14",
+    "@react-spring/parallax": "^9.7.3",
+    "@uidotdev/usehooks": "^2.4.1",
     "file-loader": "^6.2.0",
     "framer-motion": "^10.16.4",
     "hamburger-react": "^2.5.0",
@@ -26,6 +28,7 @@
     "react-html5video": "^2.5.1",
     "react-icons": "^4.11.0",
     "react-p5": "^1.4.1",
+    "react-spring": "^9.7.3",
     "three": "0.121.0",
     "vanta": "^0.5.24",
     "webpack": "^5.89.0"
