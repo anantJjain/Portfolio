@@ -71,6 +71,9 @@ const textVariants = {
                     setCurrentImage={setCurrentImage} 
                     className='border-0 border-blue-400'
                   />
+                  <div>
+                    <Image src={screen.imgUrl} key={screen.imgUrl} alt='' height={200} width={200} className='h-56 m-auto transition transform image-mask sm3:w-72 sm3:h-72 box-shadow-out sm1:w-52 md:hidden slide-right'></Image>
+                  </div>
                 </motion.div>
             ))}
           </div>

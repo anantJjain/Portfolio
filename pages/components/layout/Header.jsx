@@ -31,7 +31,7 @@
 import Link from 'next/link'
 import { Sling as Hamburger } from 'hamburger-react'
 
-const Header = (props) => { 
+const Header = ({ menuState,toggleMenu }) => { 
   return (
     <div>
       <div className='fixed z-50 w-full p-4 overflow-hidden border-0 border-red-500 bg-white/010 backdrop-blur-md box-shadow-out-navbar'>
@@ -42,8 +42,8 @@ const Header = (props) => {
           <Link className="transition duration-300 hover:transform hover:translate-y-[-0.2rem] font-stencil-navbar" href="#contact" alt="">Contact</Link>
           <Link className="transition duration-300 hover:transform hover:translate-y-[-0.2rem] font-stencil-navbar" href='https://drive.google.com/file/d/1KgTNsw2jPpuE-QCrm2txd_l8RejSsj-M/view?usp=sharing' target="_blank" alt="">Resume</Link>
         </div>
-        <div className="sm1:block md:hidden">
-          <Hamburger color={'#60a5fa'} toggled={props.menuState} toggle={props.menuMethod} rounded size={28}/>
+        <div className="bg-black sm1:block md:hidden w-fit rounded-4xl">
+          <Hamburger color={'#fff'} toggled={menuState} toggle={toggleMenu} rounded size={28} className=''/>
         </div>
       </div>
     </div>
