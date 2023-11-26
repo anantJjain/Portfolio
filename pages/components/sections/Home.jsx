@@ -18,7 +18,7 @@ const Home = () => {
   const { scrollYProgress } = useScroll()
   const x = useTransform(scrollYProgress,[0,1],[-1000,-5000])
   return (
-    <div className="relative mt-20 border-0 border-black" id="home">
+    <div className="relative border-0 border-black" id="home">
       <div ref={ref2} > 
       <div className='m-auto text-center border-0 border-green-400 mt-28 md:w-4/5 sm1:w-full'>
         <span className='mb-2 text-white border-0 border-red-500 lg:text-3xl font-extralight tracking md:text-2xl sm3:text-xl sm2:text-lg sm1:text-md md:z-50 md:relative'>👋,my name is <span className="font-normal text-blue-400">Anant</span> and I am a</span>
