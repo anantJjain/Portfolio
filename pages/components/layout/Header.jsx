@@ -1,12 +1,36 @@
-import { useState } from 'react'
 import Link from 'next/link'
 import { Sling as Hamburger } from 'hamburger-react'
 import Navbar from './Navbar'
+import { motion,AnimatePresence } from 'framer-motion'
 
-const Header = ({ isOpen,setOpen,toggleMenu }) => { 
+const sliderVariants = {
+  initial:{
+    scaleY:0,
+    opacity:0,
+  },
+  animate:{
+    scaleY:1,
+    opacity:1,
+    transition:{
+      duration:0.2,
+      ease:[0.12,0,0.39,0]
+    }
+  },
+  exit:{
+    scaleY:0,
+    opacity:0,
+    transition:{
+      delay:1,
+      duration:0.5,
+      ease:[0.22,1,0.36,1]
+    }
+  }
+}
+
+const Header = ({ isOpen,toggleMenu }) => { 
   return (
     <div>
-      <div className={`w-full md:p-4 sm1:p-2 overflow-hidden border-0 border-red-500 z-[60] box-shadow-out-navbar fixed  ${ isOpen ? 'bg-blue-400' : 'backdrop-blur-md ' }`}>
+      <div className={`w-full md:p-4 ${isOpen ? 'p-4' : 'p-0' } overflow-hidden border-0 border-red-500 z-[60] box-shadow-out-navbar fixed  ${ isOpen ? 'bg-blue-400' : 'backdrop-blur-md' }`}>
         {/* Desktop Navbar */}
         <div className='p-2 m-auto tracking-widest text-white border-0 border-red-500 md:justify-around md:text-lg lg:w-3/5 font-extralight md:w-4/5 sm1:hidden md:flex'>
           <Link className="transition duration-300 hover:transform hover:translate-y-[-0.2rem] font-stencil-navbar" href="#home" alt="">Home</Link>
@@ -20,13 +44,21 @@ const Header = ({ isOpen,setOpen,toggleMenu }) => {
           <div className='p-1 bg-black w-fit rounded-4xl'>
             <Hamburger color={'#fff'} toggled={isOpen} toggle={toggleMenu} rounded size={24} className=''/>
           </div>
+          <AnimatePresence>
           {
             isOpen && (
-              <div className='w-full bg-blue-400 border-0 border-red-500'>
-                <Navbar toggleMenu={toggleMenu}/>
-              </div>  
+                <motion.div 
+                  variants={sliderVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  className='w-full origin-top bg-blue-400 border-0 border-red-500'
+                >
+                  <Navbar toggleMenu={toggleMenu}/>
+                </motion.div>  
             )  
           }
+          </AnimatePresence>
         </div>
         
       </div>

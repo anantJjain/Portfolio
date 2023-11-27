@@ -1,31 +1,69 @@
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Link from "next/link"
 import { GrLinkedinOption,GrGithub } from 'react-icons/gr'
 import { RiInstagramFill } from 'react-icons/ri'
 import { MdEmail} from 'react-icons/md'
 import { MenuItems } from '../../../public/data/MenuItems';
 
+const containerVariants = {
+    initial:{
+        transition:{
+            staggerDirection:-1,
+            staggerChildren:0.09
+        }
+    },
+    animate:{
+        transition:{
+            delayChildren:0.2,
+            staggerChildren:0.09,
+            staggerDirection:1,
+        }
+    },
+    
+}
+
+const linkVariants = {
+    initial:{
+        opacity:0,
+        y:'10vh',
+        transition:{
+            duration:0.5,
+            ease:[0.37,0,0.63,1]
+        }
+    },
+    animate:{
+        opacity:1,
+        y:0,
+        transition:{
+            ease:[0,0.55,0.45,1],
+            duration:0.7
+        }
+    }
+}
+
 const Navbar = ({ toggleMenu }) => {
     return (        
         <div className='w-full'>
-            <AnimatePresence>
-                <motion.div 
-                    // variants={sliderVariants}
-                    // initial="initial"
-                    // animate="animate"
-                    // exit="exit"
-                    className='pt-12 text-black bg-blue-400 border-0 border-red-500 pb-28'
-                >
-                        <div className="font-extrabold">
+                <motion.div className='min-h-screen pt-12 text-black bg-blue-400 border-0 border-red-500 pb-28'>
+                        <motion.div 
+                            variants={containerVariants}
+                            initial="initial"
+                            animate="animate"
+                            exit="initial"
+                            className="font-extrabold"
+                        >
                             {
                                 MenuItems.map( (item) => {
                                     return(
                                         <div key={item.id} className='m-auto text-center sm1:space-y-4 sm3:space-y-6 md:space-y-10 sm1:w-full sm1:text-3xl sm3:text-2xl md:text-5xl md:w-3/4'>
-                                            <Link className='transition delay-200 border-0 border-red-500' href={`#${item.linkedSection}`} scroll={false}>
+                                            <Link 
+                                                className='transition delay-200 border-0 border-red-500' 
+                                                href={`${item.name!='Resume' ? `#${item.linkedSection}` : `${item.linkedSection}`}`} 
+                                                target={`${item.name=='Resume' ? '_blank' : '' }`}
+                                                scroll={false}
+                                            >
                                                 <motion.button
-                                                    // variants={linkVariants}
-                                                    // initial="initial"
-                                                    // whileHover="animate"
+                                                    variants={linkVariants}
                                                     onClick={toggleMenu}
                                                     className=''
                                                 >
@@ -36,50 +74,22 @@ const Navbar = ({ toggleMenu }) => {
                                     )
                                 })
                             }
-                        </div>
-                        <div className='mt-0 text-4xl font-extrabold text-center'>
-                            <div>
-                                <Link 
-                                    className="transition delay-200" 
-                                    href='https://drive.google.com/file/d/1KgTNsw2jPpuE-QCrm2txd_l8RejSsj-M/view?usp=sharing'
-                                    onClick={toggleMenu}
-                                    target='_blank'
-                                >
-                                    <motion.button 
-                                        // variants={linkVariants2}
-                                        // initial="initial"
-                                        // whileHover="animate"
-                                        className="" onClick={toggleMenu}
-                                    >
-                                        <span className=''>Resume</span>    
-                                    </motion.button>
-                                </Link>
-                            </div>
-                            <div className='flex justify-between w-3/4 m-auto mt-20 text-3xl'>
+                            <div className='flex justify-between w-3/4 pb-20 m-auto mt-20 text-3xl '>
                                 <motion.a 
-                                    // variants={iconVariants}
-                                    // initial="initial"
-                                    // whileHover="animate"
+                                    variants={linkVariants}
                                     href="https://www.linkedin.com/in/anantjainBE/" target="_blank" className=""><GrLinkedinOption /></motion.a>
                                 <motion.a 
-                                    // variants={iconVariants}
-                                    // initial="initial"
-                                    // whileHover="animate"
+                                    variants={linkVariants}
                                     href="https://github.com/anantJjain" target="_blank" className=""><GrGithub/></motion.a>
                                 <motion.a 
-                                    // variants={iconVariants}
-                                    // initial="initial"
-                                    // whileHover="animate"
+                                    variants={linkVariants}
                                     href="https://www.instagram.com/anantjain.8k/" target="_blank" className=""><RiInstagramFill /></motion.a>
                                 <motion.a 
-                                    // variants={iconVariants}
-                                    // initial="initial"
-                                    // whileHover="animate"
+                                    variants={linkVariants}
                                     href="mailto:anantjain.8k@gmail.com" target="_blank" className=""><MdEmail /></motion.a>
-                                </div>
-                        </div>
-                </motion.div>    
-            </AnimatePresence>
+                            </div>  
+                        </motion.div>
+                </motion.div> 
         </div>
   )
 }

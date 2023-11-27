@@ -19,4 +19,9 @@ export const MenuItems = [
         linkedSection:'contact',
         name:'Contact',
     },
+    {
+        id:5,
+        linkedSection:'https://drive.google.com/file/d/1KgTNsw2jPpuE-QCrm2txd_l8RejSsj-M/view?usp=sharing',
+        name:'Resume',
+    },
 ]
