@@ -9,21 +9,31 @@ import Header from "./components/layout/Header"
 import Navbar from "./components/layout/Navbar"
 
 const Main = () => {
+  const [ isOpen,setOpen ] = useState(false)
+  const toggleMenu = () => {
+    setOpen(prevOpen => !prevOpen)
+    console.log(isOpen)
+  }
+  
   return (
     <div className="overflow-hidden">
         <div>
-          <Header/>
+          <Header isOpen={isOpen} setOpen={setOpen} toggleMenu={toggleMenu}/>
         </div>
-        <div>
-          <Home />
-          <About />
-          <div className="sm1:hidden md:block">
-            <Parallax />
-          </div>
-          <Skill />
-          <Projects />
-          <Contact />
-        </div>
+        {
+          !isOpen && (
+            <div>
+              <Home />
+              <About />
+              <div className="sm1:hidden md:block">
+                <Parallax />
+              </div>
+              <Skill />
+              <Projects />
+              <Contact />
+            </div>
+          )
+        }  
     </div>
   )
 }

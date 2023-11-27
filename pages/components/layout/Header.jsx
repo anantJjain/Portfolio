@@ -3,12 +3,7 @@ import Link from 'next/link'
 import { Sling as Hamburger } from 'hamburger-react'
 import Navbar from './Navbar'
 
-const Header = () => { 
-  const [ isOpen,setOpen ] = useState(false)
-  const toggleMenu = () => {
-    setOpen(prevOpen => !prevOpen)
-    console.log(isOpen)
-  }
+const Header = ({ isOpen,setOpen,toggleMenu }) => { 
   return (
     <div>
       <div className={`w-full md:p-4 sm1:p-2 overflow-hidden border-0 border-red-500 z-[60] box-shadow-out-navbar fixed  ${ isOpen ? 'bg-blue-400' : 'backdrop-blur-md ' }`}>
@@ -22,7 +17,7 @@ const Header = () => {
         </div>
         {/* Mobile Navbar */}
         <div className="sm1:block md:hidden">
-          <div className='p-0 bg-black w-fit rounded-4xl'>
+          <div className='p-1 bg-black w-fit rounded-4xl'>
             <Hamburger color={'#fff'} toggled={isOpen} toggle={toggleMenu} rounded size={24} className=''/>
           </div>
           {
