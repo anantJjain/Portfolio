@@ -22,9 +22,9 @@ const Home = () => {
         ref={ref}
         className="relative z-10 flex justify-center m-auto xl:-mt-[28em] cursorChange box-shadow-inside lg:-mt-[24em] md:-mt-[25em] sm3:-mt-[5em] sm2:-mt-[2em] sm1:-mt-[4em] border-0 border-blue-500 sm1:w-3/5 md:w-4/5 xl:w-fit"
       > */}
-      <motion.div className="image-mask grayscale">  
+      <motion.div className="grayscale">  
+        {/* <Image src="/media/mebgrm.png" alt="" width={300} height={200} className={``}></Image> */}
         <Image src="/media/mebgrm.png" alt="" width={300} height={200} className={``}></Image>
-        <Image src="/media/mebgrm.png" alt="" width={320} height={200} className={``}></Image>
       </motion.div>
       
       {/* <div> 
