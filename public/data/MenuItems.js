@@ -15,7 +15,7 @@ export const MenuItems = [
         name:'Projects',
     },
     {
-        id:3,
+        id:4,
         linkedSection:'contact',
         name:'Contact',
     },

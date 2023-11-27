@@ -396,6 +396,11 @@ a {
   text-underline-offset:0.3em;
 }
 
+.font-stencil-error{
+  text-decoration: underline solid white ;
+  text-underline-offset:0.3em;
+}
+
 .font-stencil-nonhome{
   /* color:rgba(255,255,255,0); */
   -webkit-text-stroke: 0px white;
