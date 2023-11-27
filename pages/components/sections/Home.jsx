@@ -35,8 +35,8 @@ const Home = () => {
         ref={ref}
         className="relative z-10 flex justify-center m-auto xl:-mt-[28em] cursorChange box-shadow-inside lg:-mt-[24em] md:-mt-[25em] sm3:-mt-[5em] sm2:-mt-[2em] sm1:-mt-[4em] border-0 border-blue-500 sm1:w-3/5 md:w-4/5 xl:w-fit"
       >
-        <Image src="/media/images/me.png" alt="" width={400} height={200} className={`rounded-2xl sm1:z-10 image-mask md:hidden ${hovering ? '' : ''} }`}></Image>
-        <Image src="/media/images/me.png" alt="" width={420} height={200} className={`rounded-2xl image-mask sm1:z-10  sm1:hidden md:block  ${hovering ? '-mt-20' : ''} }`}></Image>
+        <Image src="/media/images/mebgrm2.png" style={{width:'auto',height:'auto'}} alt="" width={300} height={200} className={`rounded-2xl sm1:z-10 image-mask md:hidden ${hovering ? '' : ''} }`}></Image>
+        <Image src="/media/images/mebgrm2.png" style={{width:'auto',height:'auto'}} alt="" width={320} height={150} className={`rounded-2xl image-mask sm1:z-10  sm1:hidden md:block  ${hovering ? '' : ''} }`}></Image>
       </motion.div>
       
       <div className="absolute z-20 ml-40 font-extrabold tracking-tighter text-white transform md:text-5xl lg:text-6xl xl:-mt-48 whitespace-nowrap -rotate-6 font-stencil-home-smallText lg:-mt-72 md:-mt-64 sm1:-mt-[9em] sm1:text-3xl sm3:text-4xl">
