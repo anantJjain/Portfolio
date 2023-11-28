@@ -20,16 +20,29 @@ const Home = () => {
     <div className="relative mt-24 border-0 border-red-500 " id="home">
       <div> 
       <div className='pt-20 m-auto text-center border-0 border-green-400 md:w-4/5 sm1:w-full'>
-        <span className='mb-2 text-white border-0 border-red-500 lg:text-3xl font-extralight tracking md:text-2xl sm3:text-xl sm2:text-lg sm1:text-md md:z-50 md:relative'>👋,my name is <span className="font-normal text-blue-400">Anant</span> and I am a</span>
-        <div className="font-bold tracking-tighter border-0 border-red-500 lg:text-8xl xl:text-10xl md:text-8xl sm3:text-7xl sm3:mt-4 sm2:text-5xl sm2:mt-2 sm1:text-5xl sm1:mt-2 sm1:pl-2 md:mt-24 lg:flex xl:pl-20">
+        <motion.span 
+          initial={{opacity:0}}
+          whileInView={{opacity:1,transition:{type:'tween',duration:0.5}}}
+          viewport={{once:true}}       
+          className='mb-2 text-white border-0 border-red-500 lg:text-3xl font-extralight tracking md:text-2xl sm3:text-xl sm2:text-lg sm1:text-md md:z-50 md:relative'>👋,my name is <span className="font-normal text-blue-400">Anant</span> and I am a</motion.span>
+        <motion.div 
+          initial={{opacity:0}}
+          whileInView={{opacity:1,transition:{type:'tween',duration:0.5}}}
+          viewport={{once:true}}  
+          className="font-bold tracking-tighter border-0 border-red-500 lg:text-8xl xl:text-10xl md:text-8xl sm3:text-7xl sm3:mt-4 sm2:text-5xl sm2:mt-2 sm1:text-5xl sm1:mt-2 sm1:pl-2 md:mt-24 lg:flex xl:pl-20"
+        >
           <div className='text-white border-0 border-red-500 md:w-fit lg:w-full sm1:pt-2'>Web</div>
           <div className={`text-blue-400 border-0 border-red-500 md:w-fit md:-pl-20 md:relative md:z-50 lg:w-full lg:pl-10 lg:pt-2 font-stencil-home`}> Developer</div>
           <div className={`text-blue-400 border-0 border-red-500 md:w-fit md:-pl-20 md:relative md:z-50 lg:w-full lg:pl-0 lg:pt-2 sm1:hidden lg:block lg:opacity-0`}> Developer</div>
-        </div>
-        <div className={`border-0 border-blue-500 pt-4 font-bold tracking-tighter text-white font-7 transition duration-300 xl:text-10xl lg:-mt-2 xl:-mt-4 lg:text-8xl sm3:text-7xl md:text-7xl sm1:text-5xl`}>
+        </motion.div>
+        <motion.div 
+          initial={{opacity:0}}
+          whileInView={{opacity:1,transition:{type:'tween',duration:0.5,delay:0.2}}}
+          viewport={{once:true}}  
+          className={`border-0 border-blue-500 pt-4 font-bold tracking-tighter text-white font-7 transition duration-300 xl:text-10xl lg:-mt-2 xl:-mt-4 lg:text-8xl sm3:text-7xl md:text-7xl sm1:text-5xl`}>
             <span className="text-blue-400 border-0 border-blue-400 font-stencil-nonhome sm1:text-5xl md:text-6xl sm1:text-white">&</span>
             <span className="border-0 border-blue-400 md:pl-8 sm2:pl-2 sm1:pl-4 sm1:relative sm1:z-50">Web <span className="relative sm1:text-blue-400 sm1:z-50">Designer</span></span>
-        </div>
+        </motion.div>
       </div>
       <motion.div 
         ref={ref}

@@ -54,7 +54,7 @@ const Skill = () => {
         <div className='grid sm1:pt-2 sm3:grid-cols-3 sm2:grid-cols-2 sm1:grid-cols-1 md:-mt-20 md:p-20 sm2:p-10 sm3:mt-4 sm1:p-20'>
           { Skills.map((icon)=>{
             return(
-              <motion.div key={icon.id} variants={fadeInAnimationVariants} initial="initial" whileInView="animate" custom={icon.id} className='flex justify-center m-2 md:p-10 sm3:p-2 sm2:p-4 sm1:p-4'>
+              <motion.div key={icon.id} variants={fadeInAnimationVariants} initial="initial" whileInView="animate" custom={icon.id} viewport={{once:true}} className='flex justify-center m-2 md:p-10 sm3:p-2 sm2:p-4 sm1:p-4'>
                 <Image src={icon.url} alt="" width={200} height={200} className='invert-75'></Image>
               </motion.div>
             )

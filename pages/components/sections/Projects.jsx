@@ -45,7 +45,13 @@ const Projects = () => {
           viewport={{once:true}}
           className="w-full pt-4 m-auto font-bold tracking-tighter text-white sm1:text-center sm1:w-full sm3:w-4/5 sm3:flex sm3:flex-row sm3:text-center sm1:text-4xl sm3:text-5xl md:text-7xl xl:text-9xl lg:text-8xl lg:text-center"
         > 
-          <div className="border-0 border-red-500">Featured <span className="font-stencil-skill">Projects.</span></div>
+          <motion.div 
+            initial={{opacity:0,y:'10vh',scale:0.7}}
+            whileInView={{opacity:1,y:0,scale:1,transition:{type:'tween',duration:0.5}}}
+            viewport={{once:true}}
+            className="text-center border-0 border-red-500"
+            >Featured <span className="font-stencil-skill">Projects.</span>
+          </motion.div>
           <motion.div 
             animate={{
               WebkitMaskPosition: isHover ? `${xPos-size}px ${yPos-size}px` : `${xPos-6*size}px ${yPos-8*size}px` ,
