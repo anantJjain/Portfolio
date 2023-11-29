@@ -51,10 +51,10 @@ const Loader = () => {
   return (
     <AnimatePresence>
     <motion.div 
-        variants={sliderVariants}
-        initial="initial"
-        animate="animate"
-        exit="exit"
+        // variants={sliderVariants}
+        // initial="initial"
+        // animate="animate"
+        // exit="exit"
         className="grid h-screen grid-cols-5 overflow-hidden text-5xl text-white origin-top"
     >
 

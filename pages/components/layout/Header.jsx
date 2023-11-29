@@ -32,7 +32,7 @@ const Header = ({ isOpen,toggleMenu }) => {
     <div>
       <div className={`w-full md:p-4 overflow-hidden border-0 border-red-500 z-[60] box-shadow-out-navbar fixed  ${ isOpen ? 'bg-black' : 'backdrop-blur-md' }`}>
         {/* Desktop Navbar */}
-        <div className='p-4 m-auto tracking-widest text-white border-0 border-red-500 md:justify-around md:text-lg lg:w-3/5 font-extralight md:w-4/5 sm1:hidden md:flex'>
+        <div className='p-4 m-auto tracking-widest text-white border-0 border-red-500 xl:text-xl md:justify-around md:text-lg lg:w-3/5 font-extralight md:w-4/5 sm1:hidden md:flex'>
           <Link className="transition duration-300 hover:transform hover:translate-y-[-0.2rem] font-stencil-navbar" href="#home" alt="">Home</Link>
           <Link className="transition duration-300 hover:transform hover:translate-y-[-0.2rem] font-stencil-navbar" href="#about" alt="">About</Link>
           <Link className="transition duration-300 hover:transform hover:translate-y-[-0.2rem] font-stencil-navbar" href="#projects" alt="">Projects</Link>

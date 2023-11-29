@@ -24,7 +24,7 @@ const Home = () => {
           initial={{opacity:0}}
           whileInView={{opacity:1,transition:{type:'tween',duration:0.5}}}
           viewport={{once:true}}       
-          className='mb-2 text-white border-0 border-red-500 lg:text-3xl font-extralight tracking md:text-2xl sm3:text-xl sm2:text-lg sm1:text-md md:z-50 md:relative'>👋,my name is <span className="font-normal text-blue-400">Anant</span> and I am a</motion.span>
+          className='mb-2 text-white border-0 border-red-500 lg:text-3xl font-extralight tracking md:text-2xl sm3:text-xl sm2:text-lg sm1:text-md md:z-50 md:relative xl:text-4xl'>👋,my name is <span className="font-normal text-blue-400">Anant</span> and I am a</motion.span>
         <motion.div 
           initial={{opacity:0}}
           whileInView={{opacity:1,transition:{type:'tween',duration:0.5}}}
