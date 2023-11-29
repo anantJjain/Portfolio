@@ -144,10 +144,14 @@ const MyApp = ({ Component, pageProps }) => {
               </>
               : 
               <>
-                <div className='bg-black'>
+                <motion.div 
+                  initial={{opacity:0}}
+                  whileInView={{opacity:1,transition:{type:'spring',duration:1}}}
+                  className='bg-black'
+                >
                   <Component {...pageProps}/>
                   <Footer />
-                </div>
+                </motion.div>
               </>
           }
         </> 

@@ -58,9 +58,9 @@ const Contact = () => {
         <div className="grid mt-16 border-0 border-blue-500 md:grid-cols-2 sm1:grid-cols-1">
           
           <motion.div 
-            initial={{opacity:0,y:'10vh',scale:0.7}}
-            whileInView={{opacity:1,y:0,scale:1,transition:{type:'tween',duration:0.5}}}
-            viewport={{once:true}}
+            // initial={{opacity:0,y:'10vh',scale:0.7}}
+            // whileInView={{opacity:1,y:0,scale:1,transition:{type:'tween',duration:0.5}}}
+            // viewport={{once:true}}
             className="flex flex-col font-bold tracking-tighter text-white border-0 border-blue-500 xl:text-9xl lg:text-8xl lg:pl-12 xl:pl-20 lg:mt-20 xl:mt-0 md:text-7xl sm2:text-7xl sm3:pl-10 md:pl-2 sm1:pl-8 sm2:pl-4 sm1:text-5xl">
             
             <div>  

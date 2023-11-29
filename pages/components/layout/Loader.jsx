@@ -1,6 +1,7 @@
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import logo  from '../../../public/media/Loader.gif'
+
 
 const loaderVariants ={
     initial:{
@@ -22,68 +23,44 @@ const textVariants={
     }
 }
 
+const sliderVariants = {
+    initial:{
+      scaleY:0,
+      opacity:0,
+    },
+    animate:{
+      scaleY:1,
+      opacity:1,
+      transition:{
+        duration:0.2,
+        ease:[0.12,0,0.39,0]
+      }
+    },
+    exit:{
+      scaleY:0,
+      opacity:0,
+      transition:{
+        delay:1,
+        duration:0.5,
+        ease:[0.22,1,0.36,1]
+      }
+    }
+  }
+
 const Loader = () => {
   return (
-    <div className="grid h-screen grid-cols-5 overflow-hidden text-5xl text-white">
-        <motion.div 
-            variants={loaderVariants}
-            initial="initial"
-            animate="animate"
-            className='bg-blue-400'
-            custom={1}
-        >
-        
-        </motion.div>
-        <motion.div 
-            variants={loaderVariants}
-            initial="initial"
-            animate="animate"
-            className='bg-blue-400'
-            custom={2}
-        >
-        
-        </motion.div>
-        <motion.div 
-            variants={loaderVariants}
-            initial="initial"
-            animate="animate"
-            className='bg-blue-400'
-            custom={3}
-        >
-        
-        </motion.div>
-        <motion.div 
-            variants={loaderVariants}
-            initial="initial"
-            animate="animate"
-            className='bg-blue-400'
-            custom={4}
-        >  
-        
-        </motion.div>
-        <motion.div 
-            variants={loaderVariants}
-            initial="initial"
-            animate="animate"
-            className='bg-blue-400'
-            custom={5}
-        >
-        </motion.div>
-        <motion.div 
-            variants={textVariants}
-            initial="initial"
-            animate="animate"
-            className='text-5xl text-black align-middle border-2 border-red-500 top-32'
-        >
-        </motion.div>
-        <motion.div
-            variants={textVariants} 
-            initial="initial"
-            animate="animate"   
-        >
+    <AnimatePresence>
+    <motion.div 
+        variants={sliderVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        className="grid h-screen grid-cols-5 overflow-hidden text-5xl text-white origin-top"
+    >
+
             <Image src={logo} alt="Anant" className='fixed transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'/>
-        </motion.div>
-    </div>
+    </motion.div>
+    </AnimatePresence>
   )
 }
 export default Loader
