@@ -57,7 +57,7 @@ const ScrollText = ({ screen,i,setCurrentImage,currentImage}) => {
                 ><p className="xl:text-8xl lg:text-7xl md:text-6xl sm3:text-5xl" ref={textRef}>{ screen.maskText }</p>
               </motion.div>
             </div>
-            <div className='font-normal text-left text-black border-0 border-red-500 sm1:mr-6 sm3:mr-10 md:mr-20 xl:mr-0 md:tracking-tight lg:p-8 xl:text-xl lg:invert-50 lg:text-lg md:text-md md:invert-75 sm1:invert-75 sm1:text-sm sm2:tracking-normal sm1:p-4 md:p-0 sm1:pl-0'>{ screen.description}</div>
+            <div className='font-normal text-left text-black border-0 border-red-500 sm1:mr-6 sm3:mr-10 md:mr-20 xl:mr-0 md:tracking-tight lg:p-8 xl:text-xl lg:invert-50 lg:text-lg md:text-md md:invert-75 sm1:invert-75 sm1:text-sm sm2:tracking-normal sm1:p-4 md:p-0 sm1:pl-0 2xl:mt-8 2xl:text-2xl'>{ screen.description}</div>
           </div>
         </div>
       </div>
