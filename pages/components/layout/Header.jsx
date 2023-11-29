@@ -30,7 +30,7 @@ const sliderVariants = {
 const Header = ({ isOpen,toggleMenu }) => { 
   return (
     <div>
-      <div className={`w-full md:p-4 ${isOpen ? 'p-4' : 'p-0' } overflow-hidden border-0 border-red-500 z-[60] box-shadow-out-navbar fixed  ${ isOpen ? 'bg-blue-400' : 'backdrop-blur-md' }`}>
+      <div className={`w-full md:p-4 ${isOpen ? 'p-4' : 'p-0' } overflow-hidden border-0 border-red-500 z-[60] box-shadow-out-navbar fixed  ${ isOpen ? 'bg-black' : 'backdrop-blur-md' }`}>
         {/* Desktop Navbar */}
         <div className='p-2 m-auto tracking-widest text-white border-0 border-red-500 md:justify-around md:text-lg lg:w-3/5 font-extralight md:w-4/5 sm1:hidden md:flex'>
           <Link className="transition duration-300 hover:transform hover:translate-y-[-0.2rem] font-stencil-navbar" href="#home" alt="">Home</Link>
@@ -52,7 +52,7 @@ const Header = ({ isOpen,toggleMenu }) => {
                   initial="initial"
                   animate="animate"
                   exit="exit"
-                  className='w-full origin-top bg-blue-400 border-0 border-red-500'
+                  className='w-full origin-top bg-black border-0 border-red-500'
                 >
                   <Navbar toggleMenu={toggleMenu}/>
                 </motion.div>  
