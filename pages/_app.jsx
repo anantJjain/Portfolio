@@ -147,7 +147,7 @@ const MyApp = ({ Component, pageProps }) => {
                 <motion.div 
                   initial={{opacity:0}}
                   whileInView={{opacity:1,transition:{type:'spring',duration:1}}}
-                  className='bg-black'
+                  className='overflow-hidden bg-black'
                 >
                   <Component {...pageProps}/>
                   <Footer />

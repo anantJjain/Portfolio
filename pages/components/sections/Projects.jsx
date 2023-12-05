@@ -4,6 +4,8 @@ import { useTransform,useScroll } from 'framer-motion';
 import { Project } from "../../../public/data/Projects"
 import { useMousePosition } from "../../../utils/useMousePosition";
 import { useHover } from '@uidotdev/usehooks';
+import Lottie from "lottie-react";
+import animationData from "../../../public/media/lotties/projectscoding.json";
 
 const fadeInAnimationVariants={
     initial:{
@@ -71,6 +73,14 @@ const Projects = () => {
           {/* <div className="-ml-24 -mr-24 overflow-hidden text-black transform bg-blue-400 md:p-4 md:mt-10 -rotate-6 whitespace-nowrap sm3:mt-2 sm3:p-2">
             <motion.div className="font-extrabold tracking-tighter lg:text-4xl md:text-3xl sm3:text-xl sm1:hidden sm3:block" style={{x}}>Click on the project to know more !&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click on the project to know more ! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click on the project to know more !</motion.div>
           </div> */}
+          <div>
+            <Lottie
+            animationData={animationData}
+            className="flex items-center justify-center m-auto grayscale sm1:w-full md:w-4/5 xl:w-2/5"
+            loop={true}
+          />
+          </div>
+          
           <div className="grid w-4/5 pt-0 m-auto mt-12 border-0 border-red-500 rounded-sm md:grid-cols-2 sm1:grid-cols-1">
             {
                   Project.map( (project) => {

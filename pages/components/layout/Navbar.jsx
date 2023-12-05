@@ -43,7 +43,7 @@ const linkVariants = {
 
 const Navbar = ({ toggleMenu }) => {
     return (        
-        <div className='w-full'>
+        <div className='w-full overflow-auto'>
                 <motion.div className='min-h-screen pt-12 text-white bg-black border-0 border-red-500 pb-28'>
                         <motion.div 
                             variants={containerVariants}

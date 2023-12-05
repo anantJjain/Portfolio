@@ -5,6 +5,10 @@ import Link from 'next/link'
 import { useTransform,useScroll } from 'framer-motion';
 import { useMousePosition } from '../../../utils/useMousePosition';
 import { useHover } from '@uidotdev/usehooks';
+import Lottie from "lottie-react";
+import animationData from "../../../public/media/lotties/contact.json";
+
+
 
 const fadeInAnimationVariants={
   initial:{
@@ -75,10 +79,8 @@ const Contact = () => {
               <span className="pl-4 text-blue-400 border-0 border-red-500 xl:pl-8 lg:text-8xl xl:text-[0.97em] sm2:text-6xl sm3:text-7xl">together.</span>   
             </div>
             </div>
-          
-          </motion.div>
-          
-          <div className="flex items-end justify-center text-blue-400 border-0 border-blue-500 md:gap-32 lg:text-5xl lg:pt-60 md:pt-20 md:text-4xl sm2:gap-16 sm1:gap-12 sm3:text-4xl sm2:mt-10 sm1:mt-6 md:mt-0 sm1:text-3xl">
+            
+            <div className="flex items-end justify-center w-full text-blue-400 border-0 border-blue-500 sm1:hidden md:flex md:gap-32 lg:text-5xl md:text-4xl md:mt-32 lg:mt-32 2xl:mt-72 2xl:text-6xl">
             <motion.a
                   href="https://www.linkedin.com/in/anantjainBE/" target="_blank" rel="noreferrer"
    
@@ -116,12 +118,57 @@ const Contact = () => {
               <AiFillInstagram />
             </motion.a>  
           </div>
-
+           
           
-
-
+          </motion.div>
           
+          
+          
+          <Lottie
+            animationData={animationData}
+            className="flex items-center justify-center w-full border-0 border-red-500 grayscale"
+            loop={true}
+          /> 
+           <div className="flex items-end justify-center w-full text-blue-400 border-0 border-blue-500 md:hidden md:gap-32 lg:text-5xl lg:pt-60 md:pt-0 md:text-4xl sm2:gap-16 sm1:gap-12 sm3:text-4xl sm2:mt-0 sm1:mt-6 md:mt-0 sm1:text-3xl">
+            <motion.a
+                  href="https://www.linkedin.com/in/anantjainBE/" target="_blank" rel="noreferrer"
+   
+                  variants={fadeInAnimationVariants}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{ once:true }}
+                  custom={1}
+                  whileHover="hover"  
+                > 
+                <AiFillLinkedin />
+            </motion.a>
+                
+            <motion.a
+              href="https://github.com/anantJjain" target="_blank" rel="noreferrer" 
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once:true }}
+              custom={3}
+              whileHover="hover"
+            >
+              <AiFillGithub />
+            </motion.a>
+                
+            <motion.a
+              href="https://www.instagram.com/anantjain.8k/" target="_blank" rel="noreferrer"  
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once:true }}
+              custom={5}
+              whileHover="hover"
+            >
+              <AiFillInstagram />
+            </motion.a>  
+          </div>
         </div>
+          
         
         <motion.div 
           initial={{opacity:0,y:'10vh',scale:0.7}}
@@ -166,7 +213,7 @@ const Contact = () => {
         </div>
         <div className='z-10 font-extrabold tracking-tighter text-black transform bg-blue-400 lg:p-4 lg:mt-24 xl:text-4xl -rotate-0 lg:text-3xl md:text-2xl md:mt-12 md:p-3 sm2:mt-6 sm1:mt-4 sm1:p-2'>
           <motion.div style={{x}} className='whitespace-nowrap'>thanks for sticking around&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thanks for sticking around&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thanks for sticking around&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thanks for sticking around&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thanks for sticking around</motion.div>
-        </div>  
+        </div> 
       </div>  
     );
 }

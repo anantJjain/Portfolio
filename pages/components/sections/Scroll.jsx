@@ -56,7 +56,7 @@ const textVariants = {
     
     const [ currentImage,setCurrentImage ] = useState(0)
     return (
-        <div ref={containerRef} className='relative flex w-full border-0 border-red-500 lg:pt-40 parent'>
+        <div ref={containerRef} className='relative flex w-full overflow-hidden border-0 border-red-500 lg:pt-40 parent'>
           <div className='overflow-hidden border-0 border-gray-500 md:w-3/5 sm3:w-full'>
             {scrollData.map((screen,i) => (
                 <motion.div 

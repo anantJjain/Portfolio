@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
 import logo  from '../../../public/media/Loader.gif'
+import Lottie from "lottie-react";
+import animationData from "../../../public/media/lotties/loader.json";
 
 
 const loaderVariants ={
@@ -55,10 +57,15 @@ const Loader = () => {
         // initial="initial"
         // animate="animate"
         // exit="exit"
-        className="grid h-screen grid-cols-5 overflow-hidden text-5xl text-white origin-top"
+        // className="grid h-screen grid-cols-5 overflow-hidden text-5xl text-white origin-top"
     >
 
-            <Image src={logo} alt="Anant" className='fixed transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'/>
+          <Lottie
+            animationData={animationData}
+            className="flex items-center justify-center w-full h-screen"
+            loop={true}
+          />
+            {/* <Image src={logo} alt="Anant" className='fixed transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'/> */}
     </motion.div>
     </AnimatePresence>
   )

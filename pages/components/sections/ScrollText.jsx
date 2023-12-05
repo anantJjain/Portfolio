@@ -38,7 +38,7 @@ const ScrollText = ({ screen,i,setCurrentImage,currentImage}) => {
       }
     },[])
     return (
-      <div className={`xl:p-20 lg:p-10 border-0 border-red-400 ${showAnimation ? 'text-visible' : 'screen-text'}`} ref={ref}>
+      <div className={`overflow-hidden xl:p-20 lg:p-10 border-0 border-red-400 ${showAnimation ? 'text-visible' : 'screen-text'}`} ref={ref}>
         <div className='flex font-bold tracking-tighter border-0 border-blue-500'>
           <div className='p-4 text-white border-0 border-green-500 xl:text-9xl font-stencil-scroll lg:text-8xl md:text-6xl sm2:text-5xl sm1:text-4xl'>{screen.id}<span className='lg:text-6xl md:text-5xl sm2:text-4xl sm1:text-3xl'>#</span></div>
           <div className='flex flex-col border-0 border-softPink'>

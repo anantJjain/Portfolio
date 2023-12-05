@@ -17,7 +17,7 @@ const Home = () => {
   const { scrollYProgress } = useScroll()
   const x = useTransform(scrollYProgress,[0,1],[-1000,-5000])
   return (
-    <div className="relative mt-24 border-0 border-red-500 " id="home">
+    <div className="relative mt-24 border-0 border-red-500" id="home">
       <div> 
       <div className='pt-20 m-auto text-center border-0 border-green-400 md:w-4/5 sm1:w-full'>
         <motion.span 
@@ -51,13 +51,15 @@ const Home = () => {
         <Image src="/media/images/mebgrm.png" style={{width:'auto',height:'auto'}} alt="" width={300} height={200} className={`rounded-2xl sm1:z-10 image-mask md:hidden ${hovering ? '' : ''} }`}></Image>
         <Image src="/media/images/mebgrm.png" style={{width:'auto',height:'auto'}} alt="" width={300} height={200} className={`rounded-2xl image-mask sm1:z-10  sm1:hidden md:block  ${hovering ? '' : ''} }`}></Image>
       </motion.div>
+      <div className="mt-40 sm1:mt-60 xl:mt-40">
+        <div className="absolute z-20 ml-40 font-extrabold tracking-tighter text-white transform md:text-5xl lg:text-6xl xl:-mt-48 whitespace-nowrap -rotate-6 font-stencil-home-smallText lg:-mt-72 md:-mt-64 sm1:-mt-[9em] sm1:text-3xl sm3:text-4xl">
+          <motion.div className="" style={{x}}>I design and code and aims to do it well . I design and code and aims to do it well . I design and code and aims to do it well .</motion.div>
+        </div>
+        <div className="absolute z-20 ml-40 lg:text-6xl md:text-5xl font-extrabold tracking-tighter text-blue-400 transform xl:-mt-[3.5em] whitespace-nowrap -rotate-6 lg:-mt-[5em] md:-mt-[5.7em] sm1:-mt-[9.3em] sm1:text-3xl sm3:text-4xl">
+          <motion.div className="" style={{x}}>Hello there! Delighted to have you here. I&apos;m on a quest to bring ideas to life through code and design. Feel free to navigate through my work, where simplicity meets innovation.</motion.div>
+        </div>
+      </div>
       
-      <div className="absolute z-20 ml-40 font-extrabold tracking-tighter text-white transform md:text-5xl lg:text-6xl xl:-mt-48 whitespace-nowrap -rotate-6 font-stencil-home-smallText lg:-mt-72 md:-mt-64 sm1:-mt-[9em] sm1:text-3xl sm3:text-4xl">
-        <motion.div className="" style={{x}}>I design and code and aims to do it well . I design and code and aims to do it well . I design and code and aims to do it well .</motion.div>
-      </div>
-      <div className="absolute z-20 ml-40 lg:text-6xl md:text-5xl font-extrabold tracking-tighter text-blue-400 transform xl:-mt-[3.5em] whitespace-nowrap -rotate-6 lg:-mt-[5em] md:-mt-[5.7em] sm1:-mt-[9.3em] sm1:text-3xl sm3:text-4xl">
-        <motion.div className="" style={{x}}>Hello there! Delighted to have you here. I&apos;m on a quest to bring ideas to life through code and design. Feel free to navigate through my work, where simplicity meets innovation.</motion.div>
-      </div>
       </div> 
       <motion.div 
         className="absolute min-w-full min-h-screen text-white border-0 border-red-500 top-12 text-9xl homemask"

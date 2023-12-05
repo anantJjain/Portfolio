@@ -5,7 +5,8 @@ import Image from 'next/image'
 import { Skills } from '../../../public/data/Skills' 
 import { useMousePosition } from '../../../utils/useMousePosition';
 import { useHover } from '@uidotdev/usehooks';
-
+import Lottie from "lottie-react";
+import animationData from "../../../public/media/lotties/tech.json";
 
 const fadeInAnimationVariants={
   initial:{
@@ -25,7 +26,7 @@ const Skill = () => {
   const [ ref,isHover] = useHover()
   const size = isHover ? 300 : 40;
   const { scrollYProgress } = useScroll()
-  const x = useTransform(scrollYProgress,[0,1],[-800,1100])
+  const x = useTransform(scrollYProgress,[0,1],[-2000,2000])
   return (
     <div className='overflow-hidden'>
       <div>
@@ -51,6 +52,13 @@ const Skill = () => {
           <div>Technological</div>
           <div className='ml-4 font-stencil-skill'>Toolbox</div> 
         </div>
+        {/* <div className='border-2 border-red-500'>
+          <Lottie
+            animationData={animationData}
+            className="flex items-center justify-center grayscale-0"
+            loop={true}
+          />
+        </div> */}
         <div className='grid sm1:pt-2 sm3:grid-cols-3 sm2:grid-cols-2 sm1:grid-cols-1 md:-mt-20 md:p-20 sm2:p-10 sm3:mt-4 sm1:p-20'>
           { Skills.map((icon)=>{
             return(
