@@ -9,7 +9,6 @@ import Footer from './components/layout/Footer'
 import Header from './components/layout/Header'
 import Navbar from './components/layout/Navbar'
 import { Noto_Sans } from 'next/font/google' 
-import MouseMotion from './components/mouseMotion'
 
 const loaderVariants ={
   initial:{

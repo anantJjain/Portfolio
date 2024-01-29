@@ -1,4 +1,3 @@
-import MouseMotion from "./components/mouseMotion"
 import Home from "./components/sections/Home"
 
 const Main = () => {

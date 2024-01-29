@@ -154,16 +154,18 @@ const Projects = () => {
         <div className='flex mt-4 sm1:flex-col lg:flex-row'>
           <div className='mt-8 border-0 border-red-500 sm1:w-full lg:w-1/2'>
             <Lottie animationData={portfolio} className="overflow-hidden border-0 border-red-500 pt-36 sm1:hidden lg:flex h-fit rounded-3xl invert-0" loop={true}/>
-            <a href={'https://github.com/anantJjain/Portfolio'} target="_blank">
-              <div className='flex justify-center p-2 m-auto space-x-4 text-lg font-normal text-center text-white border-0 border-red-400 box-shadow-outForm md:w-2/5 md:mt-6 sm1:w-4/5 rounded-2xl bg-white/20'>
-                <span className="text-3xl"><FaGithub /></span>
-                <span>Visit Github Repo</span>
-              </div>
-            </a>
           </div> 
           <div className='bg-cover border-0 border-red-500 sm1:w-full lg:w-1/2'>
             <div className='m-auto mt-16 mb-16 text-white border-0 border-blue-400 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20'>
-              <p className='text-5xl font-extrabold underline underline-offset-8'>Portfolio <span className='text-blue-400'>Website</span></p>
+              <div className='flex'>
+                <p className='text-5xl font-extrabold underline underline-offset-8'>Portfolio <span className='text-blue-400'>Website</span></p>
+                <a href={'https://github.com/anantJjain/Portfolio'} target="_blank">
+                  <div className='flex justify-center p-2 m-auto space-x-4 text-lg font-normal text-center text-white border-0 border-red-400 box-shadow-outForm md:w-2/5 md:mt-6 sm1:w-4/5 rounded-2xl bg-white/20'>
+                    <span className="text-3xl"><FaGithub /></span>
+                    {/* <span>Visit Github Repo</span> */}
+                  </div>
+                </a>
+              </div>
               <p className='mt-12'>
                 This is a full-stack app—my portfolio website designed to showcase my skills and projects. Developed using Next.js and styled with TailwindCSS, the site boasts a seamless and visually appealing interface. The design, crafted in Figma, incorporates engaging animations and mockups with Jitter, Framer Motion, GSAP, and Lottie files. Scroll effects, driven by the Intersection Observer API, add a dynamic touch to the user experience.Delve into the about section to learn about my academic journey and college life. The project section details the technologies used in my various endeavors, providing insights into my technical expertise. Additionally, a contact form, powered by Nodemailer, facilitates direct communication, ensuring a straightforward way for users to reach out.
               </p>
@@ -189,17 +191,21 @@ const Projects = () => {
         <Image src="/media/projects2/blindcoding2.png" alt="" width={300} height={200} className='relative z-10 m-auto transition duration-300 ease-in-out cursor-pointer hover:opacity-0' />
         <Image src="/media/projects2/blindcoding3.png" alt="" width={300} height={200} className='sm1:hidden lg:block absolute lg:left-[22.75rem] xl:left-[30.75rem] 2xl:left-[38.5rem] -mt-[38.25rem] z-0 m-auto cursor-pointer' />
         <div className='absolute z-20 whitespace-nowrap overflow-hidden -mt-[25rem] font-extrabold text-center sm1:text-[20rem] md:text-[30rem] lowercase text-white sm1:left-[1rem] md:left-[15rem] lg:left-[7rem] tracking-tighter border-0 border-red-500 leading-[24rem]'>02.</div>
-        <a href={'https://github.com/anantJjain/ReverseCoding'}target="_blank">  
-          <div className='flex justify-center p-2 m-auto space-x-4 text-lg font-normal text-center text-white border-0 border-red-400 box-shadow-outForm md:w-1/5 sm1:mt-6 md:mt-12 sm1:w-4/5 rounded-2xl bg-white/20'>
-            <span className="text-3xl"><FaGithub /></span>
-            <span>Visit Github Repo</span>
-          </div>
-        </a>
         <Lottie animationData={sketch} className='sm1:hidden lg:block absolute w-1/2 -rotate-45 -mt-80 invert -left-[5rem] grayscale'/>
         <div className='flex mt-4 sm1:flex-col lg:flex-row'> 
           <div className='bg-cover border-0 border-red-500 sm1:w-full lg:w-1/2'>
             <div className='m-auto mt-16 mb-16 text-white border-0 border-blue-400 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 bg-black/20 rounded-3xl backdrop-filter backdrop-blur-sm'>
-              <p className='text-5xl font-extrabold underline underline-offset-8'>Blind <span className='text-blue-400 '>Coding&nbsp;</span></p>
+              <div className='flex'>
+                <p className='text-5xl font-extrabold underline underline-offset-8'>
+                  Blind <span className='text-blue-400 '>Coding&nbsp;</span>
+                </p>
+                <a href={'https://github.com/anantJjain/ReverseCoding'}target="_blank">  
+                  <div className='flex justify-center p-2 m-auto space-x-4 text-lg font-normal text-center text-white border-0 border-red-400 box-shadow-outForm md:w-1/5 sm1:mt-6 md:mt-12 sm1:w-4/5 rounded-2xl bg-white/20'>
+                    <span className="text-3xl"><FaGithub /></span>
+                    {/* <span>Visit Github Repo</span> */}
+                  </div>
+                </a>
+              </div>
               <p className='mt-12'>Blind Coding is one of the flagship event held in APOGEE(2023) which is the annual technical fest of BITS Pilani(Pilani Campus).The website was utilized as the central hub for the 2 hour long coding event where participants had to write code for a DSA-based problem without being able to see the actual problem statement instead they have to guess the problem and its code from the outputs generated by the downloadable executable files the webapp catered to 100+ users and provided easy access to the executable files through the website for coding-related problems, and for Hacker Rank link where the contest was hosted.</p>
               <p className='mt-10 text-2xl font-extrabold text-blue-400'>Tech stack used :</p>
               <div className='flex flex-wrap mt-4 space-x-2'>
@@ -223,22 +229,20 @@ const Projects = () => {
         <div className='flex mt-4 sm1:flex-col lg:flex-row'>
           <div className='mt-24 border-0 border-red-500 sm1:w-full lg:w-1/2'>
             <Lottie animationData={optistock} className="overflow-hidden sm1:hidden lg:flex h-fit rounded-3xl invert-0" loop={true}/>
-            <a href={'https://github.com/anantJjain/OptiStock-Inventory_Management_Software'} target="_blank">
-              <div className='flex justify-center p-2 m-auto space-x-4 text-lg font-normal text-center text-white border-0 border-red-400 box-shadow-outForm md:w-2/5 md:mt-6 sm1:w-4/5 rounded-2xl bg-white/20'>
-                <span className="text-3xl"><FaGithub /></span>
-                <span>Visit Github Repo</span>
-              </div>
-            </a>
-            {/* <a  href={''} target="_blank">
-              <div className='flex justify-center p-2 m-auto space-x-4 text-lg font-normal text-center text-white border-0 border-red-400 box-shadow-outForm md:w-2/5 md:mt-6 sm1:w-4/5 rounded-2xl bg-white/20'>
-                <span className="text-3xl"><FaGithub /></span>
-                <span>Visit Github Repo</span>
-              </div>
-            </a> */}
           </div> 
           <div className='bg-cover border-0 border-red-500 sm1:w-full lg:w-1/2'>
             <div className='m-auto mt-16 mb-16 text-white border-0 border-blue-400 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20'>
-              <p className='text-5xl font-extrabold underline underline-offset-8'>OptiStock</p>
+              <div className='flex'>
+                <p className='text-5xl font-extrabold underline underline-offset-8'>
+                  OptiStock
+                </p>
+                <a href={'https://github.com/anantJjain/OptiStock-Inventory_Management_Software'} target="_blank">
+                  <div className='flex justify-center p-2 m-auto space-x-4 text-lg font-normal text-center text-white border-0 border-red-400box-shadow-outForm md:w-2/5 md:mt-6 sm1:w-4/5 rounded-2xl bg-white/20'>
+                    <span classN  ame="text-3xl"><FaGithub /></span>
+                    {/* <span>Visit Github Repo</span> */}
+                  </div>
+                </a>
+              </div>
               <p className='mt-12'>Introducing a robust full-stack inventory management app built with the MERN stack—enabling seamless user authentication through JWT. This application empowers users to effortlessly add and remove items from the inventory while efficiently tracking the availability of products in the store. Leveraging the power of Redux, the app ensures streamlined state management, enhancing the overall user experience. Experience a sophisticated solution for inventory control and management with user-friendly features tailored for efficient business operations.
               </p>
               <p className='mt-10 text-2xl font-extrabold text-blue-400'>Tech stack used :</p>
