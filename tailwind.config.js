@@ -4,6 +4,7 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     screens:{
       'sm1': '20px',
@@ -64,6 +65,8 @@ module.exports = {
         'purplebg':'#1b1b1f',
         'pink':'#ffaed8',
         'pinkbg':'#1f1a1c',
+        'cream':'#EEE3D3',
+        'redorange':'#6f432a',
       },
       borderRadius:{
         '4xl':'4rem',
@@ -72,6 +75,14 @@ module.exports = {
       },
       backgroundImage: {
         'backdrop': "url('/media/images/parallax.jpg')",
+        'backdrop2': "url('/media/images/education2.png')",
+        'backdrop3': "url('/media/images/developer.png')",
+        'backdrop4': "url('/media/images/coding2.gif')",
+        'backdrop5': "url('/media/images/bg.webp')",
+        'backdrop6': "url('/media/bg-svgs/react-spin.gif')",
+        'backdrop7': "url('/media/bg-svgs/blackfumes.gif')",
+        'backdrop8': "url('/media/bg-svgs/gradientbg.gif')",
+        'backdrop9': "url('/media/bg-svgs/gradientbg2.gif')",
       },
       width: {
         '84': "21rem",

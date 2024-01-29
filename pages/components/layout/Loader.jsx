@@ -1,73 +1,63 @@
-import Image from 'next/image'
-import { AnimatePresence, motion } from 'framer-motion'
-import logo  from '../../../public/media/Loader.gif'
-import Lottie from "lottie-react";
-import animationData from "../../../public/media/lotties/loader.json";
-
-
-const loaderVariants ={
-    initial:{
-        height:0,
-    },
-    animate: (id) => ({
-        height:800,
-        transition:{ delay:0.3*id,type: 'spring',stiffness:150 }
-    }),
-}
-
-const textVariants={
-    initial:{
-        opacity:0
-    },
-    animate:{
-        opacity:1,
-        transition:{ delay:2,type: 'spring',stiffness:150 }
-    }
-}
-
-const sliderVariants = {
-    initial:{
-      scaleY:0,
-      opacity:0,
-    },
-    animate:{
-      scaleY:1,
-      opacity:1,
-      transition:{
-        duration:0.2,
-        ease:[0.12,0,0.39,0]
-      }
-    },
-    exit:{
-      scaleY:0,
-      opacity:0,
-      transition:{
-        delay:1,
-        duration:0.5,
-        ease:[0.22,1,0.36,1]
-      }
-    }
-  }
+import React,{ useEffect, useState } from "react"
+import { gsap,CSSPlugin,Expo } from "gsap"
+gsap.registerPlugin(CSSPlugin)
 
 const Loader = () => {
+  const [counter,setCounter] = useState(0)
+  useEffect(()=>{
+    const count = setInterval(()=>{
+      setCounter( ( counter ) => counter<100 ? counter+1 : (clearInterval(count),setCounter(100),reveal()))
+    },25)  
+  },[])
+  const reveal = () => {
+    const tl = gsap.timeline({
+      onComplete:()=>{
+        console.log("Completed")
+      }
+    })
+    tl.to("#line",{
+      width:"100%",
+      ease:Expo.easeInOut,
+      duration:1.2,
+      delay:0.7,
+    })
+    .to("#counter",{ opacity:0,duration:0.3 })
+    .to("#counter",{ display:"none",duration:0.3 })
+    .to("#line",{
+      height:"100%",
+      ease:Expo.easeInOut,
+      duration:0.7,
+      delay:0.5,    
+    })
+    .to("#content",{ opacity:1,width:"100%",ease:Expo.easeInOut,duration:0.7})
+    .to("#content-lines",{ display:"block",duration:0.1 })
+    .to("#content-lines",{
+      opacity: 1,
+      stagger: 0.15,
+      ease: Expo.easeInOut,
+      duration: 0.6,
+    })
+  }
   return (
-    <AnimatePresence>
-    <motion.div 
-        // variants={sliderVariants}
-        // initial="initial"
-        // animate="animate"
-        // exit="exit"
-        // className="grid h-screen grid-cols-5 overflow-hidden text-5xl text-white origin-top"
-    >
+   
+    <div className="relative w-screen h-screen overflow-hidden text-black">
+      <div className="h-full w-full bg-[#000] flex justify-center items-center absolute top-0">
+        <div id="line" className="absolute left-0 z-20 w-0 h-[2px] bg-blue-400"></div>
+        <div id="progress-bar" className="absolute left-0 w-0 h-[1px] transition bg-white/80 0.4 transform" style={{ width:counter+"%" }}></div>
+        <div id="counter" className="absolute z-30 tracking-tighter transform font-extralight text-white/80 sm1:-translate-y-10 md:-translate-y-20 sm1:text-5xl md:text-8xl">{counter}%</div>
+      </div>
 
-          <Lottie
-            animationData={animationData}
-            className="flex items-center justify-center w-full h-screen"
-            loop={true}
-          />
-            {/* <Image src={logo} alt="Anant" className='fixed transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'/> */}
-    </motion.div>
-    </AnimatePresence>
+      <div id="content" className="absolute top-0 left-0 w-0 h-full bg-[#0D0D0D] p-auto z-20 text-white">
+        <div className="h-screen">
+          <div id="content-lines" className="opacity-0">Hello I am Anant</div>
+          <div id="content-lines" className="opacity-0">I am a full stack developer</div>
+          <div id="content-lines" className="opacity-0">Hello I am Anant</div>
+        </div>
+        <div>
+        </div>
+      </div>
+    </div>
   )
 }
+
 export default Loader

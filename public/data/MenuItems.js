@@ -1,26 +1,21 @@
 export const MenuItems = [
     {
         id:1,
-        linkedSection:'home',
+        linkedSection:'#home',
         name:'Home',
     },
     {
         id:2,
-        linkedSection:'about',
+        linkedSection:'#about',
         name:'About',
     },
     {
         id:3,
-        linkedSection:'projects',
+        linkedSection:'#projects',
         name:'Projects',
     },
     {
         id:4,
-        linkedSection:'contact',
-        name:'Contact',
-    },
-    {
-        id:5,
         linkedSection:'https://drive.google.com/file/d/1KgTNsw2jPpuE-QCrm2txd_l8RejSsj-M/view?usp=sharing',
         name:'Resume',
     },

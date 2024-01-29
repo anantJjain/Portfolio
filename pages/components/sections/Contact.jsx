@@ -1,220 +1,263 @@
-import { motion } from 'framer-motion'
-import { AiFillLinkedin,AiFillGithub, AiFillInstagram } from 'react-icons/ai';
-import { PiArrowUpRightBold } from 'react-icons/pi';
-import Link from 'next/link'
-import { useTransform,useScroll } from 'framer-motion';
-import { useMousePosition } from '../../../utils/useMousePosition';
-import { useHover } from '@uidotdev/usehooks';
-import Lottie from "lottie-react";
-import animationData from "../../../public/media/lotties/contact.json";
+import React, { useState } from 'react'
+import { motion,useScroll,useTransform } from 'framer-motion'
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaPaperclip } from "react-icons/fa6";
+import { FiGithub,FiInstagram } from "react-icons/fi";
+import { IoDocumentTextOutline } from "react-icons/io5";
+import Confetti from 'react-confetti';
+import Lottie from 'lottie-react';
+import animationData from "../../../public/media/lotties/tick3.json";
+import animationData2 from "../../../public/media/lotties/yogaman.json";
+import animationData3 from "../../../public/media/lotties/yogaman2.json";
+import { BiRename } from "react-icons/bi";
+import { MdAttachEmail } from "react-icons/md";
+import { BiSolidMessageRoundedDetail } from "react-icons/bi";
+import { MdAlternateEmail } from "react-icons/md";
+import { PiPhoneCallFill } from "react-icons/pi";
+import { FaGraduationCap } from "react-icons/fa";
 
-
-
-const fadeInAnimationVariants={
-  initial:{
-    opacity:0,
-    y:100
-  },
-  animate: (id) => ({
-    opacity:1,
-    y:0,
-    transition:{
-      delay:0.2*id,
-      ease:"linear",
-      type:'spring',
-      stiffness:100
-    }
-  }),
-  hover:{
-    y:-1,
-    scale:1.1,
-    rotate:2,
-    transition:{type:'tween',stiffness:1000,duration:0.2},
-    borderBottomColor:'white',
-    borderRightColor:'white',
-    borderTopColor:'white'
-  }
-} 
-
-const textVariants = {
-  textInitial:{
-    y:100
-  },
-  textAnimate:{
-    y:0,
-    transition:{type:'spring',stiffness:200},
-  }
-}
-
-const Contact = () => {
-    const { xPos,yPos } = useMousePosition()
-    const [ ref,isHover] = useHover()
-    const [ ref2,isHovering] = useHover()
-    const size = isHover ? 200 : 0;
-    const size2 = isHovering ? 200 : 100;
+const ContactNew = () => {
     const { scrollYProgress } = useScroll()
-    const x = useTransform(scrollYProgress,[0,1],[-2000,10])
+    const moveDown = useTransform(scrollYProgress,[0,1],[-8000,10])
+    const toRight3 = useTransform(scrollYProgress,[0,1],[100,-1000])
+    const [ isSubmitted,setSubmitted ] = useState(false)
+    const [name,setName] = useState('')
+    const [email,setEmail] = useState('')
+    const [message,setMessage] = useState('')
+    const submitForm = async (e) => {
+        e.preventDefault()  
+        try{
+            const res = await fetch('/api/formHandler',{
+                method:'POST',
+                body:JSON.stringify({
+                    name,
+                    email,
+                    message
+                }),
+                headers:{
+                    'content-type':'application/json',
+                }
+            })
+            if(res.status === 200){
+                setSubmitted(true)
+            }
+        } catch(error){
+            console.log("Error occurred : "+error)
+        } 
+        setName('')
+        setEmail('')
+        setMessage('')
+        // console.log({name},{email},{message})
+    }
     return (
-      <div id='contact' className="pt-20 mt-20 mb-2 overflow-hidden">
-        <div className="font-extrabold tracking-tighter text-black bg-blue-400 sm3:p-4 lg:text-4xl md:text-3xl sm3:text-2xl sm1:text-xl sm1:p-2">
-          <motion.div style={{x}} className="whitespace-nowrap">your inputs matter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let&apos;s connect&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;your inputs matter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let&apos;s connect&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;your inputs matter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&apos;s connect&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;your inputs matter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let&apos;s connect</motion.div>
-        </div>
-        <div className="grid mt-16 border-0 border-blue-500 md:grid-cols-2 sm1:grid-cols-1">
-          
-          <motion.div 
-            // initial={{opacity:0,y:'10vh',scale:0.7}}
-            // whileInView={{opacity:1,y:0,scale:1,transition:{type:'tween',duration:0.5}}}
-            // viewport={{once:true}}
-            className="flex flex-col font-bold tracking-tighter text-white border-0 border-blue-500 xl:text-9xl lg:text-8xl lg:pl-12 xl:pl-20 lg:mt-20 xl:mt-0 md:text-7xl sm2:text-7xl sm3:pl-10 md:pl-2 sm1:pl-8 sm2:pl-4 sm1:text-5xl 2xl:text-10xl">
-            
-            <div>  
-            <div>
-              <span className='border-0 border-red-500'>Let</span>
-              <span className='text-blue-400 border-0 border-red-500'>&apos;</span>
-              <span className='border-0 border-red-500'>s</span> 
-              <span className='border-0 border-red-500 lg:pl-8 font-stencil-contact sm1:pl-4 md:pl-6'>work</span>   
-            </div>
-            <div>
-              <span className="text-black border-0 border-red-500 invert-75 lg:text-7xl xl:text-9xl">—</span>
-              <span className="pl-4 text-blue-400 border-0 border-red-500 xl:pl-8 lg:text-8xl xl:text-[0.97em] sm2:text-6xl sm3:text-7xl">together.</span>   
-            </div>
-            </div>
-            
-            <div className="flex items-end justify-center w-full text-blue-400 border-0 border-blue-500 sm1:hidden md:flex md:gap-32 lg:text-5xl md:text-4xl md:mt-32 lg:mt-32 2xl:mt-72 2xl:text-6xl">
-            <motion.a
-                  href="https://www.linkedin.com/in/anantjainBE/" target="_blank" rel="noreferrer"
-   
-                  variants={fadeInAnimationVariants}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{ once:true }}
-                  custom={1}
-                  whileHover="hover"  
-                > 
-                <AiFillLinkedin />
-            </motion.a>
-                
-            <motion.a
-              href="https://github.com/anantJjain" target="_blank" rel="noreferrer" 
-              variants={fadeInAnimationVariants}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once:true }}
-              custom={3}
-              whileHover="hover"
-            >
-              <AiFillGithub />
-            </motion.a>
-                
-            <motion.a
-              href="https://www.instagram.com/anantjain.8k/" target="_blank" rel="noreferrer"  
-              variants={fadeInAnimationVariants}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once:true }}
-              custom={5}
-              whileHover="hover"
-            >
-              <AiFillInstagram />
-            </motion.a>  
-          </div>
-           
-          
-          </motion.div>
-          
-          
-          
-          <Lottie
-            animationData={animationData}
-            className="flex items-center justify-center w-full border-0 border-red-500 grayscale"
-            loop={true}
-          /> 
-           <div className="flex items-end justify-center w-full text-blue-400 border-0 border-blue-500 md:hidden md:gap-32 lg:text-5xl lg:pt-60 md:pt-0 md:text-4xl sm2:gap-16 sm1:gap-12 sm3:text-4xl sm2:mt-0 sm1:mt-6 md:mt-0 sm1:text-3xl">
-            <motion.a
-                  href="https://www.linkedin.com/in/anantjainBE/" target="_blank" rel="noreferrer"
-   
-                  variants={fadeInAnimationVariants}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{ once:true }}
-                  custom={1}
-                  whileHover="hover"  
-                > 
-                <AiFillLinkedin />
-            </motion.a>
-                
-            <motion.a
-              href="https://github.com/anantJjain" target="_blank" rel="noreferrer" 
-              variants={fadeInAnimationVariants}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once:true }}
-              custom={3}
-              whileHover="hover"
-            >
-              <AiFillGithub />
-            </motion.a>
-                
-            <motion.a
-              href="https://www.instagram.com/anantjain.8k/" target="_blank" rel="noreferrer"  
-              variants={fadeInAnimationVariants}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once:true }}
-              custom={5}
-              whileHover="hover"
-            >
-              <AiFillInstagram />
-            </motion.a>  
-          </div>
-        </div>
-          
-        
-        <motion.div 
-          initial={{opacity:0,y:'10vh',scale:0.7}}
-          whileInView={{opacity:1,y:0,scale:1,transition:{type:'tween',duration:0.5}}}
-          viewport={{once:true}}
-          className='m-auto font-bold leading-snug tracking-tighter text-center text-white border-0 border-red-500 lg:text-5xl xl:w-3/5 xl:mt-28 lg:w-4/5 lg:mt-20 md:text-3xl md:mt-16 sm1:mt-8 sm3:text-2xl sm3:p-6 md:p-2 sm1:p-4 sm2:text-xl sm1:text-lg sm1:font-normal sm2:font-bold'
-        >
-          Drop me an email and send your <span className='text-blue-400 font-stencil-contact-nonsmallText'>Ideas</span> ,<span className='text-blue-400 font-stencil-contact-nonsmallText'> Suggestions</span> ,<span className='text-blue-400 font-stencil-contact-nonsmallText'> Collaborative </span> sparks , and <span className='text-blue-400 font-stencil-contact-nonsmallText'> Queries </span>directly to my <span className='tracking-wider font-stencil-contact'>inbox.</span>
-        </motion.div>
-        <motion.div 
-          animate={{
-            WebkitMaskPosition: isHover ? `${xPos-2*size}px ${yPos-2*size}px` : `${xPos-5*size}px ${yPos-2*size}px` ,
-            WebkitMaskSize:`${size}px`
-          }}
-          transition={{ type:'tween',ease:'backOut'}}
-          className='mask sm1:hidden md:block m-auto font-bold leading-snug tracking-tighter text-center text-white border-0 border-red-500 lg:text-5xl xl:w-3/5 xl:-mt-40 lg:w-4/5 lg:-mt-40 md:text-3xl md:-mt-[3em] sm3:mt-0 sm3:text-2xl sm3:p-6 md:p-2 sm1:p-4 sm2:text-xl sm1:text-lg sm1:font-normal sm2:font-bold'
-        >
-          <p 
-            ref={ref}
-          >
-            Drop me an email and send your <span className='text-blue-400 font-stencil-contact-nonsmallText'>Ideas</span> ,<span className='text-blue-400 font-stencil-contact-nonsmallText'> Suggestions</span> ,<span className='text-blue-400 font-stencil-contact-nonsmallText'> Collaborative </span> sparks , and <span className='text-blue-400 font-stencil-contact-nonsmallText'> Queries </span>directly to my <span className='tracking-wider font-stencil-contact'>inbox.</span>
-          </p>
-        </motion.div>
+        <div>
+        {/* <Confetti />     */}
+        {
+            isSubmitted ? 
+            (
+                <div className='border-2 border-red-500'>
+                    <div className='absolute sm1:top-[315rem] sm2:top-[321rem] sm3:top-[324rem] border-0 border-red-500'>
+                        <Confetti width={500}/>
+                    </div>
+                    <div>
+                        <Lottie animationData={animationData} className="sm1:h-[10rem] md:h-[20rem] grayscale-0" loop={true}/>
+                    </div>    
+                    <div className='m-auto font-light text-blue-400 sm1:w-3/5 lg:w-full md:text-center sm1:text-2xl md:text-5xl'>Thanks for reaching out, I&apos;ll contact you soon</div>
+                    <div className='flex justify-around w-full m-auto mt-20 text-white'>
+                        <div className='flex xl:space-x-20 sm1:flex-col xl:flex-row sm1:space-y-2 md:space-y-8 xl:space-y-0'>
+                            <a href="mailto:f20200641@pilani.bits-pilani.ac.in">
+                                        <div className='flex flex-row space-x-4 sm1:hidden md:flex'>
+                                            <div className='text-blue-400 rounded-full md:p-3 sm1:p-2 sm1:text-2xl lg:text-4xl md:text-5xl bg-blue-400/30'><FaGraduationCap /></div>
+                                            <div className='leading-[1rem]'>
+                                                <p className='sm1:text-sm md:text-lg'>f20200641@pilani.bits-pilani.ac.in</p>
+                                                <p className='sm1:text-xs md:text-sm text-white/50'>University Email</p>
+                                            </div>
+                                        </div>
+                            </a>
+                            <a href="tel:+91 9917763508">    
+                                        <div className='flex flex-row space-x-4'>
+                                            <div className='text-blue-400 rounded-full md:p-3 sm1:p-2 sm1:text-2xl lg:text-4xl md:text-5xl bg-blue-400/30'><PiPhoneCallFill /></div>
+                                            <div className='leading-[1rem]'>
+                                                <p className='sm1:text-md md:text-lg'>+91 9917763508</p>
+                                                <p className='sm1:text-sm md:text-sm text-white/50'>Call me at</p>
+                                            </div>
+                                        </div>
+                            </a>    
+                            <a href="mailto:anantjain.8k@gmail.com">
+                                        <div className='flex flex-row space-x-4'>
+                                            <div className='text-blue-400 rounded-full sm1:mt-4 md:p-3 sm1:p-2 sm1:text-2xl lg:text-4xl md:text-5xl bg-blue-400/30'><MdAlternateEmail /></div>
+                                            <div className='leading-[1rem] sm1:mt-4'>
+                                                <p className='sm1:text-md md:text-lg'>anantjain.8k@gmail.com</p>
+                                                <p className='sm1:text-sm md:text-sm text-white/50'>Personal Email</p>
+                                            </div>
+                                        </div> 
+                                    </a> 
+                            <div className='flex border-0 border-red-500 sm1:mt-8 lg:ml-0 md:ml-10 xl:ml-auto xl:w-2/5 sm1:w-4/5 md:w-3/5 lg:w-4/5 sm1:justify-between md:text-3xl sm1:text-3xl lg:text-2xl'>
+                                        <a className='text-blue-400 rounded-full sm1:p-2 md:p-4 bg-blue-400/20' href="https://github.com/anantJjain" target="_blank" rel="noreferrer" ><FiGithub /></a>
+                                        <a className='text-blue-400 rounded-full sm1:p-2 md:p-4 bg-blue-400/20' href="https://www.instagram.com/anantjain.8k/" target="_blank" rel="noreferrer"><FiInstagram /></a>
+                                        <a className='text-blue-400 rounded-full sm1:p-2 md:p-4 bg-blue-400/20' href="https://www.linkedin.com/in/anantjainBE/" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
+                                        <a className='text-blue-400 rounded-full sm1:p-2 md:p-4 bg-blue-400/20' href="https://drive.google.com/file/d/1KgTNsw2jPpuE-QCrm2txd_l8RejSsj-M/view?usp=sharing" target="_blank"><IoDocumentTextOutline /></a>
+                            </div>
+                        </div>           
+                    </div>
+                </div>    
+            ) :
+            (
+                <>
+                    <div className='relative z-10 flex w-10/12 m-auto text-white border-0 border-red-500 lg:flex-row sm1:flex-col'>
+                        <div className='sm1:w-full lg:w-3/5'>
+                            <div className='border-0 border-blue-500 sm1:text-5xl md:text-9xl sm2:text-6xl sm3:text-7xl lg:text-8xl xl:text-10xl'>
+                                <div className='font-extrabold leading-tight tracking-tighter'>Let<span className='text-blue-400'>&apos;</span>s <span className='font-stencil2'>work</span></div>
+                                <div className='font-extrabold leading-tight tracking-tighter sm1:-mt-4 md:-mt-12 lg:-mt-12'><span className='sm1:text-5xl md:text-8xl'>— </span><span className='text-blue-400'>together</span></div>
+                            </div> 
+                        </div>
 
-        <motion.div 
-          initial={{opacity:0,y:'10vh'}}
-          whileInView={{opacity:1,y:0,transition:{type:'tween',duration:0.7,staggerChildren:0.09,}}}
-          viewport={{once:true}}  
-          className='justify-around m-auto text-center text-white border-0 border-green-500 md:flex md:mt-16 lg:w-4/5 md:w-full sm3:w-full sm3:mt-4 sm1:mt-2'
-        >
-          <a className="flex flex-col transition duration-500 ease-in-out" href="mailto:anantjain.8k@gmail.com">
-            <span className="underline xl:text-3xl underline-offset-8 hover:text-blue-400 lg:text-2xl md:text-xl sm2:text-lg sm3:font-normal md:font-bold sm1:text-md">anantjain.8k@gmail.com</span>
-            <span className="tracking-tighter text-left text-black sm2:mt-2 xl:text-2xl sm3:invert-50 lg:text-xl md:text-lg sm1:text-center md:text-left sm1:invert-75 sm1:mt-1">Personal Email</span>
-          </a>
-          <a className="flex flex-col transition duration-500 ease-in-out sm3:mt-4 md:mt-0" href="mailto:f20200641@pilani.bits-pilani.ac.in">
-            <span className="underline xl:text-3xl hover:text-blue-400 underline-offset-8 lg:text-2xl md:text-xl sm2:text-lg sm3:font-normal md:font-bold sm1:text-md">f20200641@pilani.bits-pilani.ac.in</span>
-            <span className="tracking-tighter text-left text-black sm2:mt-2 xl:text-2xl sm3:invert-50 lg:text-xl md:text-lg sm1:text-center md:text-left sm1:invert-75 sm1:mt-1">University Email</span>
-          </a>
-        </motion.div>
-        <div className='z-10 -ml-4 -mr-20 font-extrabold tracking-tighter text-black transform bg-blue-400 lg:p-4 lg:mt-24 xl:text-4xl -rotate-6 lg:text-3xl md:text-2xl md:mt-16 md:p-3 sm2:mt-8 sm1:mt-6 sm1:p-2'>
-          <motion.div style={{x}} className='whitespace-nowrap'>that&apos;s too much scrolling for a day&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that&apos;s too much scrolling for a day&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that&apos;s too much scrolling for the day&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that&apos;s too much scrolling for a day</motion.div>
+                        <div className='border-0 border-orange-500 sm1:w-full lg:w-2/5'>
+                            <div className='border-0 border-green-500'>
+                                <Lottie animationData={animationData3} loop={true} width={300} height={200} className='sm1:scale-[2] lg:scale-[4] lg:mt-20 xl:scale-[3.5] xl:mt-20' />
+                            </div>
+                        </div>        
+                    </div>    
+                    
+                    <div className='relative z-10 flex w-10/12 m-auto text-white lg:flex-row sm1:flex-col lg:space-x-12'>
+                        <div className='sm1:w-full lg:w-4/5 lg:-mt-20 xl:mt-10'>
+                            <div className='p-10 m-auto border-0 xl:-mt-14 sm1:mt-12 md:mt-20 lg:mt-72 border-white/30 rounded-xl bg-blue-400/0 box-shadow-outForm'>    
+                                <form onSubmit={submitForm} className='sm1:space-y-8 md:space-y-16 rounded-2xl'>
+                                
+                                <div className='font-light tracking-tighter sm1:text-3xl md:text-6xl'>Get <span className='text-white'>in</span> touch</div>
+                                <div className='flex flex-col space-y-0 xl:space-y-2'>
+                                    <label className='flex flex-row text-white'><span className='mt-0 font-normal sm1:text-lg md:text-2xl lg:text-xl'>What&apos;s your name ?</span></label>
+                                    <input type='text' placeholder='Enter your name' value={name} onChange={ (e) => setName(e.target.value) } required className='p-2 text-white bg-transparent pl-0 focus:pl-2 border-b-[0.01rem] border-blue-400 focus:ring focus:rounded-xl focus:border-blue-400 focus:outline-none md:w-full lg:w-full'></input>
+                                </div>
+                                <div className='flex flex-col space-y-0 xl:space-y-2'>
+                                    <label className='flex flex-row text-white'><span className='mt-0 font-normal sm1:text-lg md:text-2xl lg:text-xl'>What&apos;s your email ?</span></label>
+                                    <input type='email' placeholder='Enter your email address' value={email} onChange={ (e) => setEmail(e.target.value) } required className='p-2 text-white bg-transparent pl-0 focus:pl-2 border-b-[0.01rem] border-blue-400 focus:ring focus:rounded-xl focus:border-blue-400 focus:outline-none md:w-full lg:w-full'></input>
+                                </div>
+                                <div className='flex flex-col space-y-0 xl:space-y-2'>
+                                    <label className='flex flex-row text-white'><span className='mt-0 font-normal sm1:text-md md:text-2xl lg:text-xl'>Type in your message</span></label>
+                                    <textarea type='name' placeholder='Enter your message' value={message} onChange={ (e) => setMessage(e.target.value) } required className='p-2 text-white bg-transparent pl-0 focus:pl-2 border-b-[0.01rem] border-blue-400 focus:ring focus:rounded-xl focus:border-blue-400 focus:outline-none md:w-full lg:w-full'></textarea>
+                                </div>
+                                <div className='flex flex-row md:space-x-10 sm1:space-x-4'>
+                                    <button type='submit' className='font-extrabold text-black bg-backdrop8 transform transition ease-in-out duration-300 hover:scale-[1.05] sm1:p-1 md:text-2xl sm1:w-full lg:w-3/4 md:p-4 rounded-xl'>Send</button>
+                                    <button type='submit' onClick={()=>{
+                                        setEmail('')
+                                        setName('')
+                                        setMessage('')
+                                    }} className='font-extrabold text-black bg-backdrop8 transform transition ease-in-out duration-300 hover:scale-[1.05] sm1:p-1 md:text-2xl sm1:w-full lg:w-3/4 md:p-4 rounded-xl'>Reset All</button>
+                                </div>
+                                </form> 
+                            </div>
+                        </div>
+                        <div className='sm1:w-full lg:w-3/5 lg:mt-96 xl:mt-60 sm1:mt-12 md:mt-28 xl:w-full'>
+                            <div className='flex flex-col w-full border-0 border-blue-500 sm1:mt-4 md:mt-0 md:space-y-4'>
+                                <div className='flex xl:space-x-20 sm1:flex-col xl:flex-row sm1:space-y-2 md:space-y-8 xl:space-y-0'>
+                                    <a href="mailto:f20200641@pilani.bits-pilani.ac.in">
+                                        <div className='flex flex-row space-x-4 sm1:hidden md:flex'>
+                                            <div className='text-blue-400 rounded-full md:p-3 sm1:p-2 sm1:text-2xl lg:text-4xl md:text-5xl bg-blue-400/30'><FaGraduationCap /></div>
+                                            <div className='leading-[1rem]'>
+                                                <p className='sm1:text-sm md:text-lg'>f20200641@pilani.bits-pilani.ac.in</p>
+                                                <p className='sm1:text-xs md:text-sm text-white/50'>University Email</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="tel:+91 9917763508">    
+                                        <div className='flex flex-row space-x-4'>
+                                            <div className='text-blue-400 rounded-full md:p-3 sm1:p-2 sm1:text-2xl lg:text-4xl md:text-5xl bg-blue-400/30'><PiPhoneCallFill /></div>
+                                            <div className='leading-[1rem]'>
+                                                <p className='sm1:text-md md:text-lg'>+91 9917763508</p>
+                                                <p className='sm1:text-sm md:text-sm text-white/50'>Call me at</p>
+                                            </div>
+                                        </div>
+                                    </a>    
+                                </div> 
+                                <div className='flex sm1:flex-col md:flex-row lg:flex-col xl:flex-row'>
+                                    <a href="mailto:anantjain.8k@gmail.com">
+                                        <div className='flex flex-row space-x-4'>
+                                            <div className='text-blue-400 rounded-full sm1:mt-4 md:p-3 sm1:p-2 sm1:text-2xl lg:text-4xl md:text-5xl bg-blue-400/30'><MdAlternateEmail /></div>
+                                            <div className='leading-[1rem] sm1:mt-4'>
+                                                <p className='sm1:text-md md:text-lg'>anantjain.8k@gmail.com</p>
+                                                <p className='sm1:text-sm md:text-sm text-white/50'>Personal Email</p>
+                                            </div>
+                                        </div> 
+                                    </a> 
+                                    <div className='flex border-0 border-red-500 sm1:mt-8 lg:ml-0 md:ml-10 xl:ml-auto xl:w-2/5 sm1:w-4/5 md:w-3/5 lg:w-4/5 sm1:justify-between md:text-3xl sm1:text-3xl lg:text-2xl'>
+                                        <a className='text-blue-400 rounded-full sm1:p-2 md:p-4 bg-blue-400/20' href="https://github.com/anantJjain" target="_blank" rel="noreferrer" ><FiGithub /></a>
+                                        <a className='text-blue-400 rounded-full sm1:p-2 md:p-4 bg-blue-400/20' href="https://www.instagram.com/anantjain.8k/" target="_blank" rel="noreferrer"><FiInstagram /></a>
+                                        <a className='text-blue-400 rounded-full sm1:p-2 md:p-4 bg-blue-400/20' href="https://www.linkedin.com/in/anantjainBE/" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
+                                        <a className='text-blue-400 rounded-full sm1:p-2 md:p-4 bg-blue-400/20' href="https://drive.google.com/file/d/1KgTNsw2jPpuE-QCrm2txd_l8RejSsj-M/view?usp=sharing" target="_blank"><IoDocumentTextOutline /></a>
+                                    </div>
+                                </div>           
+                            </div>
+                        </div>
+                    </div> 
+                </>
+            )
+        }       
         </div>
-        <div className='z-10 font-extrabold tracking-tighter text-black transform bg-blue-400 lg:p-4 lg:mt-24 xl:text-4xl -rotate-0 lg:text-3xl md:text-2xl md:mt-12 md:p-3 sm2:mt-6 sm1:mt-4 sm1:p-2'>
-          <motion.div style={{x}} className='whitespace-nowrap'>thanks for sticking around&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thanks for sticking around&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thanks for sticking around&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thanks for sticking around&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thanks for sticking around</motion.div>
-        </div> 
-      </div>  
-    );
+    )
 }
-export default Contact;
+
+export default ContactNew
+
+
+
+
+
+        {/* <div className="h-screen overflow-hidden">
+            <div className="font-extrabold tracking-tighter text-center text-white uppercase text-10xl">Let&apos;s connect</div>
+            <div className="flex justify-around mt-32">
+            <button className="pt-10 pb-10 pl-20 pr-20 text-2xl font-light text-white border-0 border-blue-400 rounded-xl">Write a Message</button>
+            <button className="pt-10 pb-10 pl-20 pr-20 text-2xl font-light text-white border-0 border-blue-400 rounded-xl">Discuss a Project</button>
+            </div>
+            
+            
+            <div className="flex justify-around mt-20 text-white md:flex-row sm1:flex-col">
+            <div className="flex justify-between pt-4 border-t-[2px] sm1:mt-6 md:mt-0 border-blue-400 sm1:w-4/5 md:w-1/5 sm1:m-auto md:m-0">
+                <div>
+                    <p className="lg:text-2xl sm1:text-xl">Github</p>
+                    <p className="sm1:text-xs lg:text-sm">@anantJjain</p>
+                </div>
+                <div className="text-black bg-white rounded-full sm1:text-xl lg:text-2xl sm1:p-3 md:p-3 lg:p-4"><FiGithub /></div>
+            </div>
+            <div className="flex justify-between pt-4 border-t-[2px] sm1:mt-6 md:mt-0 border-blue-400 sm1:w-4/5 md:w-1/5 sm1:m-auto md:m-0">
+                <div>
+                    <p className="lg:text-2xl sm1:text-xl">Linkedin</p>
+                    <p className="sm1:text-xs lg:text-sm">@anantJjain</p>
+                </div>
+                <div className="text-black bg-white rounded-full sm1:text-xl lg:text-2xl sm1:p-3 md:p-3 lg:p-4"><FaLinkedinIn /></div>
+            </div>
+            <div className="flex justify-between pt-4 border-t-[2px] sm1:mt-6 md:mt-0 border-blue-400 sm1:w-4/5 md:w-1/5 sm1:m-auto md:m-0">
+                <div>
+                    <p className="lg:text-2xl sm1:text-xl">Instagram</p>
+                    <p className="sm1:text-xs lg:text-sm">@anantjain.8k</p>
+                </div>
+                <div className="text-black bg-white rounded-full sm1:text-xl lg:text-2xl sm1:p-3 md:p-3 lg:p-4"><FiInstagram /></div>
+            </div>
+            <div className="flex justify-between pt-4 border-t-[2px] sm1:mt-6 md:mt-0 border-blue-400 sm1:w-4/5 md:w-1/5 sm1:m-auto md:m-0">
+                <div>
+                    <p className="lg:text-2xl sm1:text-xl">Resume</p>
+                    <p className="sm1:text-xs lg:text-sm">Anant Jain</p>
+                </div>
+                <div className="text-black bg-white rounded-full sm1:text-xl lg:text-2xl sm1:p-3 md:p-3 lg:p-4"><IoDocumentTextOutline /></div>
+            </div>
+            </div>
+
+
+
+
+            
+            <div>
+            <motion.svg 
+            style={{ y:moveDown}}
+            id="c-circle" viewBox="0 0 1254 1254" fill="none" xmlns="http://www.w3.org/2000/svg"
+            >
+            <circle cx="627" cy="627" r="627" fill="url(#paint0_radial_3260_3)"></circle>
+            <defs> 
+                <radialGradient id="paint0_radial_3260_3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(627) rotate(60) scale(613)"> 
+                <stop stop-color="#f3f3f3" stop-opacity="0.45"></stop>
+                <stop offset="1" stop-color="#f3f3f3" stop-opacity="0"></stop>
+                </radialGradient>
+            </defs>
+            </motion.svg>
+            </div>
+        </div> */}

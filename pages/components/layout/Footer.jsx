@@ -1,7 +1,10 @@
+import Link from "next/link"
+
 const Footer = () => {
   return (
-    <div className="p-4 overflow-hidden font-light text-center text-white uppercase md:text-lg sm1:text-xs sm3:text-sm">
-        Made with ❤️ by <span className="text-blue-400">Anant</span>
+    <div className="flex justify-between w-11/12 sm1:pt-2 md:pt-4 sm1:pb-4 md:pb-10 m-auto border-t-[0.1rem] border-white/10">
+      <div className="pl-4 mt-1 text-sm font-light text-white/50">made with <span className="text-white">❤️</span> by <span className="font-bold text-white">Anant</span></div>
+      <div className="pr-4 text-white md:text-xl sm1:hidden md:flex"><Link href="mailto:anantjain.8k@gmail.com" target="_blank" className="hover:text-blue-400 hover:scale-110">Get in touch</Link></div>
     </div>
   )
 }

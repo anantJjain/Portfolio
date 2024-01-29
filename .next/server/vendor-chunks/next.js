@@ -21,6 +21,16 @@ eval("/**\n * Hoists a name from a module or promised module.\n *\n * @param mod
 
 /***/ }),
 
+/***/ "./node_modules/next/font/google/target.css?{\"path\":\"pages\\\\_app.jsx\",\"import\":\"Noto_Sans\",\"arguments\":[{\"weight\":[\"300\",\"400\",\"500\",\"600\",\"700\",\"800\",\"900\"],\"subsets\":[\"latin-ext\"]}],\"variableName\":\"notoSans\"}":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/font/google/target.css?{"path":"pages\\_app.jsx","import":"Noto_Sans","arguments":[{"weight":["300","400","500","600","700","800","900"],"subsets":["latin-ext"]}],"variableName":"notoSans"} ***!
+  \*************************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+eval("// Exports\nmodule.exports = {\n\t\"style\": {\"fontFamily\":\"'__Noto_Sans_Fallback_dabd81', '__Noto_Sans_Fallback_Fallback_dabd81'\",\"fontStyle\":\"normal\"},\n\t\"className\": \"__className_dabd81\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvbmV4dC9mb250L2dvb2dsZS90YXJnZXQuY3NzP3tcInBhdGhcIjpcInBhZ2VzXFxcXF9hcHAuanN4XCIsXCJpbXBvcnRcIjpcIk5vdG9fU2Fuc1wiLFwiYXJndW1lbnRzXCI6W3tcIndlaWdodFwiOltcIjMwMFwiLFwiNDAwXCIsXCI1MDBcIixcIjYwMFwiLFwiNzAwXCIsXCI4MDBcIixcIjkwMFwiXSxcInN1YnNldHNcIjpbXCJsYXRpbi1leHRcIl19XSxcInZhcmlhYmxlTmFtZVwiOlwibm90b1NhbnNcIn0iLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBLFdBQVcsMEdBQTBHO0FBQ3JIO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9wb3J0Zm9saW8tbmV4dC8uL25vZGVfbW9kdWxlcy9uZXh0L2ZvbnQvZ29vZ2xlL3RhcmdldC5jc3M/M2UxMyJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBFeHBvcnRzXG5tb2R1bGUuZXhwb3J0cyA9IHtcblx0XCJzdHlsZVwiOiB7XCJmb250RmFtaWx5XCI6XCInX19Ob3RvX1NhbnNfRmFsbGJhY2tfZGFiZDgxJywgJ19fTm90b19TYW5zX0ZhbGxiYWNrX0ZhbGxiYWNrX2RhYmQ4MSdcIixcImZvbnRTdHlsZVwiOlwibm9ybWFsXCJ9LFxuXHRcImNsYXNzTmFtZVwiOiBcIl9fY2xhc3NOYW1lX2RhYmQ4MVwiXG59O1xuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./node_modules/next/font/google/target.css?{\"path\":\"pages\\\\_app.jsx\",\"import\":\"Noto_Sans\",\"arguments\":[{\"weight\":[\"300\",\"400\",\"500\",\"600\",\"700\",\"800\",\"900\"],\"subsets\":[\"latin-ext\"]}],\"variableName\":\"notoSans\"}\n");
+
+/***/ }),
+
 /***/ "./node_modules/next/dist/client/add-base-path.js":
 /*!********************************************************!*\
   !*** ./node_modules/next/dist/client/add-base-path.js ***!

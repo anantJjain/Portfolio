@@ -1,11 +1,11 @@
 export const Skills = [
     {
       id:1,
-      url:'/media/skills/mongodb.png'
+      url:'/media/skills/react.png'
     },
     {
       id:2,
-      url:'/media/skills/react.png'
+      url:'/media/skills/mongodb.png'
     },
     {
       id:3,
@@ -29,12 +29,16 @@ export const Skills = [
     },
     {
       id:8,
-      url:'/media/skills/html.png'
+      url:'/media/skills/node.png'
     },
-    {
-      id:9,
-      url:'/media/skills/css.png'
-    },
+    // {
+    //   id:8,
+    //   url:'/media/skills/html.png'
+    // },
+    // {
+    //   id:9,
+    //   url:'/media/skills/css.png'
+    // },
     
     
   ]

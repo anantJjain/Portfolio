@@ -3,6 +3,8 @@ import ScrollText from './ScrollText'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { scrollData } from '../../../public/data/About'
+import Lottie from "lottie-react";
+import animationData from "../../../public/media/lotties/projects.json";
   
 const textVariants = {
     initial:{
@@ -57,7 +59,7 @@ const textVariants = {
     const [ currentImage,setCurrentImage ] = useState(0)
     return (
         <div ref={containerRef} className='relative flex w-full overflow-hidden border-0 border-red-500 lg:pt-40 parent'>
-          <div className='overflow-hidden border-0 border-gray-500 md:w-3/5 sm3:w-full'>
+          <div className='overflow-hidden border-0 border-gray-500 lg:w-3/5 sm3:w-full'>
             {scrollData.map((screen,i) => (
                 <motion.div 
                   variants={textVariants}
@@ -72,17 +74,17 @@ const textVariants = {
                     className='border-0 border-blue-400'
                   />
                   <div>
-                    <Image src={screen.imgUrl} key={screen.imgUrl} alt='' height={200} width={200} className='h-56 m-auto transition transform image-mask sm3:w-72 sm3:h-72 box-shadow-out sm1:w-52 md:hidden slide-right'></Image>
+                    <Image src={screen.imgUrl} key={screen.imgUrl} alt='' height={200} width={300} className='h-64 m-auto transition transform invert sm3:w-72 sm3:h-72 box-shadow-out sm1:w-64 md:w-4/5 md:h-100 lg:hidden slide-right'></Image>
                   </div>
                 </motion.div>
             ))}
           </div>
-          <div className={`sm1:hidden md:flex fixed top-32 lg:right-0 md:right-2 w-2/5 border-0 border-green-500 h-fit flex justify-around ${view ? 'visible' :'not-visible'}`}>
-            <div className='h-full xl:w-80 rounded-xl lg:w-72 md:w-64'>
-                <div className='p-2 bg-stone-950 box-shadow-out-2 rounded-3xl'>
+          <div className={`sm1:hidden lg:flex fixed top-20 lg:right-0 md:right-2 w-2/5 border-0 border-green-500 h-fit flex justify-around ${view ? 'visible' :'not-visible'}`}>
+            <div className='h-full xl:w-80 rounded-xl lg:w-80'>
+                <div className='p-2 bg-stone-950 rounded-3xl'>
                     <div className='h-full overflow-hidden bg-black rounded-3xl box-shadow-in'>
                         <div className='w-2/5 p-3 m-auto mt-2 box-shadow-out rounded-3xl'></div>
-                        <Image src={scrollData[currentImage].imgUrl} key={scrollData[currentImage].imgUrl} alt='' height={400} width={600} className='p-4 pt-8 transition transform duration-[800ms] slide-right h-100 grayscale hover:grayscale-0 hover:scale-105'></Image>
+                        <Image src={scrollData[currentImage].imgUrl} key={scrollData[currentImage].imgUrl} alt='' height={500} width={800} className='object-cover p-2 pt-0 transition transform duration-[1000ms] slide-right invert h-100'></Image>
                     </div>
                 </div>
             </div>

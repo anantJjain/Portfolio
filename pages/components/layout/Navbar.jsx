@@ -41,10 +41,10 @@ const linkVariants = {
     }
 }
 
-const Navbar = ({ toggleMenu }) => {
+const Navbar = ({ toggleOpen,toggleClose,isOpen }) => {
     return (        
-        <div className='w-full overflow-auto'>
-                <motion.div className='min-h-screen pt-12 text-white bg-black border-0 border-red-500 pb-28'>
+        <div className='w-full overflow-auto border-0 border-red-500'>
+                <motion.div className='max-h-screen pt-20 text-black bg-white border-t-0 border-red-500'>
                         <motion.div 
                             variants={containerVariants}
                             initial="initial"
@@ -58,13 +58,13 @@ const Navbar = ({ toggleMenu }) => {
                                         <div key={item.id} className='m-auto text-center sm1:space-y-4 sm3:space-y-6 md:space-y-10 sm1:w-full sm1:text-3xl sm3:text-2xl md:text-5xl md:w-3/4'>
                                             <Link 
                                                 className='transition delay-200 border-0 border-red-500' 
-                                                href={`${item.name!='Resume' ? `#${item.linkedSection}` : `${item.linkedSection}`}`} 
+                                                href={`${item.linkedSection}`} 
                                                 target={`${item.name=='Resume' ? '_blank' : '' }`}
                                                 scroll={false}
                                             >
                                                 <motion.button
                                                     variants={linkVariants}
-                                                    onClick={toggleMenu}
+                                                    onClick={isOpen ? toggleClose : toggleOpen}
                                                     className=''
                                                 >
                                                     <div className='text-4xl'>{item.name}</div> &nbsp;
