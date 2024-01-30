@@ -92,16 +92,12 @@ const Projects = () => {
   }
   return (
     <div className='text-white bg-[#000] border-0 border-red-400'>  
-      <div className='m-auto mt-40 text-sm border-0 border-red-500 lg:w-1/5 sm1:w-3/5 md:w-2/5'>
+      {/* <div className='m-auto mt-40 text-sm border-0 border-red-500 lg:w-1/5 sm1:w-3/5 md:w-2/5'>
         <div className='ml-auto border-0 border-red-500 xl:w-full sm1:w-full'>
           Archive of all my projects from
         </div>
-      </div>
-      <div className='m-auto mt-2 font-bold border-0 border-red-500 md:text-lg sm1:w-3/5 md:w-2/5 lg:w-1/5 sm1:text-md'>
-        <div className='ml-auto text-blue-400 border-0 border-red-500 xl:w-full sm1:w-full'>
-          2021-2023
-        </div>
-      </div>
+      </div> */}
+      
       <motion.div 
         className="mt-16 font-extrabold tracking-tighter text-white border-0 border-red-500 font-mine2 md:text-10xl sm1:text-8xl"
         style={{x:toRight}}
@@ -145,6 +141,12 @@ const Projects = () => {
           
         </span>
       </motion.div>
+
+      <div className='m-auto mt-4 font-bold border-0 border-red-500 md:text-lg sm1:w-3/5 md:w-2/5 lg:w-1/5 sm1:text-md'>
+        <div className='ml-auto text-xl text-center text-blue-400 border-0 border-red-500 xl:w-full sm1:w-full'>
+          Projects
+        </div>
+      </div>
       {/* 1st proj */}
       <div className='mt-20 mb-20'>
         <Image src="/media/projects2/portfolio3.png" alt="" width={300} height={200} className='relative z-10 m-auto cursor-pointer' />
@@ -157,11 +159,11 @@ const Projects = () => {
           </div> 
           <div className='bg-cover border-0 border-red-500 sm1:w-full lg:w-1/2'>
             <div className='m-auto mt-16 mb-16 text-white border-0 border-blue-400 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20'>
-              <div className='flex'>
+              <div className='flex justify-between'>
                 <p className='text-5xl font-extrabold underline underline-offset-8'>Portfolio <span className='text-blue-400'>Website</span></p>
-                <a href={'https://github.com/anantJjain/Portfolio'} target="_blank">
-                  <div className='flex justify-center p-2 m-auto space-x-4 text-lg font-normal text-center text-white border-0 border-red-400 box-shadow-outForm md:w-2/5 md:mt-6 sm1:w-4/5 rounded-2xl bg-white/20'>
-                    <span className="text-3xl"><FaGithub /></span>
+                <a href={'https://github.com/anantJjain/Portfolio'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
+                  <div className='pt-2'>
+                    <span className="text-4xl"><FaGithub /></span>
                     {/* <span>Visit Github Repo</span> */}
                   </div>
                 </a>
@@ -195,13 +197,13 @@ const Projects = () => {
         <div className='flex mt-4 sm1:flex-col lg:flex-row'> 
           <div className='bg-cover border-0 border-red-500 sm1:w-full lg:w-1/2'>
             <div className='m-auto mt-16 mb-16 text-white border-0 border-blue-400 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 bg-black/20 rounded-3xl backdrop-filter backdrop-blur-sm'>
-              <div className='flex'>
-                <p className='text-5xl font-extrabold underline underline-offset-8'>
+              <div className='flex justify-between'>
+                <p className='text-5xl font-extrabold underline border-0 border-red-500 underline-offset-8'>
                   Blind <span className='text-blue-400 '>Coding&nbsp;</span>
                 </p>
-                <a href={'https://github.com/anantJjain/ReverseCoding'}target="_blank">  
-                  <div className='flex justify-center p-2 m-auto space-x-4 text-lg font-normal text-center text-white border-0 border-red-400 box-shadow-outForm md:w-1/5 sm1:mt-6 md:mt-12 sm1:w-4/5 rounded-2xl bg-white/20'>
-                    <span className="text-3xl"><FaGithub /></span>
+                <a href={'https://github.com/anantJjain/ReverseCoding'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>  
+                  <div className='pt-2'>
+                    <span className="text-4xl"><FaGithub /></span>
                     {/* <span>Visit Github Repo</span> */}
                   </div>
                 </a>
@@ -232,13 +234,13 @@ const Projects = () => {
           </div> 
           <div className='bg-cover border-0 border-red-500 sm1:w-full lg:w-1/2'>
             <div className='m-auto mt-16 mb-16 text-white border-0 border-blue-400 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20'>
-              <div className='flex'>
-                <p className='text-5xl font-extrabold underline underline-offset-8'>
-                  OptiStock
+              <div className='flex justify-between'>
+                <p className='text-5xl font-extrabold underline border-0 border-red-500 underline-offset-8'>
+                  Opti<span className='text-blue-400'>Stock</span>
                 </p>
-                <a href={'https://github.com/anantJjain/OptiStock-Inventory_Management_Software'} target="_blank">
-                  <div className='flex justify-center p-2 m-auto space-x-4 text-lg font-normal text-center text-white border-0 border-red-400box-shadow-outForm md:w-2/5 md:mt-6 sm1:w-4/5 rounded-2xl bg-white/20'>
-                    <span classN  ame="text-3xl"><FaGithub /></span>
+                <a href={'https://github.com/anantJjain/OptiStock-Inventory_Management_Software'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
+                  <div className='pt-2'>
+                    <span className="text-4xl"><FaGithub /></span>
                     {/* <span>Visit Github Repo</span> */}
                   </div>
                 </a>

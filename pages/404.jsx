@@ -1,24 +1,37 @@
 import Link from 'next/link'
-import React, { use } from 'react'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { useMousePosition } from '../utils/useMousePosition'
+import React,{ useState } from 'react'
+import Lottie from 'lottie-react'
+import errorGif from '../public/media/lotties/404error.json'
+
 
 const ErrorPage = () =>{
-    const { xPos,yPos } = useMousePosition()
-    const size = 20
+    const [isHovered,setHover] = useState(false)
+    const getHover = () => {
+        setHover(true)
+        console.log("hover ho gya")
+    }
+    const escapeHover = () => {
+        setHover(false)
+        console.log("hover chala gya")
+    }
     return (
-    <div className='min-h-screen overflow-hidden'>
-        <div className='flex flex-col justify-center min-h-screen pt-20 pb-20 border-0 border-red-500'>   
-            <div className='w-full m-auto font-extrabold text-center'>
-                <div className='text-3xl text-blue-400 sm1:text-4xl md:text-7xl'>Oops !</div>
-                <div className='w-full m-auto font-normal text-white sm1:mt-4 md:mt-8 sm1:text-2xl'>Page not found</div>
-            </div>
-            <Image src="/media/404.gif" alt="Error 404" width={150} height={150} className='m-auto border-0 border-red-500'></Image>
-            <button className='p-4 m-auto text-xl text-white md:text-2xl'><Link href="/" className='font-normal tracking-tighter text-blue-400 hover:transform hover:translate-y-[-0.2rem] font-stencil-error'>Back to Home</Link></button>
+    <div className={`max-h-screen min-h-screen overflow-hidden bg-white ${isHovered ? 'invert-0 transition ease-in-out duration-300' : 'invert transition ease-in-out duration-300' }`}> 
+        <div className='relative z-10 w-full pt-20 font-bold text-center text-black sm1:text-2xl md:text-4xl'>Oops! Page not found</div>
+        <div className="z-0 m-auto overflow-hidden border-0 border-red-500 sm1:-mt-4 md:-mt-20 md:w-3/5 lg:w-2/5 sm1:w-full">
+            <Lottie animationData={errorGif} className="scale-75 border-0 border-red-500" onMouseEnter={getHover} onMouseLeave={escapeHover}/>
+        </div>
+        <div className='relative z-20 flex justify-center m-auto border-0 border-red-500 sm1:-mt-10 lg:-mt-10 2xl:-mt-20 2xl:lg:w-2/5 lg:w-3/5 sm2:w-4/5'>
+            <button onMouseEnter={getHover} onMouseLeave={escapeHover} className='md:w-1/3 sm1:p-2 md:p-4 m-auto font-bold text-center text-black border-2 border-black rounded-0 hover:scale-[1.1] transform transition ease-in-out duration-300'><Link href="/" className=''>Back to Home</Link></button>
+            <button onMouseEnter={getHover} onMouseLeave={escapeHover} className='md:w-1/3 sm1:p-2 md:p-4 m-auto font-bold text-center text-black border-2 border-black rounded-0 hover:scale-[1.1] transform transition ease-in-out duration-300'><Link href="mailto:anantjain.8k@gmail.com" className=''>Report an Error</Link></button>
         </div>
     </div>
   )
 }
 
+ErrorPage.getLayout = function PageLayout(page){
+    return <>{ page }</>
+}
+
 export default ErrorPage
+
+

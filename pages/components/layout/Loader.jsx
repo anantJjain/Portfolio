@@ -47,11 +47,11 @@ const Loader = () => {
         <div id="counter" className="absolute z-30 tracking-tighter transform font-extralight text-white/80 sm1:-translate-y-10 md:-translate-y-20 sm1:text-5xl md:text-8xl">{counter}%</div>
       </div>
 
-      <div id="content" className="absolute top-0 left-0 w-0 h-full bg-[#0D0D0D] p-auto z-20 text-white">
+      <div id="content" className="absolute top-0 left-0 w-0 h-full bg-[#000] p-auto z-20 text-white">
         <div className="h-screen">
-          <div id="content-lines" className="opacity-0">Hello I am Anant</div>
+          {/* <div id="content-lines" className="opacity-0">Hello I am Anant</div>
           <div id="content-lines" className="opacity-0">I am a full stack developer</div>
-          <div id="content-lines" className="opacity-0">Hello I am Anant</div>
+          <div id="content-lines" className="opacity-0">Hello I am Anant</div> */}
         </div>
         <div>
         </div>

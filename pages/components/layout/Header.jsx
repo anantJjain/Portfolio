@@ -35,7 +35,7 @@ const sliderVariants = {
 const Header = ({isOpen,toggleClose,toggleOpen}) => { 
   
   return (
-    <div>
+    <div className=''>
       <div className='fixed z-50 flex justify-between text-white bg-red-400 sm1:hidden md:block'>
         <Link href="/" className='fixed mt-12 ml-20 text-sm tracking-tighter border-0 border-red-500 w-fit hover:text-blue-400 hover:text-xl'>
           <div>Anant Jain</div>

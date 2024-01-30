@@ -599,3 +599,11 @@ a {
   font-size: 1.125rem;
   line-height: 1.5rem;
 }
+
+.mask-edges{
+  mask-image: linear-gradient(to right,hsl(100 100% 100%/0),
+    hsl(0 0% 0%/1) 10%,
+    hsl(0 0% 0%/1) 90%,
+    hsl(0 0% 0%/0)
+  );
+}
