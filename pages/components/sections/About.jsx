@@ -109,7 +109,7 @@ const About = () => {
                 <div className='relative z-10 m-auto border-0 border-red-500 md:grid sm1:hidden md:grid-cols-2 xl:w-3/5 mt-28 sm1:w-2/3 md:w-3/4'>
                     <div className='font-bold text-blue-400 border-0 border-red-500 xl:text-center sm1:text-left'>Background</div>
                     <div className='border-0 border-red-500 sm1:w-full md:text-sm sm1:mt-2 md:mt-0 sm1:text-xs xl:w-3/4'>
-                        <div>Currently l am in my prefinal year at BITS Pilani,working as a freelancer and on contract basis with a design agency, But in the past I have worked with some great clients and delivered amazing products which users enjoy.</div>
+                        <div>Currently l am in my prefinal year at BITS Pilani,I have a good experience as a freelancer from past 1+ years,on college level I have worked on many practical projects being a member of college&apos;s coding socities.</div>
                         <div className='md:mt-12 sm1:mt-4'>I have 2 years of experience as a full stack developer with the ability to bring concepts to life through creative front-end development. I love everything that has to do with product & visual design,mobile & web as well as typography, and animations.</div>
                     </div>
                 </div>

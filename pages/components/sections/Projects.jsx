@@ -66,7 +66,7 @@ const Projects = () => {
   }
   
   return (
-    <div className='text-white bg-[#000] border-0 border-red-400'>  
+    <div className='text-white bg-[#000] border-0 border-red-400 mb-[10rem]'>  
       <motion.div 
         className="mt-16 font-extrabold tracking-tighter text-white border-0 border-red-500 font-mine2 md:text-10xl sm1:text-8xl"
         style={{x:toRight}}
@@ -116,12 +116,15 @@ const Projects = () => {
         </div>
       </div>
       {/* 1st proj */}
-      <div className='mt-20 mb-20'>
-        <Image src="/media/projects/portfolio/portfolio3.png" alt="" width={300} height={200} className='relative z-10 m-auto cursor-pointer' />
-        <Image src="/media/projects/portfolio/portfolio2.png" alt="" width={300} height={200} className='sm1:hidden lg:block transition ease-in-out duration-300 absolute lg:left-[22.7rem] xl:left-[30.7rem] 2xl:left-[35.7rem] -mt-[38.25rem] z-10 m-auto hover:opacity-0 border-0 cursor-pointer border-red-500' />
-        <div className='absolute z-20 whitespace-nowrap overflow-hidden -mt-[25rem] font-extrabold text-center sm1:text-[20rem] md:text-[30rem] lowercase text-white sm1:-left-[5rem] lg:left-[28rem] xl:left-[47rem] tracking-tighter border-0 border-red-500 w-fit h-fit p-0 leading-[24rem]'>01.</div>
-        <Lottie animationData={sketch} className='absolute -rotate-45 md:block w-lg:1/2 sm1:hidden left-1/2 -mt-80 invert grayscale'/>
-        <div className='flex mt-4 sm1:flex-col lg:flex-row'>
+      <div className='relative mt-20 border-0 border-red-500'>
+        <div className='relative border-0 border-blue-400'>
+          <Image src="/media/projects/portfolio/portfolio2.png" alt="" width={300} height={200} className='relative z-30 transition duration-300 ease-in-out -translate-x-1/2 border-0 border-red-500 cursor-pointer left-1/2 lg:hover:opacity-0' />
+          <Image src="/media/projects/portfolio/portfolio3.png" alt="" width={300} height={200} className='absolute top-0 z-20 -translate-x-1/2 border-0 border-red-500 sm1:hidden lg:block left-1/2'/>
+          {/* <div className='absolute top-0 w-full border-2 border-red-500 h-[40rem]'></div> */}
+          <div className='absolute top-0 z-40 whitespace-nowrap overflow-hidden font-extrabold text-center sm1:text-[20rem] md:text-[30rem] lowercase text-white tracking-tighter border-0 border-red-500 w-fit h-fit p-0 leading-[24rem] mt-56 md:-left-[10rem] lg:left-1/2'>01.</div>
+          <Lottie animationData={sketch} className='absolute top-0 mt-64 -rotate-45 md:block sm1:hidden invert grayscale left-1/2'/>
+        </div>
+        <div className='relative flex mt-0 border-0 border-green-500 sm1:flex-col lg:flex-row'>
           <div className='mt-8 border-0 border-red-500 sm1:w-full lg:w-1/2'>
             <Lottie animationData={portfolio} className="overflow-hidden border-0 border-red-500 pt-36 sm1:hidden lg:flex h-fit rounded-3xl invert-0" loop={true}/>
           </div> 
@@ -156,72 +159,77 @@ const Projects = () => {
         </div>
       </div>
       {/* 2nd proj */}
-      <div className='mt-40 mb-20'>
-        <Image src="/media/projects/blindcoding/blindcoding2.png" alt="" width={300} height={200} className='relative z-10 m-auto transition duration-300 ease-in-out cursor-pointer hover:opacity-0' />
-        <Image src="/media/projects/blindcoding/blindcoding3.png" alt="" width={300} height={200} className='sm1:hidden lg:block absolute lg:left-[22.7rem] xl:left-[30.7rem] 2xl:left-[35.7rem] -mt-[38.25rem] z-0 m-auto cursor-pointer' />
-        <div className='absolute z-20 whitespace-nowrap overflow-hidden -mt-[25rem] font-extrabold text-center sm1:text-[20rem] md:text-[30rem] lowercase text-white sm1:left-[1rem] md:left-[15rem] lg:left-[7rem] tracking-tighter border-0 border-red-500 leading-[24rem]'>02.</div>
-        <Lottie animationData={sketch} className='sm1:hidden lg:block absolute w-1/2 -rotate-45 -mt-80 invert -left-[5rem] grayscale'/>
-        <div className='flex mt-4 sm1:flex-col lg:flex-row'> 
+      <div className='relative mt-8 border-0 border-red-500'>
+        <div className='relative border-0 border-blue-400'>
+          <Image src="/media/projects/blindcoding/blindcoding2.png" alt="" width={300} height={200} className='relative z-30 transition duration-300 ease-in-out -translate-x-1/2 border-0 border-red-500 cursor-pointer left-1/2 lg:hover:opacity-0' />
+          <Image src="/media/projects/blindcoding/blindcoding3.png" alt="" width={300} height={200} className='absolute top-0 z-20 -translate-x-1/2 border-0 border-red-500 sm1:hidden lg:block left-1/2'/>
+          <div className='absolute top-0 z-40 whitespace-nowrap overflow-hidden font-extrabold text-center sm1:text-[20rem] md:text-[30rem] lowercase text-white tracking-tighter border-0 border-red-500 w-fit h-fit p-0 leading-[24rem] mt-56'>02.</div>
+          <Lottie animationData={sketch} className='absolute top-0 mt-64 -rotate-45 md:block sm1:hidden invert grayscale'/>
+        </div>
+        <div className='relative flex mt-0 border-0 border-green-500 sm1:flex-col lg:flex-row'>
           <div className='bg-cover border-0 border-red-500 sm1:w-full lg:w-1/2'>
-            <div className='m-auto mt-16 mb-16 text-white border-0 border-blue-400 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 bg-black/20 rounded-3xl backdrop-filter backdrop-blur-sm'>
+            <div className='m-auto mt-16 mb-16 text-white border-0 border-blue-400 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20 backdrop-filter backdrop-blur-sm'>
               <div className='flex justify-between'>
-                <p className='text-5xl font-extrabold underline border-0 border-red-500 underline-offset-8'>
-                  Blind <span className='text-blue-400 '>Coding&nbsp;</span>
-                </p>
-                <a href={'https://github.com/anantJjain/ReverseCoding'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>  
+                <p className='text-5xl font-extrabold underline underline-offset-8'>Blind <span className='text-blue-400'>Coding&nbsp;</span></p>
+                <a href={'https://github.com/anantJjain/ReverseCoding'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
                   <div className='pt-2'>
                     <span className="text-4xl"><FaGithub /></span>
                   </div>
                 </a>
               </div>
-              <p className='mt-12'>Blind Coding is one of the flagship event held in APOGEE(2023) which is the annual technical fest of BITS Pilani(Pilani Campus).The website was utilized as the central hub for the 2 hour long coding event where participants had to write code for a DSA-based problem without being able to see the actual problem statement instead they have to guess the problem and its code from the outputs generated by the downloadable executable files the webapp catered to 100+ users and provided easy access to the executable files through the website for coding-related problems, and for Hacker Rank link where the contest was hosted.</p>
+              <p className='mt-12'>
+                Blind Coding is one of the flagship event held in APOGEE(2023) which is the annual technical fest of BITS Pilani(Pilani Campus).The website was utilized as the central hub for the 2 hour long coding event where participants had to write code for a DSA-based problem without being able to see the actual problem statement instead they have to guess the problem and its code from the outputs generated by the downloadable executable files the webapp catered to 100+ users and provided easy access to the executable files through the website for coding-related problems, and for Hacker Rank link where the contest was hosted.
+              </p>
               <p className='mt-10 text-2xl font-extrabold text-blue-400'>Tech stack used :</p>
-              <div className='flex flex-wrap mt-4 space-x-2'>
-                <p className='p-2 text-white bg-white/20 rounded-xl'>React.js</p>
+              <div className='flex flex-wrap mt-4 -ml-2 space-x-2 space-y-2'>
+                <p className='p-2 mt-2 ml-2 text-white bg-white/20 rounded-xl'>React.js</p>
                 <p className='p-2 text-white bg-white/20 rounded-xl'>Python</p>
                 <p className='p-2 text-white bg-white/20 rounded-xl'>Vanilla CSS</p>
               </div>
             </div>
           </div>
-          <div className='border-0 border-red-500 sm1:w-full lg:w-1/2'>
-            <Lottie animationData={blindcoding} className="mt-10 overflow-hidden sm1:hidden lg:flex h-fit rounded-3xl invert-0" loop={true}/>
-          </div>
+          <div className='mt-8 border-0 border-red-500 sm1:w-full lg:w-1/2'>
+            <Lottie animationData={blindcoding} className="overflow-hidden border-0 border-red-500 pt-36 sm1:hidden lg:flex h-fit rounded-3xl invert-0" loop={true}/>
+          </div> 
         </div>
       </div>
       {/* 3rd proj */}
-      <div className='mt-20 mb-20'>
-        <Image src="/media/projects/optistock/optistock1.png" alt="" width={300} height={200} className='relative z-10 m-auto cursor-pointer' />
-        <Image src="/media/projects/optistock/optistock2.png" alt="" width={300} height={200} className='sm1:hidden lg:block  transition ease-in-out duration-300 absolute lg:left-[22.7rem] xl:left-[30.7rem] 2xl:left-[35.7rem] -mt-[38.25rem] z-10 m-auto hover:opacity-0 border-0 cursor-pointer border-red-500' />
-        <div className='absolute z-20 whitespace-nowrap overflow-hidden -mt-[25rem] font-extrabold text-center sm1:text-[20rem] md:text-[30rem] lowercase text-white sm1:-left-[5rem] lg:left-[28rem] xl:left-[48rem] tracking-tighter border-0 border-red-500 w-fit h-fit p-0 leading-[24rem]'>03.</div>
-        <Lottie animationData={sketch} className='absolute -rotate-45 md:block w-lg:1/2 sm1:hidden left-1/2 -mt-80 invert grayscale'/>
-        <div className='flex mt-4 sm1:flex-col lg:flex-row'>
-          <div className='mt-24 border-0 border-red-500 sm1:w-full lg:w-1/2'>
-            <Lottie animationData={optistock} className="overflow-hidden sm1:hidden lg:flex h-fit rounded-3xl invert-0" loop={true}/>
+      <div className='relative mt-8 border-0 border-red-500'>
+        <div className='relative border-0 border-blue-400'>
+          <Image src="/media/projects/optistock/optistock2.png" alt="" width={300} height={200} className='relative z-30 transition duration-300 ease-in-out -translate-x-1/2 border-0 border-red-500 cursor-pointer left-1/2 lg:hover:opacity-0' />
+          <Image src="/media/projects/optistock/optistock1.png" alt="" width={300} height={200} className='absolute top-0 z-20 -translate-x-1/2 border-0 border-red-500 sm1:hidden lg:block left-1/2'/>
+          <div className='absolute top-0 z-40 whitespace-nowrap overflow-hidden font-extrabold text-center sm1:text-[20rem] md:text-[30rem] lowercase text-white tracking-tighter border-0 border-red-500 w-fit h-fit p-0 leading-[24rem] mt-56 md:-left-[10rem] lg:left-1/2'>03.</div>
+          <Lottie animationData={sketch} className='absolute top-0 mt-64 -rotate-45 md:block sm1:hidden invert grayscale left-1/2'/>
+        </div>
+        <div className='relative flex mt-0 border-0 border-green-500 sm1:flex-col lg:flex-row'>
+          <div className='mt-8 border-0 border-red-500 sm1:w-full lg:w-1/2'>
+            <Lottie animationData={optistock} className="overflow-hidden border-0 border-red-500 pt-36 sm1:hidden lg:flex h-fit rounded-3xl invert-0" loop={true}/>
           </div> 
           <div className='bg-cover border-0 border-red-500 sm1:w-full lg:w-1/2'>
             <div className='m-auto mt-16 mb-16 text-white border-0 border-blue-400 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20 backdrop-filter backdrop-blur-sm'>
               <div className='flex justify-between'>
-                <p className='text-5xl font-extrabold underline border-0 border-red-500 underline-offset-8'>
-                  Opti<span className='text-blue-400'>Stock</span>
-                </p>
+                <p className='text-5xl font-extrabold underline underline-offset-8'>Opti<span className='text-blue-400'>Stock</span></p>
                 <a href={'https://github.com/anantJjain/OptiStock-Inventory_Management_Software'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
                   <div className='pt-2'>
                     <span className="text-4xl"><FaGithub /></span>
                   </div>
                 </a>
               </div>
-              <p className='mt-12'>Introducing a robust full-stack inventory management app built with the MERN stack—enabling seamless user authentication through JWT. This application empowers users to effortlessly add and remove items from the inventory while efficiently tracking the availability of products in the store. Leveraging the power of Redux, the app ensures streamlined state management, enhancing the overall user experience. Experience a sophisticated solution for inventory control and management with user-friendly features tailored for efficient business operations.
+              <p className='mt-12'>
+                Introducing a robust full-stack inventory management app built with the MERN stack—enabling seamless user authentication through JWT. This application empowers users to effortlessly add and remove items from the inventory while efficiently tracking the availability of products in the store. Leveraging the power of Redux, the app ensures streamlined state management, enhancing the overall user experience. Experience a sophisticated solution for inventory control and management with user-friendly features tailored for efficient business operations.
               </p>
               <p className='mt-10 text-2xl font-extrabold text-blue-400'>Tech stack used :</p>
               <div className='flex flex-wrap mt-4 -ml-2 space-x-2 space-y-2'>
-                <p className='p-2 mt-2 ml-2 text-white bg-white/20 rounded-xl'>React.js</p>
+                <p className='p-2 mt-2 ml-2 text-white bg-white/20 rounded-xl'>Next.js</p>
                 <p className='p-2 text-white bg-white/20 rounded-xl'>Tailwind</p>
-                <p className='p-2 text-white bg-white/20 rounded-xl'>MongoDB</p>
-                <p className='p-2 text-white bg-white/20 rounded-xl'>Express</p>
-                <p className='p-2 text-white bg-white/20 rounded-xl'>Redux</p>
-                <p className='p-2 text-white bg-white/20 rounded-xl'>Node.js</p>
+                <p className='p-2 text-white bg-white/20 rounded-xl'>Framer Motion</p>
+                <p className='p-2 text-white bg-white/20 rounded-xl'>Lottie</p>
+                <p className='p-2 text-white bg-white/20 rounded-xl'>Figma</p>
+                <p className='p-2 text-white bg-white/20 rounded-xl'>Jitter</p>
                 <p className='p-2 text-white bg-white/20 rounded-xl'>Nodemailer</p>
-                <p className='p-2 text-white bg-white/20 rounded-xl'>JWT</p>
+                <p className='p-2 text-white bg-white/20 rounded-xl'>Intersection Observer API</p>
+                <p className='p-2 text-white bg-white/20 rounded-xl'>Greensock animation (GSAP)</p>
+                <p className='p-2 text-white bg-white/20 rounded-xl'>react-confetti</p>
               </div>
             </div>
           </div>

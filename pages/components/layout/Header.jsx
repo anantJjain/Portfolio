@@ -38,14 +38,14 @@ const Header = ({ isOpen,toggleClose,toggleOpen }) => {
         </Link>
         <div className='fixed right-0 flex justify-between mt-12 mr-20 border-0 border-red-500 w-fit'>
           <div className='text-sm border-0 border-blue-500'>
-            <div><Link href='#about' className="hover:text-blue-400 hover:text-xl">About</Link></div>
-            <div><Link scroll={false} href='#projects' className="hover:text-blue-400 hover:text-xl">Projects</Link></div>
-            <div><Link scroll={false} href='#contact' className="hover:text-blue-400 hover:text-xl">Contact</Link></div>
+            <div><Link href='#about' className="hover:text-blue-400">About</Link></div>
+            <div><Link scroll={false} href='#projects' className="hover:text-blue-400">Projects</Link></div>
+            <div><Link scroll={false} href='#contact' className="hover:text-blue-400">Contact</Link></div>
           </div>
           <div className='text-sm border-0 border-green-500 ml-28'>
-            <div><Link scroll={false} href="https://drive.google.com/file/d/1KgTNsw2jPpuE-QCrm2txd_l8RejSsj-M/view?usp=sharing" target="_blank" alt="" className="hover:text-blue-400 hover:text-xl">Resume</Link></div>
-            <div><Link href="https://github.com/anantJjain" target="_blank" rel="noreferrer" className="hover:text-blue-400 hover:text-xl">Github</Link></div>
-            <div><Link href="https://www.linkedin.com/in/anantjainBE/" target="_blank" rel="noreferrer" className="hover:text-blue-400 hover:text-xl">LinkedIn</Link></div>
+            <div><Link scroll={false} href="https://drive.google.com/file/d/1KgTNsw2jPpuE-QCrm2txd_l8RejSsj-M/view?usp=sharing" target="_blank" alt="" className="hover:text-blue-400">Resume</Link></div>
+            <div><Link href="https://github.com/anantJjain" target="_blank" rel="noreferrer" className="hover:text-blue-400">Github</Link></div>
+            <div><Link href="https://www.linkedin.com/in/anantjainBE/" target="_blank" rel="noreferrer" className="hover:text-blue-400">LinkedIn</Link></div>
           </div>
         </div>
       </div>
