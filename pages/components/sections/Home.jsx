@@ -175,7 +175,7 @@ const Home = () => {
   }
   return (
     <>
-      <div className="pb-40 bg-black sm1:pt-16 md:pt-0">
+      <div className="pb-40 overflow-hidden bg-black sm1:pt-16 md:pt-0">
         {/* Desktop Home */}
         {/* <div className='absolute mt-[40rem] h-[20rem] bg-blue-300/50 w-full rounded-full z-0 blur-[20rem] border-0 border-red-500'></div> */}
         <div className="relative h-screen bg-cover sm1:hidden md:block">
@@ -210,13 +210,13 @@ const Home = () => {
             {/* <div className="p-4 text-white border-2 border-blue-400 rounded-xl">Resume</div>
             <div className="p-4 text-white border-2 border-blue-400 rounded-xl">Chat with me</div> */}
             <a href="https://github.com/anantJjain" target="_blank" rel="noreferrer">
-              <div className="text-white bg-black rounded-full sm1:text-xl md:text-2xl lg:text-3xl sm1:p-3 md:p-3 lg:p-3 hover:bg-white hover:text-black hover:scale-75"><FiGithub /></div>
+              <div className="text-white bg-black rounded-full sm1:text-xl md:text-2xl lg:text-3xl sm1:p-3 md:p-3 lg:p-3 hover:bg-white hover:text-black hover:scale-75 "><FiGithub /></div>
             </a>
             <a href="https://www.linkedin.com/in/anantjainBE/" target="_blank" rel="noreferrer">
-              <div className="text-white bg-black rounded-full sm1:text-xl md:text-2xl lg:text-3xl sm1:p-3 md:p-3 lg:p-3 hover:bg-white hover:text-black hover:scale-75"><FaLinkedinIn /></div>
+              <div className="text-white bg-black rounded-full sm1:text-xl md:text-2xl lg:text-3xl sm1:p-3 md:p-3 lg:p-3 hover:bg-white hover:text-black hover:scale-75 "><FaLinkedinIn /></div>
             </a>
             <a href="https://www.instagram.com/anantjain.8k/" target="_blank" rel="noreferrer" >
-              <div className="text-white bg-black rounded-full sm1:text-xl md:text-2xl lg:text-3xl sm1:p-3 md:p-3 lg:p-3 hover:bg-white hover:text-black hover:scale-75"><FiInstagram /></div>
+              <div className="text-white bg-black rounded-full sm1:text-xl md:text-2xl lg:text-3xl sm1:p-3 md:p-3 lg:p-3 hover:bg-white hover:text-black hover:scale-75 "><FiInstagram /></div>
             </a>
           </div>
         </div>
@@ -354,7 +354,7 @@ const Home = () => {
             </div>
           </Marquee>
         </div>  
-        <div id="projects" className="pt-2 mt-12 border-0 border-red-500">
+        <div id="projects" className="pt-2 mt-56 border-0 border-red-500">
           <Projects />
         </div>
         <div id="contact" className="pt-2 mt-40 border-0 border-red-500">

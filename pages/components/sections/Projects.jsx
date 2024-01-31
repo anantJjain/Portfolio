@@ -158,7 +158,7 @@ const Projects = () => {
             <Lottie animationData={portfolio} className="overflow-hidden border-0 border-red-500 pt-36 sm1:hidden lg:flex h-fit rounded-3xl invert-0" loop={true}/>
           </div> 
           <div className='bg-cover border-0 border-red-500 sm1:w-full lg:w-1/2'>
-            <div className='m-auto mt-16 mb-16 text-white border-0 border-blue-400 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20'>
+            <div className='m-auto mt-16 mb-16 text-white border-0 border-blue-400 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20 backdrop-filter backdrop-blur-sm'>
               <div className='flex justify-between'>
                 <p className='text-5xl font-extrabold underline underline-offset-8'>Portfolio <span className='text-blue-400'>Website</span></p>
                 <a href={'https://github.com/anantJjain/Portfolio'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
@@ -233,7 +233,7 @@ const Projects = () => {
             <Lottie animationData={optistock} className="overflow-hidden sm1:hidden lg:flex h-fit rounded-3xl invert-0" loop={true}/>
           </div> 
           <div className='bg-cover border-0 border-red-500 sm1:w-full lg:w-1/2'>
-            <div className='m-auto mt-16 mb-16 text-white border-0 border-blue-400 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20'>
+            <div className='m-auto mt-16 mb-16 text-white border-0 border-blue-400 sm1:p-8 md:p-20 lg:p-4 xl:p-20 sm1:w-full lg:w-4/5 rounded-3xl bg-black/20 backdrop-filter backdrop-blur-sm'>
               <div className='flex justify-between'>
                 <p className='text-5xl font-extrabold underline border-0 border-red-500 underline-offset-8'>
                   Opti<span className='text-blue-400'>Stock</span>

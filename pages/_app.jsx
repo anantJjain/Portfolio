@@ -22,7 +22,7 @@ const MyApp = ({ Component, pageProps }) => {
         <Head>
           <title>Anant Jain | Portfolio </title>
         </Head>
-        <Component {...pageProps } />
+        <Component {...pageProps } className="overflow-hidden" />
       </>
     ) 
   }
