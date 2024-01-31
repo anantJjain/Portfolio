@@ -124,13 +124,13 @@ const ContactNew = () => {
                                         <textarea type='name' placeholder='Enter your message' value={message} onChange={ (e) => setMessage(e.target.value) } required className='p-2 text-white bg-transparent pl-0 focus:pl-2 border-b-[0.01rem] border-blue-400 focus:ring focus:rounded-xl focus:border-blue-400 focus:outline-none md:w-full lg:w-full'></textarea>
                                     </div>
                                     <div className='flex flex-row md:space-x-10 sm1:space-x-4'>
-                                        <button type='submit' className='font-extrabold text-black bg-backdrop8 transform transition ease-in-out duration-300 hover:scale-[1.05] sm1:p-1 md:text-2xl sm1:w-full lg:w-3/4 md:p-4 rounded-xl'>Send</button>
+                                        <button type='submit' className='font-extrabold text-black bg-blue-400 transform transition ease-in-out duration-300 hover:scale-[1.05] sm1:p-1 md:text-2xl sm1:w-full lg:w-3/4 md:p-4 rounded-xl'>Send</button>
                                         <button type='submit' onClick={()=>{
                                             setEmail('')
                                             setName('')
                                             setMessage('')
                                         }} 
-                                        className='font-extrabold text-black bg-backdrop8 transform transition ease-in-out duration-300 hover:scale-[1.05] sm1:p-1 md:text-2xl sm1:w-full lg:w-3/4 md:p-4 rounded-xl'>Reset All</button>
+                                        className='font-extrabold text-black bg-blue-400 transform transition ease-in-out duration-300 hover:scale-[1.05] sm1:p-1 md:text-2xl sm1:w-full lg:w-3/4 md:p-4 rounded-xl'>Reset All</button>
                                     </div>
                                 </form> 
                             </div>
