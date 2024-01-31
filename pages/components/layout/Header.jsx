@@ -1,8 +1,7 @@
 import Link from 'next/link'
-import { Twirl as Hamburger } from 'hamburger-react'
-import Navbar from './Navbar'
 import { motion,AnimatePresence } from 'framer-motion'
-import { useState } from 'react'
+import Navbar from './Navbar'
+import { Twirl as Hamburger } from 'hamburger-react'
 
 const sliderVariants = {
   initial:{
@@ -28,11 +27,7 @@ const sliderVariants = {
   }
 }
 
-// const toggleTheme = () => {
-  
-// }
-
-const Header = ({isOpen,toggleClose,toggleOpen}) => { 
+const Header = ({ isOpen,toggleClose,toggleOpen }) => { 
   
   return (
     <div className=''>
@@ -49,7 +44,6 @@ const Header = ({isOpen,toggleClose,toggleOpen}) => {
           </div>
           <div className='text-sm border-0 border-green-500 ml-28'>
             <div><Link scroll={false} href="https://drive.google.com/file/d/1KgTNsw2jPpuE-QCrm2txd_l8RejSsj-M/view?usp=sharing" target="_blank" alt="" className="hover:text-blue-400 hover:text-xl">Resume</Link></div>
-            {/* <div><Link href="mailto:anantjain.8k@gmail.com" className="hover:text-blue-400 hover:text-xl">Email</Link></div> */}
             <div><Link href="https://github.com/anantJjain" target="_blank" rel="noreferrer" className="hover:text-blue-400 hover:text-xl">Github</Link></div>
             <div><Link href="https://www.linkedin.com/in/anantjainBE/" target="_blank" rel="noreferrer" className="hover:text-blue-400 hover:text-xl">LinkedIn</Link></div>
           </div>
@@ -60,7 +54,6 @@ const Header = ({isOpen,toggleClose,toggleOpen}) => {
           <div>Anant Jain</div>
           <div>Full Stack Developer</div>
         </Link>
-        {/* <button className='fixed p-2 mt-2 text-black bg-white rounded-full' onClick={toggleTheme}>Toggle Theme</button> */}
         <div className='fixed right-0 z-50 mt-12 mr-2 text-white'>
           <div className="sm1:block md:hidden">
             <div className='p-0 -mt-2 bg-[#fff] border-0 border-red-500 w-fit rounded-4xl'>
@@ -79,7 +72,7 @@ const Header = ({isOpen,toggleClose,toggleOpen}) => {
               exit="exit"
               className='origin-top bg-black border-0 border-red-500'
             >
-              <Navbar toggleOpen={toggleOpen} toggleClose={toggleClose} isOpen={isOpen}/>
+              <Navbar toggleOpen={toggleOpen} toggleClose={toggleClose} isOpen={isOpen} />
             </motion.div>  
           )  
         }

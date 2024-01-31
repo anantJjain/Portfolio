@@ -1,35 +1,13 @@
-import React,{ useState,useEffect,useRef } from 'react'
 import Image from 'next/image';
+import React,{ useState,useEffect,useRef } from 'react'
 import { motion,useTransform,useScroll } from "framer-motion"
 import { useSpring,animated } from "react-spring"
-import { Project } from '../../../public/data/Projects.js';
-import { GoPaperclip } from "react-icons/go";
 import Lottie from 'lottie-react';
-import portfolio from '../../../public/media/lotties/portfolio.json'
-import blindcoding from '../../../public/media/lotties/blindcoding.json'
-import optistock from '../../../public/media/lotties/optistock.json'
-import base from '../../../public/media/lotties/optistock.json'
-import sketch from '../../../public/media/lotties/sketch.json'
 import { FaGithub } from "react-icons/fa";
-const boxVariants = {
-  initial:{
-    clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)'
-  },
-  animate:{
-    clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
-    transition: { duration:0.8,type:'tween',ease:'linear'}
-  }
-}
-
-const imageVariants = {
-  initial:{
-    scale:1.1
-  },
-  animate:{
-    scale:1,
-    transition: { delay:0.5,duration:0.5}
-  }
-}
+import portfolio from '../../../public/media/lotties/Portfolio(Project).json'
+import blindcoding from '../../../public/media/lotties/BlindCoding(Projects).json'
+import optistock from '../../../public/media/lotties/Optistock(Project).json'
+import sketch from '../../../public/media/lotties/AnimatedMarker(Projects).json'
 
 const Projects = () => {
   const [ view,setView ] = useState(false);
@@ -55,15 +33,11 @@ const Projects = () => {
         observer.unobserve(numRef.current)
       }
     }
-  },[])
-  const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };    
+  },[])    
   const { scrollYProgress } = useScroll()
   const toRight = useTransform(scrollYProgress,[0,1],[-200,200])
   const toLeft = useTransform(scrollYProgress,[0,1],[-100,-2000])  
-  const toUp = useTransform(scrollYProgress,[0,1],[10,-100])
-  const toUp2 = useTransform(scrollYProgress,[0,1],[100,-100])
-  const toRight1 = useTransform(scrollYProgress,[0,1],[-1000,100])
-  const toRight2 = useTransform(scrollYProgress,[0,1],[100,-1000])
+  
   const NumberFloat = ({ n }) => {
     const { number } = useSpring({
       from : { number:0.1 },
@@ -90,14 +64,9 @@ const Projects = () => {
       ) 
     ) 
   }
+  
   return (
     <div className='text-white bg-[#000] border-0 border-red-400'>  
-      {/* <div className='m-auto mt-40 text-sm border-0 border-red-500 lg:w-1/5 sm1:w-3/5 md:w-2/5'>
-        <div className='ml-auto border-0 border-red-500 xl:w-full sm1:w-full'>
-          Archive of all my projects from
-        </div>
-      </div> */}
-      
       <motion.div 
         className="mt-16 font-extrabold tracking-tighter text-white border-0 border-red-500 font-mine2 md:text-10xl sm1:text-8xl"
         style={{x:toRight}}
@@ -141,7 +110,6 @@ const Projects = () => {
           
         </span>
       </motion.div>
-
       <div className='m-auto mt-4 font-bold border-0 border-red-500 md:text-lg sm1:w-3/5 md:w-2/5 lg:w-1/5 sm1:text-md'>
         <div className='ml-auto text-xl text-center text-blue-400 border-0 border-red-500 xl:w-full sm1:w-full'>
           Projects
@@ -164,7 +132,6 @@ const Projects = () => {
                 <a href={'https://github.com/anantJjain/Portfolio'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
                   <div className='pt-2'>
                     <span className="text-4xl"><FaGithub /></span>
-                    {/* <span>Visit Github Repo</span> */}
                   </div>
                 </a>
               </div>
@@ -204,7 +171,6 @@ const Projects = () => {
                 <a href={'https://github.com/anantJjain/ReverseCoding'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>  
                   <div className='pt-2'>
                     <span className="text-4xl"><FaGithub /></span>
-                    {/* <span>Visit Github Repo</span> */}
                   </div>
                 </a>
               </div>
@@ -241,7 +207,6 @@ const Projects = () => {
                 <a href={'https://github.com/anantJjain/OptiStock-Inventory_Management_Software'} target="_blank" className='hover:scale-[1.2] transition ease-in-out duration-300'>
                   <div className='pt-2'>
                     <span className="text-4xl"><FaGithub /></span>
-                    {/* <span>Visit Github Repo</span> */}
                   </div>
                 </a>
               </div>
@@ -265,5 +230,4 @@ const Projects = () => {
     </div>
   )
 }
-
 export default Projects

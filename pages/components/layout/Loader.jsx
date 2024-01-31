@@ -9,6 +9,7 @@ const Loader = () => {
       setCounter( ( counter ) => counter<100 ? counter+1 : (clearInterval(count),setCounter(100),reveal()))
     },25)  
   },[])
+  
   const reveal = () => {
     const tl = gsap.timeline({
       onComplete:()=>{
@@ -38,22 +39,17 @@ const Loader = () => {
       duration: 0.6,
     })
   }
+  
   return (
-   
     <div className="relative w-screen h-screen overflow-hidden text-black">
       <div className="h-full w-full bg-[#000] flex justify-center items-center absolute top-0">
         <div id="line" className="absolute left-0 z-20 w-0 h-[2px] bg-blue-400"></div>
         <div id="progress-bar" className="absolute left-0 w-0 h-[1px] transition bg-white/80 0.4 transform" style={{ width:counter+"%" }}></div>
         <div id="counter" className="absolute z-30 tracking-tighter transform font-extralight text-white/80 sm1:-translate-y-10 md:-translate-y-20 sm1:text-5xl md:text-8xl">{counter}%</div>
       </div>
-
       <div id="content" className="absolute top-0 left-0 w-0 h-full bg-[#000] p-auto z-20 text-white">
-        <div className="h-screen">
-          {/* <div id="content-lines" className="opacity-0">Hello I am Anant</div>
-          <div id="content-lines" className="opacity-0">I am a full stack developer</div>
-          <div id="content-lines" className="opacity-0">Hello I am Anant</div> */}
-        </div>
-        <div>
+        <div className="h-screen"></div>
+      <div>
         </div>
       </div>
     </div>

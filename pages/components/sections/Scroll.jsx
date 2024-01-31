@@ -1,11 +1,9 @@
-import React,{ useState,useRef,useEffect } from 'react'
-import ScrollText from './ScrollText'
 import Image from 'next/image'
+import React,{ useState,useRef,useEffect } from 'react'
 import { motion } from 'framer-motion'
+import ScrollText from './ScrollText'
 import { scrollData } from '../../../public/data/About'
-import Lottie from "lottie-react";
-import animationData from "../../../public/media/lotties/projects.json";
-  
+
 const textVariants = {
     initial:{
       y:100,
@@ -20,8 +18,7 @@ const textVariants = {
         ease: 'easeInOut',
       },
     }
-
-  }
+}
 
   const Scroll = () => {
     const containerRef = useRef(null);
@@ -51,16 +48,11 @@ const textVariants = {
     };
     
     }, []);
-
-    // useEffect(() => {
-    //   console.log("Current view value:", view);
-    // }, [view]);
-    
     const [ currentImage,setCurrentImage ] = useState(0)
     return (
         <div ref={containerRef} className='relative flex w-full overflow-hidden border-0 border-red-500 lg:pt-40 parent'>
           <div className='overflow-hidden border-0 border-gray-500 lg:w-3/5 sm3:w-full'>
-            {scrollData.map((screen,i) => (
+            { scrollData.map((screen,i) => (
                 <motion.div 
                   variants={textVariants}
                   initial="initial"

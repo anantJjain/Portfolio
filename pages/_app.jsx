@@ -44,7 +44,6 @@ const MyApp = ({ Component, pageProps }) => {
                     initial={{ opacity:0 }}
                     whileInView={{ opacity:1,transition:{ type:'spring',duration:1 } }}
                     className={`${notoSans.className} overflow-hidden bg-[#000] relative`}
-                    
                   >
                     <Component {...pageProps}/>
                   </motion.div>

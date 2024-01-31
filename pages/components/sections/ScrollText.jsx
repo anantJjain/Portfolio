@@ -1,9 +1,6 @@
-'use client'
 import React, { useState,useRef, useEffect } from 'react'
 import { useMousePosition } from '../../../utils/useMousePosition';
-import { motion } from 'framer-motion';
 import { useHover } from "@uidotdev/usehooks";
-import Lottie from 'lottie-react';
 
 
 const ScrollText = ({ screen,i,setCurrentImage,currentImage}) => {

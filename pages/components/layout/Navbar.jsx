@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion'
 import Link from "next/link"
+import { motion } from 'framer-motion'
+import { MenuItems } from '../../../public/data/MenuItems';
 import { GrLinkedinOption,GrGithub } from 'react-icons/gr'
 import { RiInstagramFill } from 'react-icons/ri'
 import { MdEmail} from 'react-icons/md'
-import { MenuItems } from '../../../public/data/MenuItems';
 
 const containerVariants = {
     initial:{

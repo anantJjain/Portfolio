@@ -1,100 +1,27 @@
-import Link from "next/link";
 import Image from "next/image";
-import React, { useEffect,useRef,useState,useLayoutEffect } from "react";
+import React, { useEffect,useRef,useState} from "react";
 import { motion,useTransform,useScroll } from 'framer-motion'
-import Lottie from "lottie-react";
 import { useSpring,animated } from "react-spring"
-import animationData from "../../../public/media/lotties/3d.json";
-import animationData2 from "../../../public/media/lotties/contactHome.json";
-import hello from "../../../public/media/lotties/hello1.json";
-import { CgArrowLongRight } from "react-icons/cg";
-import { AiFillGithub,AiFillInstagram,AiFillLinkedin } from 'react-icons/ai';
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaPaperclip } from "react-icons/fa6";
-import { FiGithub,FiInstagram } from "react-icons/fi";
-import { IoDocumentTextOutline } from "react-icons/io5";
+import { gsap,CSSPlugin } from "gsap"
+import Marquee from "react-fast-marquee";
+import Lottie from "lottie-react";
 import About from './About'
 import Projects from './Projects'
 import Parallax from "./Parallax";
-import { gsap,CSSPlugin,Expo } from "gsap"
 import Contact from "./Contact";
 import { Skills } from '../../../public/data/Skills'
-import Marquee from "react-fast-marquee";
-
+import animationData from "../../../public/media/lotties/3dSpheres(Home).json";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FiGithub,FiInstagram } from "react-icons/fi";
 gsap.registerPlugin(CSSPlugin)
 
 
-const fadeInAnimationVariants={
-  initial:{
-    opacity:0,
-    y:100
-  },
-  animate: (id) => ({
-    opacity:1,
-    y:0,
-    transition:{ delay:0.2*id,type:'easeInOut' }
-  })
-}
-
-const boxVariants = {
-  initial:{
-    clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)'
-  },
-  animate:{
-    clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
-    transition: { duration:0.8,delay:0.5,type:'tween',ease:'linear'}
-  }
-}
-
-const boxVariants2 = {
-  initial:{
-    clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)'
-  },
-  animate:{
-    clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
-    transition: { duration:0.8,type:'tween',ease:'linear'}
-  }
-}
-
-const imageVariants = {
-  initial:{
-    y:400
-  },
-  animate:{
-    y:0,
-    transition: { duration:0.5,delay:0.5}
-  }
-}
-
-const boxVariantsProj = {
-  initial:{
-    clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)'
-  },
-  animate:{
-    clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
-    transition: { duration:0.8,type:'tween',ease:'linear'}
-  }
-}
-
-const imageVariantsProj = {
-  initial:{
-    scale:1.1
-  },
-  animate:{
-    scale:1,
-    transition: { delay:0.5,duration:0.5}
-  }
-}
-
 const Home = () => {  
-  const headRef = useRef(null)
   const { scrollYProgress } = useScroll()
   const toRight = useTransform(scrollYProgress,[0,1],[-500,100])
   const toRight2 = useTransform(scrollYProgress,[0,1],[-100,800])
   const toRight3 = useTransform(scrollYProgress,[0,1],[-100,2000])
   const toLeft = useTransform(scrollYProgress,[0,1],[10,-1000])  
-  const toUp = useTransform(scrollYProgress,[0,1],[100,-300])
-  const toUp2 = useTransform(scrollYProgress,[0,1],[10,-100])
   const numRef = useRef(null)
   const [ view,setView ] = useState(false);
   
@@ -146,33 +73,7 @@ const Home = () => {
       }
     }
   },[])
-
-  const descRef = useRef(null)
   
-  // useLayoutEffect( () => {
-  //   let context = gsap.context( () => {
-  //     const tl = gsap.timeline()
-  //     tl.to("#main", { opacity: 1,ease:Expo.easeInOut,duration:1.2,delay:0.7,})
-  //     .to("#content-lines",{ display:"block",duration:0.1 })
-  //     .to("#content-lines",{
-  //       opacity: 1,
-  //       stagger: 5,
-  //       ease: Expo.easeInOut,
-  //       duration: 0.6,
-  //     })
-  //   })
-  //   return () => context.revert()
-  // },[])
-  
-  const bgVariants = {
-    initial:{
-      clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)'
-    },
-    animate:{
-      clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
-      transition: { duration:0.1,delay:0,type:'tween',ease:'linear'}
-    }
-  }
   return (
     <>
       <div className="pb-40 overflow-hidden bg-black sm1:pt-16 md:pt-0">

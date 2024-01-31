@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React,{ useState } from 'react'
 import Lottie from 'lottie-react'
-import errorGif from '../public/media/lotties/404error.json'
+import errorGif from '../public/media/lotties/404Error(ErrorPage).json'
 
 
 const ErrorPage = () =>{
