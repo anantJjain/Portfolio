@@ -44,17 +44,17 @@ const ContactNew = () => {
         {
             isSubmitted ? 
             (
-                <div className='border-2 border-red-500'>
-                    <div className='absolute sm1:top-[315rem] sm2:top-[321rem] sm3:top-[324rem] border-0 border-red-500'>
+                <div className='border-0 border-red-500'>
+                    {/* <div className='absolute sm1:top-[315rem] sm2:top-[321rem] sm3:top-[324rem] border-0 border-red-500'>
                         <Confetti width={500}/>
-                    </div>
+                    </div> */}
                     <div>
-                        <Lottie animationData={sendTick} className="sm1:h-[10rem] md:h-[20rem] grayscale-0" loop={true}/>
+                        <Lottie animationData={sendTick} className="sm1:h-[10rem] md:h-[20rem] grayscale-0 border-0 border-red-500" loop={true}/>
                     </div>    
-                    <div className='m-auto font-light text-blue-400 sm1:w-3/5 lg:w-full md:text-center sm1:text-2xl md:text-5xl'>Thanks for reaching out, I&apos;ll contact you soon</div>
-                    <div className='flex justify-around w-full m-auto mt-20 text-white'>
-                        <div className='flex xl:space-x-20 sm1:flex-col xl:flex-row sm1:space-y-2 md:space-y-8 xl:space-y-0'>
-                            <a href="mailto:f20200641@pilani.bits-pilani.ac.in">
+                    <div className='m-auto font-normal text-blue-400 border-0 border-red-500 sm1:w-4/5 lg:w-3/5 xl:w-full md:text-center sm1:text-3xl md:text-5xl'>Thanks for reaching out, I&apos;ll contact you soon</div>
+                    <div className='flex justify-around w-full m-auto mt-20 text-white border-0 border-red-500'>
+                        <div className='flex border-0 border-red-500 xl:space-x-20 sm1:flex-col xl:flex-row sm1:space-y-2 md:space-y-8 xl:space-y-0'>
+                            <a href="mailto:f20200641@pilani.bits-pilani.ac.in" className='border-0 border-red-500'>
                                 <div className='flex flex-row space-x-4 sm1:hidden md:flex'>
                                     <div className='text-blue-400 rounded-full md:p-3 sm1:p-2 sm1:text-2xl lg:text-4xl md:text-5xl bg-blue-400/30'><FaGraduationCap /></div>
                                     <div className='leading-[1rem]'>
@@ -63,7 +63,7 @@ const ContactNew = () => {
                                     </div>
                                 </div>
                             </a>
-                            <a href="tel:+91 9917763508">    
+                            <a href="tel:+91 9917763508" className='border-0 border-red-500'>    
                                 <div className='flex flex-row space-x-4'>
                                     <div className='text-blue-400 rounded-full md:p-3 sm1:p-2 sm1:text-2xl lg:text-4xl md:text-5xl bg-blue-400/30'><PiPhoneCallFill /></div>
                                     <div className='leading-[1rem]'>
@@ -72,16 +72,16 @@ const ContactNew = () => {
                                     </div>
                                 </div>
                             </a>    
-                            <a href="mailto:anantjain.8k@gmail.com">
+                            <a href="mailto:anantjain.8k@gmail.com" className='border-0 border-red-500'>
                                 <div className='flex flex-row space-x-4'>
-                                    <div className='text-blue-400 rounded-full sm1:mt-4 md:p-3 sm1:p-2 sm1:text-2xl lg:text-4xl md:text-5xl bg-blue-400/30'><MdAlternateEmail /></div>
-                                    <div className='leading-[1rem] sm1:mt-4'>
+                                    <div className='text-blue-400 rounded-full md:p-3 sm1:p-2 sm1:text-2xl lg:text-4xl md:text-5xl bg-blue-400/30'><MdAlternateEmail /></div>
+                                    <div className='leading-[1rem]'>
                                         <p className='sm1:text-md md:text-lg'>anantjain.8k@gmail.com</p>
                                         <p className='sm1:text-sm md:text-sm text-white/50'>Personal Email</p>
                                     </div>
                                 </div> 
                             </a> 
-                            <div className='flex border-0 border-red-500 sm1:mt-8 lg:ml-0 md:ml-10 xl:ml-auto xl:w-2/5 sm1:w-4/5 md:w-3/5 lg:w-4/5 sm1:justify-between md:text-3xl sm1:text-3xl lg:text-2xl'>
+                            <div className='flex space-x-4 border-0 border-red-500 sm1:pt-8 md:pt-4 lg:pt-0 md:text-3xl sm1:text-3xl lg:text-2xl'>
                                 <a className='text-blue-400 rounded-full sm1:p-2 md:p-4 bg-blue-400/20' href="https://github.com/anantJjain" target="_blank" rel="noreferrer" ><FiGithub /></a>
                                 <a className='text-blue-400 rounded-full sm1:p-2 md:p-4 bg-blue-400/20' href="https://www.instagram.com/anantjain.8k/" target="_blank" rel="noreferrer"><FiInstagram /></a>
                                 <a className='text-blue-400 rounded-full sm1:p-2 md:p-4 bg-blue-400/20' href="https://www.linkedin.com/in/anantjainBE/" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
