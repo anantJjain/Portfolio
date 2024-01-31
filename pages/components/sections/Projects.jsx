@@ -117,9 +117,9 @@ const Projects = () => {
       </div>
       {/* 1st proj */}
       <div className='mt-20 mb-20'>
-        <Image src="/media/projects2/portfolio3.png" alt="" width={300} height={200} className='relative z-10 m-auto cursor-pointer' />
-        <Image src="/media/projects2/portfolio2.png" alt="" width={300} height={200} className='sm1:hidden lg:block transition ease-in-out duration-300 absolute lg:left-[22.75rem] xl:left-[30.75rem] 2xl:left-[38.75rem] -mt-[38.25rem] z-10 m-auto hover:opacity-0 border-0 cursor-pointer border-red-500' />
-        <div className='absolute z-20 whitespace-nowrap overflow-hidden -mt-[25rem] font-extrabold text-center sm1:text-[20rem] md:text-[30rem] lowercase text-white sm1:-left-[5rem] lg:left-[28rem] xl:left-[48rem] tracking-tighter border-0 border-red-500 w-fit h-fit p-0 leading-[24rem]'>01.</div>
+        <Image src="/media/projects/portfolio/portfolio3.png" alt="" width={300} height={200} className='relative z-10 m-auto cursor-pointer' />
+        <Image src="/media/projects/portfolio/portfolio2.png" alt="" width={300} height={200} className='sm1:hidden lg:block transition ease-in-out duration-300 absolute lg:left-[22.7rem] xl:left-[30.7rem] 2xl:left-[35.7rem] -mt-[38.25rem] z-10 m-auto hover:opacity-0 border-0 cursor-pointer border-red-500' />
+        <div className='absolute z-20 whitespace-nowrap overflow-hidden -mt-[25rem] font-extrabold text-center sm1:text-[20rem] md:text-[30rem] lowercase text-white sm1:-left-[5rem] lg:left-[28rem] xl:left-[47rem] tracking-tighter border-0 border-red-500 w-fit h-fit p-0 leading-[24rem]'>01.</div>
         <Lottie animationData={sketch} className='absolute -rotate-45 md:block w-lg:1/2 sm1:hidden left-1/2 -mt-80 invert grayscale'/>
         <div className='flex mt-4 sm1:flex-col lg:flex-row'>
           <div className='mt-8 border-0 border-red-500 sm1:w-full lg:w-1/2'>
@@ -157,8 +157,8 @@ const Projects = () => {
       </div>
       {/* 2nd proj */}
       <div className='mt-40 mb-20'>
-        <Image src="/media/projects2/blindcoding2.png" alt="" width={300} height={200} className='relative z-10 m-auto transition duration-300 ease-in-out cursor-pointer hover:opacity-0' />
-        <Image src="/media/projects2/blindcoding3.png" alt="" width={300} height={200} className='sm1:hidden lg:block absolute lg:left-[22.75rem] xl:left-[30.75rem] 2xl:left-[38.5rem] -mt-[38.25rem] z-0 m-auto cursor-pointer' />
+        <Image src="/media/projects/blindcoding/blindcoding2.png" alt="" width={300} height={200} className='relative z-10 m-auto transition duration-300 ease-in-out cursor-pointer hover:opacity-0' />
+        <Image src="/media/projects/blindcoding/blindcoding3.png" alt="" width={300} height={200} className='sm1:hidden lg:block absolute lg:left-[22.7rem] xl:left-[30.7rem] 2xl:left-[35.7rem] -mt-[38.25rem] z-0 m-auto cursor-pointer' />
         <div className='absolute z-20 whitespace-nowrap overflow-hidden -mt-[25rem] font-extrabold text-center sm1:text-[20rem] md:text-[30rem] lowercase text-white sm1:left-[1rem] md:left-[15rem] lg:left-[7rem] tracking-tighter border-0 border-red-500 leading-[24rem]'>02.</div>
         <Lottie animationData={sketch} className='sm1:hidden lg:block absolute w-1/2 -rotate-45 -mt-80 invert -left-[5rem] grayscale'/>
         <div className='flex mt-4 sm1:flex-col lg:flex-row'> 
@@ -190,8 +190,8 @@ const Projects = () => {
       </div>
       {/* 3rd proj */}
       <div className='mt-20 mb-20'>
-        <Image src="/media/projects2/optistock1.png" alt="" width={300} height={200} className='relative z-10 m-auto cursor-pointer' />
-        <Image src="/media/projects2/optistock2.png" alt="" width={300} height={200} className='sm1:hidden lg:block  transition ease-in-out duration-300 absolute lg:left-[22.75rem] xl:left-[30.75rem] 2xl:left-[38.75rem] -mt-[38.25rem] z-10 m-auto hover:opacity-0 border-0 cursor-pointer border-red-500' />
+        <Image src="/media/projects/optistock/optistock1.png" alt="" width={300} height={200} className='relative z-10 m-auto cursor-pointer' />
+        <Image src="/media/projects/optistock/optistock2.png" alt="" width={300} height={200} className='sm1:hidden lg:block  transition ease-in-out duration-300 absolute lg:left-[22.7rem] xl:left-[30.7rem] 2xl:left-[35.7rem] -mt-[38.25rem] z-10 m-auto hover:opacity-0 border-0 cursor-pointer border-red-500' />
         <div className='absolute z-20 whitespace-nowrap overflow-hidden -mt-[25rem] font-extrabold text-center sm1:text-[20rem] md:text-[30rem] lowercase text-white sm1:-left-[5rem] lg:left-[28rem] xl:left-[48rem] tracking-tighter border-0 border-red-500 w-fit h-fit p-0 leading-[24rem]'>03.</div>
         <Lottie animationData={sketch} className='absolute -rotate-45 md:block w-lg:1/2 sm1:hidden left-1/2 -mt-80 invert grayscale'/>
         <div className='flex mt-4 sm1:flex-col lg:flex-row'>

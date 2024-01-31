@@ -23,31 +23,12 @@ a {
 }
 
 .box-shadow-out-navbar{
-  /* horizontal offset vertical offset blur */
-  /* box-shadow:1px 1px 50px #60a5fa; */
   box-shadow:1px 1px 300px rgba(255,255,255,0.3);
-  /* border-bottom:0.01px white solid */
 }
 
 .box-shadow-in-navbar{
-  /* horizontal offset vertical offset blur */
-  /* box-shadow:inset 1px 1px 50px #60a5fa; */
   box-shadow:inset 1px 1px 10px white;
 }
-
-
-/* *::-webkit-scrollbar {
-  display: none;
-}
-
-.hider{
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.hider::-webkit-scrollbar {
-  display: none;
-
-} */
 
 ::-webkit-scrollbar-track{
   background-color: black;
@@ -85,8 +66,6 @@ a {
 
 
 .mask{
-  /* mask-image: url('../public/media/masks/circle.svg'); */
-  /* background:#60a5fa; */
   background:#fff;
   mask-repeat: no-repeat;
   mask-position: 50%;
@@ -95,8 +74,6 @@ a {
 }
 
 .homemask{
-  /* mask-image: url('../public/media/masks/circle.svg'); */
-  /* background:#60a5fa; */
   background:#fff;
   mask-repeat: no-repeat;
   mask-position: 50%;
@@ -141,41 +118,6 @@ a {
   }
 }
 
-.image {
-  display: flex;
-  flex-direction: column;
-  justify-content:flex-end;
-  align-items:center;
-  width: 90%;
-  height: 30vw;
-}
-
-/* .image:nth-child(1){
-  margin:-10em 1em 1em 20em;
-}
-.image:nth-child(2){
-  margin:-1em 20em 1em 2em;
-}
-
-.image:nth-child(3){
-  margin:5em 1em 1em 20em;
-}
-
-.image:nth-child(4){
-  margin:1em 1em 1em 36em;
-}
-
-.image:nth-child(5){
-  margin:1em 1em 1em 36em;
-}
-
-.image:nth-child(6){
-  margin:22em 1em 3em 3em;
-} */
-
-
-
-
 .slide-right {
 	-webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse ;
 	        animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse ;
@@ -203,41 +145,31 @@ a {
 }
 
 
-
-
-
 .box-shadow-in{
-  /* horizontal offset vertical offset blur */
   box-shadow:inset 1px -4px 30px rgba(255,255, 255, 0.4);
 }
 
 .box-shadow-out{
-  /* horizontal offset vertical offset blur */
   box-shadow:1px 1px 10px rgba(255,255, 255, 0.2);
 }
 
 .box-shadow-outForm{
-  /* horizontal offset vertical offset blur */
   box-shadow:1px 1px 20px rgba(255,255, 255, 0.5);
 }
 
 .box-shadow-outProj{
-  /* horizontal offset vertical offset blur */
   box-shadow:1px 1px 10px #60a5fa;
 }
 
 .box-shadow-out-2{
-  /* horizontal offset vertical offset blur */
   box-shadow:1px 1px 30px rgba(255,255, 255, 0.4);
 }
 
 .box-shadow-out-img{
-  /* horizontal offset vertical offset blur */
   filter:drop-shadow(1px 3px 40px white);
 }
 
 .not-visible{
-  /* opacity: 0; */
   transition: 0.5s;
   transform: translateY(-120%);
 }
@@ -245,24 +177,17 @@ a {
 .visible{
   opacity: 1;
   transition: 1s;
-  /* transform: scale(1.1); */
 }
 
 .visibleImage{
-  /* opacity: 1; */
   transition: 1s;
   height: fit-content;
-  /* transform: scale(1.1); */
 }
 
 .not-visibleImage{
-  /* opacity: 0; */
   height: 0;
   transition: 0.5s;
 }
-
-
-
 
 .box-shadow{
   border-radius: 10%;
@@ -277,8 +202,6 @@ a {
   bottom: 0px;
   width: 120%;
   margin: auto;
-  /* border-radius: inh; */
-  /* background: #60a5fa; */
   background: white;
   filter: blur(1px); 
   z-index: -1;
@@ -288,16 +211,11 @@ a {
 .box-shadow-inside{
   filter: grayscale(100%);
   border-radius: 10%;
-  /* horizontal position of the center of the circle,at specifies the radius of the circle wrt element,vertical position of the center of the circle */
   clip-path: circle(100% at 50% 50%); /* Clip the image to a circle */
   /* border:2px red solid; */
   /* filter: blur(4px); */
 }
 
-/* .box-shadow-inside:hover{
-  transition: 0.5s;
-  filter:grayscale(20%)
-} */
 
 .box-shadow-out-projects{
   /* horizontal offset vertical offset blur */
@@ -454,17 +372,6 @@ a {
   transform:scale(1.2,0.8);
 }
 
-/* .inView{
-  opacity: 1;
-  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-  transition: 1s;
-}
-
-.outView{
-  opacity: 0;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  transition: 1s;
-} */
 
 .fontwt{
   font-weight: 600;
