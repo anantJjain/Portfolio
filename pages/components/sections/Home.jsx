@@ -18,8 +18,7 @@ gsap.registerPlugin(CSSPlugin)
 const Home = () => {  
   const { scrollYProgress } = useScroll()
   const toRight2 = useTransform(scrollYProgress,[0,1],[-100,800])
-  const toRight3 = useTransform(scrollYProgress,[0,1],[-100,2000])
-  const toLeft = useTransform(scrollYProgress,[0,1],[10,-1000])  
+  const toRight3 = useTransform(scrollYProgress,[0,1],[-100,2000]) 
   const numRef = useRef(null)
   const [ view,setView ] = useState(false);
   
@@ -76,7 +75,7 @@ const Home = () => {
     <>
       <div className="pb-40 overflow-hidden bg-black sm1:pt-16 md:pt-0">
         {/* Desktop Home */}
-        <div className="relative h-screen bg-cover sm1:hidden md:block">
+        <div className="relative border-0 border-red-500 sm1:hidden md:block h-[50rem]">
           <div className="w-4/5 pt-20 m-auto border-0 border-red-500 opacity-1" id="main">
             <div className="z-0 text-2xl font-normal tracking-tighter text-white border-0 border-red-500 font-change2">
               <div className="absolute right-0 w-2/5 text-5xl border-0 border-red-500 sm1:hidden lg:block">
@@ -112,7 +111,7 @@ const Home = () => {
           </div>
         </div>
         {/* Mobile Home */}
-        <div id="home" className="relative max-h-screen bg-cover sm1:block md:hidden">
+        <div id="home" className="relative top-0 max-h-screen bg-cover border-0 border-red-500 sm1:block md:hidden">
           <div className="w-full pt-20 m-auto border-0 border-red-500 opacity-1" id="main">
             <div className="absolute w-2/5 text-5xl border-0 border-red-500 -right-4">
               <Lottie animationData={threedSpheres} className="grayscale invert" loop={true}/>
@@ -144,19 +143,19 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <div id="about" className="pt-2 mt-24 border-0 border-red-500">
+        <div id="about" className="relative pt-32 border-0 border-red-500">
           <About />
         </div>
         <div className="sm1:hidden md:block">
           <Parallax />
         </div>
-        <div>
+        <div className="pt-32 border-0 border-red-500">
           <SkillsCarousel />
         </div>
-        <div id="projects" className="pt-2 mt-56 border-0 border-red-500">
+        <div id="projects" className="pt-32 border-0 border-red-500">
           <Projects />
         </div>
-        <div id="contact" className="pt-2 mt-40 border-0 border-red-500">
+        <div id="contact" className="pt-32 border-0 border-red-500">
           <Contact />
         </div>
       </div>

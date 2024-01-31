@@ -66,9 +66,9 @@ const Projects = () => {
   }
   
   return (
-    <div className='text-white bg-[#000] border-0 border-red-400 mb-[10rem]'>  
+    <div className='text-white bg-[#000] border-0 border-red-400'>  
       <motion.div 
-        className="mt-16 font-extrabold tracking-tighter text-white border-0 border-red-500 font-mine2 md:text-10xl sm1:text-8xl"
+        className="font-extrabold tracking-tighter text-white border-0 border-red-500 font-mine2 md:text-10xl sm1:text-8xl"
         style={{x:toRight}}
       >
         <span className='font-mine2'>

@@ -11,7 +11,7 @@ const SkillsCarousel = () => {
   return (
     <div>
       <motion.div 
-            className="font-extrabold tracking-tighter text-white border-0 border-red-500 mt-44 font-mine2 md:text-10xl sm1:text-8xl"
+            className="font-extrabold tracking-tighter text-white border-0 border-red-500 font-mine2 md:text-10xl sm1:text-8xl"
             style={{x:toRight}}
           >
             <span className='font-mine2'>

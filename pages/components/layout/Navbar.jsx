@@ -77,16 +77,28 @@ const Navbar = ({ toggleOpen,toggleClose,isOpen }) => {
                             <div className='flex justify-between w-3/4 pb-20 m-auto mt-20 text-3xl '>
                                 <motion.a 
                                     variants={linkVariants}
-                                    href="https://www.linkedin.com/in/anantjainBE/" target="_blank" className=""><GrLinkedinOption /></motion.a>
+                                    href="https://www.linkedin.com/in/anantjainBE/" target="_blank" className=""
+                                >
+                                    <GrLinkedinOption />
+                                </motion.a>
                                 <motion.a 
                                     variants={linkVariants}
-                                    href="https://github.com/anantJjain" target="_blank" className=""><GrGithub/></motion.a>
+                                    href="https://github.com/anantJjain" target="_blank" className=""
+                                >
+                                    <GrGithub/>
+                                </motion.a>
                                 <motion.a 
                                     variants={linkVariants}
-                                    href="https://www.instagram.com/anantjain.8k/" target="_blank" className=""><RiInstagramFill /></motion.a>
+                                    href="https://www.instagram.com/anantjain.8k/" target="_blank" className=""
+                                >
+                                    <RiInstagramFill />
+                                </motion.a>
                                 <motion.a 
                                     variants={linkVariants}
-                                    href="mailto:anantjain.8k@gmail.com" target="_blank" className=""><MdEmail /></motion.a>
+                                    href="mailto:anantjain.8k@gmail.com" target="_blank" className=""
+                                >
+                                    <MdEmail />
+                                </motion.a>
                             </div>  
                         </motion.div>
                 </motion.div> 

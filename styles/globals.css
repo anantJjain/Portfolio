@@ -20,6 +20,7 @@ a {
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .box-shadow-out-navbar{
@@ -346,8 +347,6 @@ a {
   /* color:rgba(255,255,255,0.1); */
   -webkit-text-stroke: 0px white;
 }
-
-
 
 .normalText{
   font-family: circular sans-serif;

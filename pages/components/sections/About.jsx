@@ -32,7 +32,7 @@ const About = () => {
     const formattedDate = `${formattedDay}-${formattedMonth}-${year}`;
     return (
         <div className='bg-[#000] text-white'>
-            <div className='w-2/3 m-auto border-0 border-red-500 md:text-sm sm1:text-xs md:pt-20 fontwt sm1:pt-10'>
+            <div className='w-2/3 m-auto border-0 border-red-500 md:text-sm sm1:text-xs fontwt'>
                 <div className='border-0 border-red-500 xl:w-1/5 sm1:w-4/5 md:w-2/5'>Available for freelance & remote jobs/internships after</div>
                 <div className='mt-2 font-bold text-blue-400 border-0 border-red-500 sm1:text-sm md:text-lg'>{ formattedDate }</div>
             </div>
