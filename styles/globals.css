@@ -225,7 +225,7 @@ a {
 
 .font-stencil2{
   color:rgba(255,255,255,0);
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 2px #fff;
 }
 
 .font-stencil24{

@@ -152,7 +152,7 @@ const Home = () => {
         <div className="pt-32 border-0 border-red-500">
           <SkillsCarousel />
         </div>
-        <div id="projects" className="pt-32 border-0 border-red-500">
+        <div id="projects" className="pt-32 mt-56 border-0 border-red-500">
           <Projects />
         </div>
         <div id="contact" className="pt-32 border-0 border-red-500">
