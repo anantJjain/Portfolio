@@ -220,16 +220,13 @@ const Projects = () => {
               </p>
               <p className='mt-10 text-2xl font-extrabold text-blue-400'>Tech stack used :</p>
               <div className='flex flex-wrap mt-4 -ml-2 space-x-2 space-y-2'>
-                <p className='p-2 mt-2 ml-2 text-white bg-white/20 rounded-xl'>Next.js</p>
+                <p className='p-2 mt-2 ml-2 text-white bg-white/20 rounded-xl'>React</p>
                 <p className='p-2 text-white bg-white/20 rounded-xl'>Tailwind</p>
-                <p className='p-2 text-white bg-white/20 rounded-xl'>Framer Motion</p>
-                <p className='p-2 text-white bg-white/20 rounded-xl'>Lottie</p>
-                <p className='p-2 text-white bg-white/20 rounded-xl'>Figma</p>
-                <p className='p-2 text-white bg-white/20 rounded-xl'>Jitter</p>
+                <p className='p-2 text-white bg-white/20 rounded-xl'>Node</p>
+                <p className='p-2 text-white bg-white/20 rounded-xl'>Express</p>
                 <p className='p-2 text-white bg-white/20 rounded-xl'>Nodemailer</p>
-                <p className='p-2 text-white bg-white/20 rounded-xl'>Intersection Observer API</p>
-                <p className='p-2 text-white bg-white/20 rounded-xl'>Greensock animation (GSAP)</p>
-                <p className='p-2 text-white bg-white/20 rounded-xl'>react-confetti</p>
+                <p className='p-2 text-white bg-white/20 rounded-xl'>Redux</p>
+                <p className='p-2 text-white bg-white/20 rounded-xl'>MongoDB</p>
               </div>
             </div>
           </div>
